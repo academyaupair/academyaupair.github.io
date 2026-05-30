@@ -1,0 +1,2918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academy AuPair — Your Guide from India to Germany</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("BojO7YrfgCcMNoInN");</script>
+<style>
+
+:root {
+  --green: #1a3d2b;
+  --green-mid: #2d6647;
+  --green-light: #eaf3de;
+  --green-dark: #0f2a1d;
+  --gold: #b8933a;
+  --gold-light: #fdf6e7;
+  --gold-dark: #633806;
+  --gold-mid: #d4a94a;
+  --white: #ffffff;
+  --off-white: #faf9f6;
+  --text: #1a1a1a;
+  --text-mid: #3d3d3d;
+  --text-muted: #6b6b6b;
+  --border: rgba(0,0,0,0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--off-white);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ── URGENCY BAR ── */
+.urgency-bar {
+  background: var(--gold);
+  padding: 10px 48px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-dark);
+  letter-spacing: 0.02em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.urgency-bar span {
+  display: inline-block;
+  margin: 0 8px;
+  opacity: 0.7;
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--green);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: sticky;
+  top: 40px;
+  z-index: 99;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  cursor: pointer;
+}
+.nav-logo-main {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+.nav-logo-main span { color: var(--gold); }
+.nav-logo-sub {
+  font-size: 9px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--gold);
+  color: var(--green-dark);
+  border: none;
+  padding: 9px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.nav-cta:hover { background: var(--gold-mid); transform: scale(1.03); }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background: var(--green);
+  padding: 24px;
+  z-index: 98;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+}
+.mobile-menu .m-cta {
+  background: var(--gold);
+  color: var(--green-dark);
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--green);
+  padding: 80px 48px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(184,147,58,0.06);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(184,147,58,0.04);
+  pointer-events: none;
+}
+.hero-spots {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(184,147,58,0.15);
+  border: 1px solid rgba(184,147,58,0.4);
+  color: var(--gold-mid);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+.hero-spots::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+.hero h1 {
+  font-size: clamp(28px, 6vw, 46px);
+  color: var(--white);
+  margin-bottom: 12px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+.hero-thesis {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hero-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.65);
+  max-width: 700px;
+  margin: 0 auto 32px;
+  line-height: 1.75;
+}
+.hero-story {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: left;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.hero-story p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.hero-story .questions {
+  font-size: 15px;
+  color: rgba(255,255,255,0.38);
+  line-height: 2.2;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.hero-stop {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.hero-here {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.hero-tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.38);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 28px;
+}
+.hero-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--green-dark);
+  border: none;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--gold-mid); transform: translateY(-2px); }
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  padding: 15px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--green-light);
+  padding: 14px 48px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #c0dd97;
+}
+.trust-item {
+  font-size: 13px;
+  font-weight: 600;
+  color: #27500a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.trust-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── VISION BLOCK ── */
+.vision-block {
+  background: var(--green);
+  padding: 64px 48px;
+  text-align: center;
+}
+.vision-inner { max-width: 860px; margin: 0 auto; }
+.vision-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.vision-title {
+  font-size: clamp(22px, 4vw, 30px);
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+.vision-box {
+  background: rgba(184,147,58,0.1);
+  border: 1px solid rgba(184,147,58,0.3);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.vision-box-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.vision-box p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+}
+.vision-box strong { color: var(--white); font-weight: 600; }
+.vision-pills {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.vpill {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  border: 1px solid rgba(184,147,58,0.4);
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+/* ── SECTIONS ── */
+section { padding: 56px 48px; }
+section.dark { background: var(--green); }
+section.light { background: var(--off-white); }
+section.white { background: var(--white); }
+section.gold-bg { background: var(--gold); }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.section-label.dark-label { color: var(--gold); }
+.section-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.section-title.white-title { color: var(--white); }
+.section-sub {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.section-sub.white-sub { color: rgba(255,255,255,0.6); }
+.max-w { max-width: 1100px; margin-left: auto; margin-right: auto; }
+
+/* ── FOMO COUNTER ── */
+.fomo-strip {
+  background: #0f2a1d;
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding: 24px 48px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.fomo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0 16px;
+  border-right: 1px solid rgba(184,147,58,0.2);
+}
+.fomo-item:last-child { border-right: none; }
+.fomo-num {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.fomo-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── AUDIENCE GRID ── */
+.aud-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.aud-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 18px 18px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.aud-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.aud-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.ic-green { background: var(--green-light); color: var(--green); }
+.ic-gold { background: var(--gold-light); color: var(--gold-dark); }
+.aud-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.aud-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.aud-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-mid);
+}
+
+/* ── COURSE CARD ── */
+.course-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.course-hd {
+  background: var(--green);
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.course-hd-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+.course-price {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.course-price span {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 400;
+}
+.day-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.day-row:nth-child(even) { background: var(--off-white); }
+.day-row:last-of-type { border-bottom: none; }
+.d-num {
+  width: 36px;
+  height: 36px;
+  background: var(--green);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.d-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.d-tags { font-size: 12px; color: var(--text-muted); }
+.d-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pill-hw { background: var(--green-light); color: #27500a; }
+.pill-cert { background: var(--gold-light); color: var(--gold-dark); border: 1px solid var(--gold); }
+.course-ft {
+  background: var(--off-white);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 14px 18px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.inc-pill {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+/* ── CERT SECTION ── */
+.cert-section {
+  background: var(--green);
+  padding: 64px 48px;
+  text-align: center;
+}
+.cert-inner { max-width: 860px; margin: 0 auto; }
+.cert-title {
+  font-size: clamp(22px, 4vw, 30px);
+  color: var(--white);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+.cert-body {
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.cert-future-box {
+  background: rgba(184,147,58,0.1);
+  border: 1px solid rgba(184,147,58,0.3);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.cert-future-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.cert-future-text {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+}
+.cert-future-text strong { color: var(--white); }
+.cert-pills {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.c-pill {
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(184,147,58,0.15);
+  color: var(--gold-mid);
+  border: 1px solid rgba(184,147,58,0.3);
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+
+/* ── PRICING ── */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.price-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  position: relative;
+}
+.price-card.featured { border: 2.5px solid var(--gold); }
+.price-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--gold);
+  color: var(--green-dark);
+  padding: 3px 14px;
+  border-radius: 50px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.price-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.price-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.price-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.price-val {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--green);
+}
+.price-val.free-val { color: #3b6d11; }
+.price-val span {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.price-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
+.p-tag {
+  font-size: 11px;
+  background: var(--off-white);
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+}
+.p-tag-gold { background: var(--gold-light); color: var(--gold-dark); border-color: rgba(184,147,58,0.3); }
+.price-divider { height: 1px; background: var(--border); margin: 10px 0; }
+.price-detail { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+/* ── WHY GRID ── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+}
+.why-icon {
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.why-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.why-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* ── STEPS ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.step-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 14px;
+  text-align: center;
+}
+.step-num {
+  width: 36px;
+  height: 36px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0 auto 12px;
+}
+.step-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.step-text { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+/* ── QUIZ ── */
+.quiz-wrap {
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.quiz-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.quiz-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.quiz-q {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.quiz-opts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.quiz-opt {
+  font-size: 14px;
+  color: var(--text-muted);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.quiz-opt:hover { border-color: var(--gold); color: var(--text); }
+.quiz-note { font-size: 12px; color: var(--text-muted); font-style: italic; }
+
+/* ── SCHEDULE TABLE ── */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.schedule-table th {
+  background: var(--green);
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 12px 16px;
+  text-align: left;
+}
+.schedule-table th:last-child { color: var(--gold); }
+.schedule-table td {
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  vertical-align: middle;
+}
+.schedule-table tr:nth-child(even) td { background: var(--off-white); }
+.schedule-table tr:last-child td { border-bottom: none; }
+.day-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.day-name { font-weight: 700; color: var(--green); font-size: 15px; }
+.day-num-sm { font-size: 12px; color: var(--gold-dark); font-weight: 600; }
+.time-cell { font-weight: 700; color: var(--gold-dark); font-size: 16px; }
+.note-box {
+  background: var(--green-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #27500a;
+  line-height: 1.6;
+}
+.note-box strong { color: var(--green); }
+
+/* ── COMMUNITY BOX ── */
+.community-box {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+.comm-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--green);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.comm-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.comm-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.comm-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.c-tag {
+  font-size: 12px;
+  background: var(--green-light);
+  color: #27500a;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* ── FOUNDER ── */
+.founder-box {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+.founder-avatar {
+  width: 56px;
+  height: 56px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.founder-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.founder-role { font-size: 13px; color: var(--gold-dark); font-weight: 600; margin-bottom: 10px; }
+.founder-bio { font-size: 15px; color: var(--text-muted); line-height: 1.75; }
+.founder-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.f-tag {
+  font-size: 11px;
+  background: var(--green-light);
+  color: #27500a;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* ── CAUTION SECTION ── */
+.caution-section {
+  background: var(--green-dark);
+  padding: 64px 48px;
+}
+.caution-inner { max-width: 860px; margin: 0 auto; }
+.caution-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.caution-eyebrow::before {
+  content: '⚠';
+  font-size: 14px;
+}
+.caution-title {
+  font-size: clamp(18px, 3.5vw, 24px);
+  color: var(--white);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.caution-body {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.caution-questions {
+  font-size: 15px;
+  color: rgba(255,255,255,0.45);
+  line-height: 2.3;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.caution-close {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.caution-sig {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--gold-mid);
+}
+.de-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 20px;
+}
+.de-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* ── ENROL CTA ── */
+.enrol-section {
+  background: var(--gold);
+  padding: 64px 48px;
+  text-align: center;
+}
+.enrol-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(22px, 4vw, 32px);
+  color: var(--green-dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.enrol-sub {
+  font-size: 16px;
+  color: rgba(26,61,43,0.7);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.enrol-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn-dark {
+  background: var(--green-dark);
+  color: var(--white);
+  border: none;
+  padding: 16px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-dark:hover { background: var(--green); transform: translateY(-2px); }
+.btn-ghost {
+  background: rgba(255,255,255,0.3);
+  color: var(--green-dark);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.5); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0a1f13;
+  padding: 40px 48px 28px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.footer-logo {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+}
+.footer-logo span { color: var(--gold); }
+.footer-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: rgba(255,255,255,0.8); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* ── SECTION ANCHORS ── */
+#for-aupairs, #for-families, #for-agencies, #for-tutors, #about, #contact, #pricing, #schedule {}
+
+/* ── DIVIDER ── */
+.divider { height: 1px; background: var(--border); margin: 0; }
+
+/* ── EURODOOT BADGE ── */
+.eurodoot-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-top: 14px;
+}
+.eurodoot-badge {
+  background: var(--green);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.eurodoot-text { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+.eurodoot-text strong { color: var(--text); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .urgency-bar { font-size: 12px; padding: 8px 16px; }
+  nav { top: 36px; padding: 0 16px; }
+  .hero { padding: 40px 16px 36px; }
+  .hero-story { padding: 16px; }
+  section { padding: 40px 16px; }
+  .fomo-strip { gap: 0; padding: 20px 16px; }
+  .fomo-item { padding: 0 12px; }
+  .fomo-num { font-size: 26px; }
+  .schedule-table th, .schedule-table td { padding: 10px 10px; font-size: 13px; }
+  .founder-box, .community-box { flex-direction: column; }
+  .footer-top { flex-direction: column; gap: 16px; }
+  .footer-top { padding: 0 16px; }
+  .day-row { grid-template-columns: 40px 1fr auto; gap: 8px; padding: 12px 14px; }
+  .cert-section, .vision-block, .caution-section, .enrol-section { padding: 40px 16px; }
+  footer { padding: 32px 16px 20px; }
+  .trust-bar { padding: 12px 16px; }
+}
+@media (max-width: 400px) {
+  .fomo-item { padding: 0 8px; }
+  .fomo-num { font-size: 22px; }
+  .fomo-label { font-size: 10px; }
+}
+
+.page { display: none; }
+.page.active { display: block; }
+.page-hero {
+  background: var(--green);
+  padding: 48px 48px 40px;
+  text-align: center;
+}
+.page-hero h1 {
+  font-size: clamp(24px,5vw,40px);
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.page-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+@media(max-width:768px) {
+  .page-hero { padding: 32px 16px; }
+}
+
+/* Ausbildung page why-card overrides for light backgrounds */
+#page-ausbildung .white .why-card,
+#page-ausbildung section.white .why-card {
+  background: #fff;
+  border: 1px solid #e0ebe5;
+}
+#page-ausbildung .white .why-title,
+#page-ausbildung section.white .why-title {
+  color: #1a1a1a;
+}
+#page-ausbildung .white .why-text,
+#page-ausbildung section.white .why-text {
+  color: #555;
+}
+#page-ausbildung .light .why-card,
+#page-ausbildung section.light .why-card {
+  background: #fff;
+  border: 1px solid #e0ebe5;
+}
+#page-ausbildung .light .why-title,
+#page-ausbildung section.light .why-title {
+  color: #1a1a1a;
+}
+#page-ausbildung .light .why-text,
+#page-ausbildung section.light .why-text {
+  color: #555;
+}
+</style>
+</head>
+<body>
+
+
+<div class="urgency-bar">
+  🔒 Cohort 1 — <strong>Only 20 spots available</strong> <span>·</span> First-come, first-certified <span>·</span> Enrolment open now
+</div>
+
+
+
+<nav>
+  <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;">
+    <div class="nav-logo-main">Academy <span>AuPair</span></div>
+    <div class="nav-logo-sub">Your guide from India to Germany</div>
+  </div>
+  <div class="nav-links">
+    <a href="javascript:void(0)" onclick="showPage('aupairs')">For AuPairs</a>
+    <a href="javascript:void(0)" onclick="showPage('agencies')">For agencies</a>
+    <a href="javascript:void(0)" onclick="showPage('families')">For families</a>
+    <a href="javascript:void(0)" onclick="showPage('tutors')">For tutors</a>
+    <a href="javascript:void(0)" onclick="showPage('ausbildung')">Ausbildung</a>
+    <a href="javascript:void(0)" onclick="goToAbout()">About</a>
+    <button class="nav-cta" onclick="goToContact()">Enrol now →</button>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="javascript:void(0)" onclick="showPage('aupairs')" onclick="document.getElementById('mobileMenu').classList.remove('open')">For AuPairs</a>
+  <a href="javascript:void(0)" onclick="showPage('agencies')" onclick="document.getElementById('mobileMenu').classList.remove('open')">For agencies</a>
+  <a href="javascript:void(0)" onclick="showPage('families')" onclick="document.getElementById('mobileMenu').classList.remove('open')">For families</a>
+  <a href="javascript:void(0)" onclick="showPage('tutors')" onclick="document.getElementById('mobileMenu').classList.remove('open')">For tutors</a>
+  <a href="javascript:void(0)" onclick="showPage('ausbildung');document.getElementById('mobileMenu').classList.remove('open')">Ausbildung</a>
+  <a href="javascript:void(0)" onclick="goToAbout()" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <button class="m-cta" onclick="goToContact();document.getElementById('mobileMenu').classList.remove('open')">Enrol now →</button>
+</div>
+
+
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <div class="hero">
+  <div class="hero-spots">Cohort 1 — only 20 spots</div>
+  <div class="hero-thesis">The AuPair programme succeeds when everyone is prepared</div>
+  <h1>Prepared AuPair.<br>Prepared family.<br><em>Successful story.</em></h1>
+  <p class="hero-sub">We make sure they are.</p>
+  <div class="hero-btns">
+    <a href="javascript:void(0)" onclick="showPage('aupairs')" class="btn-primary">I am an AuPair — show me &rarr;</a>
+    <a href="javascript:void(0)" onclick="showPage('families')" class="btn-secondary">I am a host family</a>
+    <a href="javascript:void(0)" onclick="showPage('agencies')" class="btn-secondary">I am an agency</a>
+  </div>
+</div>
+  
+<div class="vision-block">
+  <div class="vision-inner">
+    <div class="vision-label">Something new — and necessary</div>
+    <h2 class="vision-title" style="color:var(--white)">This gap existed for years.<br>Nobody filled it. Until now.</h2>
+    <div class="vision-box">
+      <div class="vision-box-label">Today a choice. Tomorrow a requirement.</div>
+      <p>A first-time AuPair arriving unprepared. A host family that did not know what to expect. A placement that fails — and a child caught in the middle. This is what nobody was fixing.<br><br><strong>As agencies and families experience the difference a prepared AuPair makes, the certificate will become something every AuPair is expected to have.</strong> The ones who have it now set the standard. <strong>The ones who don't — will be left behind.</strong></p>
+    </div>
+    <div class="vision-pills">
+      <div class="vpill">Better prepared</div>
+      <div class="vpill">Better matched</div>
+      <div class="vpill">Better future</div>
+    </div>
+  </div>
+</div>
+
+
+  
+<section class="white" id="who">
+  <div class="max-w">
+    <div class="section-label">Who is this for</div>
+    <h2 class="section-title">Find your section</h2>
+    <p class="section-sub">Academy AuPair serves four groups — each with their own programme and entry point.</p>
+    <div class="aud-grid">
+      <div class="aud-card" onclick="showPage('aupairs')">
+        <div class="aud-icon ic-green">✈</div>
+        <div class="aud-title">For AuPairs from India</div>
+        <div class="aud-desc">First-timers preparing for Germany. Live training, certificate, community, and a real plan for your future — all in one place.</div>
+        <div class="aud-link">See the full programme →</div>
+      </div>
+      <div class="aud-card" onclick="showPage('families')">
+        <div class="aud-icon ic-gold">🏠</div>
+        <div class="aud-title">For host families</div>
+        <div class="aud-desc">Receiving your first Indian AuPair? Enrol them before they come — or prepare yourself before they arrive.</div>
+        <div class="aud-link">See family options →</div>
+      </div>
+      <div class="aud-card" onclick="showPage('agencies')">
+        <div class="aud-icon ic-green">🏢</div>
+        <div class="aud-title">For AuPair agencies</div>
+        <div class="aud-desc">Send your Indian AuPairs to us before placement. We prepare them — you place them. Better outcomes. Fewer failures.</div>
+        <div class="aud-link">Become a partner →</div>
+      </div>
+      <div class="aud-card" onclick="showPage('tutors')">
+        <div class="aud-icon ic-gold">🎓</div>
+        <div class="aud-title">For tutors & Ausbildung</div>
+        <div class="aud-desc">Teaching German to students who want Germany? Academy AuPair is the natural next step. For Ausbildung — EuroDoot.</div>
+        <div class="aud-link">Refer your students →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="divider"></div>
+  
+<section class="dark">
+  <div class="max-w">
+    <div class="section-label dark-label">Why Academy AuPair</div>
+    <h2 class="section-title white-title">The gap nobody else fills</h2>
+    <p class="section-sub white-sub">Agencies handle paperwork. We handle people.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <div class="why-title">Based in Germany. Living it.</div>
+        <div class="why-text">The team behind is based in Germany, living with Indian AuPairs and speaks from experience.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👁</div>
+        <div class="why-title">Both sides, not one</div>
+        <div class="why-text">AuPairs and families prepared separately — because both need to be ready for a placement to succeed.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚩</div>
+        <div class="why-title">Honest, not through flowers</div>
+        <div class="why-text">We tell you what agencies don't. Red flags, real situations, what actually happens — before you sign anything.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🗺</div>
+        <div class="why-title">A plan for what comes next</div>
+        <div class="why-text">Ausbildung, work, staying in Germany — we build your roadmap before you even leave India.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <div class="why-title">The prepared community</div>
+        <div class="why-text">Certified AuPairs and screened families — together in one private space. Prepared meets prepared.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👶</div>
+        <div class="why-title">Children first, always</div>
+        <div class="why-text">Every prepared AuPair and prepared family means more safety and stability for the children in between.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="white">
+  <div class="max-w">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">Four steps from here to Germany — prepared</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">Take the quiz</div>
+        <div class="step-text">Understand what you truly want before you search for anything.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">Book your free call</div>
+        <div class="step-text">20 minutes. Ask everything. Decide if the course is right for you.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">Complete the 5 days</div>
+        <div class="step-text">Live sessions, homework, real documents. Receive your certificate.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-title">Arrive prepared</div>
+        <div class="step-text">Join the community. Find your family. Build your future.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="divider"></div>
+  
+<section class="light" id="about">
+  <div class="max-w">
+    <div class="section-label">The founder</div>
+    <h2 class="section-title">This started in my living room</h2>
+    <p class="section-sub">Not from research. From real life.</p>
+    <div class="founder-box">
+      <div class="founder-avatar">👤</div>
+      <div>
+        <div class="founder-name">Founder, Academy AuPair</div>
+        <div class="founder-role">European host mother · Living in Germany · Cultural bridge · AuPair advocate</div>
+        <div class="founder-bio">I am a European host mother living in Germany with an Indian AuPair and an Indian partner. I have lived in three countries, navigated three cultures, and watched too many AuPairs arrive unprepared — overworked, confused, and alone in a country they did not yet understand.<br><br>I have opened my home to AuPairs in trouble. I have given free guidance when nobody else was available. I have cooked Indian food on Sunday afternoons with a living room full of people who just needed someone who understood both worlds.<br><br>Academy AuPair is what happens when that becomes a mission.</div>
+        <div class="founder-tags">
+          <span class="f-tag">Host mother</span>
+          <span class="f-tag">Indian culture</span>
+          <span class="f-tag">3 countries</span>
+          <span class="f-tag">5 years in Germany</span>
+          <span class="f-tag">EuroDoot partner</span>
+          <span class="f-tag">Real experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<div class="caution-section">
+  <div class="caution-inner">
+    <div class="caution-eyebrow">A word of caution — for AuPairs</div>
+    <h2 class="caution-title">As preparation becomes known as essential, others will offer it too.</h2>
+    <p class="caution-body">Before you trust anyone with something as important as your future, ask yourself:</p>
+    <div class="caution-questions">
+      Do they actually live in Germany right now?<br>
+      Have they ever been a host family?<br>
+      Do they truly understand Indian culture from the inside — or did they read about it?<br>
+      Are they telling you what you want to hear, or what you actually need to know?
+    </div>
+    <p class="caution-close">Anyone can build a course. Not everyone has lived both sides of this experience — as a host family, as someone with deep roots in Indian culture, as someone who has sat with AuPairs in crisis in their own home and helped them find their way.</p>
+    <p class="caution-sig">"We do not talk through flowers. We prepare you for reality. Because reality is what is waiting for you."</p>
+    <div class="de-dots">
+      <div class="de-dot" style="background:#222;"></div>
+      <div class="de-dot" style="background:#CC0000;"></div>
+      <div class="de-dot" style="background:#b8933a;"></div>
+    </div>
+  </div>
+</div>
+
+
+  
+<div class="enrol-section" id="contact">
+  <div class="max-w" style="text-align:center;">
+    <div style="display:inline-block;background:rgba(26,61,43,0.15);border-radius:50px;padding:6px 18px;font-size:13px;font-weight:700;color:var(--green-dark);margin-bottom:16px;letter-spacing:0.04em;">⚡ Limited spots — Cohort 1 open now</div>
+    <h2 class="enrol-title">Ready to stop searching<br>and start preparing?</h2>
+    <p class="enrol-sub">Start with the free 20-minute call. No commitment — just an honest conversation with someone who has lived both worlds. Or enrol directly in the course.</p>
+    <div class="enrol-btns">
+      <a href="mailto:academyaupair@gmail.com" class="btn-dark">Enrol in the course — €150 →</a>
+      <a href="mailto:academyaupair@gmail.com" class="btn-ghost">Book free 20-min call</a>
+    </div>
+    <p style="font-size:13px;color:rgba(26,61,43,0.55);margin-top:16px;">For agencies and families: <a href="mailto:academyaupair@gmail.com" style="color:var(--green-dark);font-weight:600;text-decoration:underline;">academyaupair@gmail.com</a></p>
+  </div>
+</div>
+
+
+</div>
+
+<!-- AUPAIRS PAGE -->
+<div id="page-aupairs" class="page">
+  <div class="page-hero">
+  <h1>For AuPairs from India</h1>
+  <p>Everything you need to arrive prepared, confident, and ready for your year in Germany.</p>
+</div>
+  <div style="background:var(--green);padding:32px 48px;">
+  <div style="max-width:760px;margin:0 auto;">
+    <div class="hero-story">
+      <p>You are sitting in India, searching Google for hours.</p>
+      <div class="questions">How do I find a host family. What is pocket money in Germany. How do I write a motivation letter. What happens after AuPair. What is Ausbildung. Is this agency trustworthy. What do German families really expect. How do I pass the interview. What if something goes wrong. What are my rights.</div>
+      <p>Fifty tabs open. Three Facebook groups. Three different answers. One person who had an amazing year. One who came home in tears.</p>
+      <p>You are excited and terrified at the same time.</p>
+      <div class="hero-stop">Stop.</div>
+      <div class="hero-here">Academy AuPair is here.</div>
+      <div class="hero-tagline">Everything you need. One place. Someone who has lived both worlds.</div>
+    </div>
+  </div>
+</div>
+  <section class="light">
+    <div class="max-w">
+      <div class="section-label">Know yourself first</div>
+      <h2 class="section-title" style="margin-bottom:8px;">What kind of AuPair are you?</h2>
+      <p class="section-sub">3 minutes of honesty before you apply anywhere. Your answers go directly to Academy AuPair.</p>
+      <div id="ap-collect" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px;max-width:520px;margin:0 auto 32px;">
+  <p style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:14px;">Tell us who you are first</p>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <input id="ap-name" type="text" placeholder="Your full name" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+    <input id="ap-email" type="email" placeholder="Your email address" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+    <input id="ap-phone" type="tel" placeholder="Your phone / WhatsApp number" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+    <button onclick="startAPQuiz()" style="background:var(--green);color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Take the quiz &rarr;</button>
+    <p id="ap-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all fields.</p>
+  </div>
+</div>
+<div id="ap-quiz-box" style="display:none;max-width:680px;margin:0 auto 32px;"></div>
+      <div class="divider" style="margin:32px 0;"></div>
+      <h2 class="section-title" style="text-align:left;font-size:clamp(20px,3vw,28px);margin-bottom:16px;">You deserve to arrive prepared, confident, and ready.</h2>
+      <p style="font-size:16px;color:var(--text-muted);margin-bottom:24px;line-height:1.7;">Not just with a visa and a suitcase. With real knowledge, a real plan, and someone who has lived both worlds.</p>
+      
+<section class="light" id="for-aupairs">
+  <div class="max-w">
+    <div class="section-label">For AuPairs from India</div>
+    
+
+    <!-- FOMO urgency statement --><!-- COURSE CARD -->
+    <div class="section-label" style="text-align:left;margin-bottom:8px;">The 5-day programme</div>
+    <h3 style="font-family:'Inter',-apple-system,sans-serif;font-size:20px;color:var(--text);margin-bottom:20px;">What you will learn — and do</h3>
+    <div class="course-card">
+      <div class="course-hd">
+        <div class="course-hd-title">AuPair preparation course — live group training</div>
+        <div class="course-price">€150 <span>/ full course</span></div>
+      </div>
+      <div class="day-row">
+        <div class="d-num">Day<br>1</div>
+        <div><div class="d-title">Who you are — and what you truly want</div><div class="d-tags">Self-discovery · Motivation · Finding your right match</div></div>
+        <div class="d-pill pill-hw">Homework</div>
+      </div>
+      <div class="day-row">
+        <div class="d-num">Day<br>2</div>
+        <div><div class="d-title">Finding your family &amp; interview preparation</div><div class="d-tags">Search · Red flags · Communication · Mock interview</div></div>
+        <div class="d-pill pill-hw">Homework</div>
+      </div>
+      <div class="day-row">
+        <div class="d-num">Day<br>3</div>
+        <div><div class="d-title">Practical life in Germany</div><div class="d-tags">Daily life · Household · Childcare · Your rights</div></div>
+        <div class="d-pill pill-hw">Homework</div>
+      </div>
+      <div class="day-row">
+        <div class="d-num">Day<br>4</div>
+        <div><div class="d-title">When things go wrong — and how to handle it</div><div class="d-tags">Problem situations · Your rights · Who helps</div></div>
+        <div class="d-pill pill-hw">Homework</div>
+      </div>
+      <div class="day-row">
+        <div class="d-num">Day<br>5</div>
+        <div><div class="d-title">Life after AuPair — your future in Germany</div><div class="d-tags">Ausbildung · Work · Future planning · Certification</div></div>
+        <div class="d-pill pill-cert">Certificate</div>
+      </div>
+      <div class="course-ft">
+        <div class="inc-pill">AuPair handbook</div>
+        <div class="inc-pill">Real document examples</div>
+        <div class="inc-pill">Daily homework</div>
+        <div class="inc-pill">EuroDoot consultation</div>
+        <div class="inc-pill">Certificate on completion</div>
+        <div class="inc-pill">Private community access</div>
+      </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div style="margin-top:32px;">
+      <div class="section-label" style="text-align:left;margin-bottom:8px;">Session timings — Cohort 1</div>
+      <h3 style="font-family:'Inter',-apple-system,sans-serif;font-size:20px;color:var(--text);margin-bottom:16px;">All times in Indian Standard Time (IST)</h3>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Session topic</th>
+            <th>India (IST)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="day-cell"><span class="day-name">Monday</span><span class="day-num-sm">Day 01</span></div></td>
+            <td style="font-size:14px;">Who you are &amp; what you truly want</td>
+            <td><span class="time-cell">08:30 – 09:30</span></td>
+          </tr>
+          <tr>
+            <td><div class="day-cell"><span class="day-name">Tuesday</span><span class="day-num-sm">Day 02</span></div></td>
+            <td style="font-size:14px;">Finding your family &amp; interview prep</td>
+            <td><span class="time-cell">08:30 – 09:30</span></td>
+          </tr>
+          <tr>
+            <td><div class="day-cell"><span class="day-name">Wednesday</span><span class="day-num-sm">Day 03</span></div></td>
+            <td style="font-size:14px;">Practical life in Germany</td>
+            <td><span class="time-cell">19:00 – 20:00</span></td>
+          </tr>
+          <tr>
+            <td><div class="day-cell"><span class="day-name">Thursday</span><span class="day-num-sm">Day 04</span></div></td>
+            <td style="font-size:14px;">When things go wrong</td>
+            <td><span class="time-cell">08:30 – 09:30</span></td>
+          </tr>
+          <tr>
+            <td><div class="day-cell"><span class="day-name">Friday</span><span class="day-num-sm">Day 05</span></div></td>
+            <td style="font-size:14px;">Life after AuPair — your future</td>
+            <td><span class="time-cell">10:30 – 11:30</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box"><strong>Note:</strong> Wednesday is the only evening session. All other sessions are morning sessions. Certificate is issued on Day 5 — attendance at all 5 sessions is required, no exceptions.</div>
+    </div>
+
+    <!-- COMMUNITY -->
+    <div style="margin-top:32px;">
+      <div class="section-label" style="text-align:left;margin-bottom:8px;">The community</div>
+      <h3 style="font-family:'Inter',-apple-system,sans-serif;font-size:20px;color:var(--text);margin-bottom:16px;">You will not be alone in Germany</h3>
+      <div class="community-box">
+        <div class="comm-icon">👥</div>
+        <div>
+          <div class="comm-title">Private — Prepared AuPair Community</div>
+          <div class="comm-text">A closed group exclusively for Academy AuPair graduates. Share real experiences, ask real questions, and support each other. When something goes wrong at 11pm, there are people who understand — because they went through the same preparation, and they are in Germany right now too.</div>
+          <div class="comm-tags">
+            <span class="c-tag">Graduates only</span>
+            <span class="c-tag">Real peer support</span>
+            <span class="c-tag">Across Germany</span>
+            <span class="c-tag">Earned access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </div>
+  </section>
+  
+<div class="cert-section">
+  <div class="cert-inner">
+    <div class="section-label dark-label">The Academy AuPair certificate</div>
+    <h2 class="cert-title">Host families receive dozens of applications.<br>Most look exactly the same.</h2>
+    <p class="cert-body">A photo. A letter. A smile. Everyone says they love children and are excited about Germany.<br><br>An Academy AuPair graduate is different. Trained, honestly assessed, and certified before arrival. Families notice. Agencies notice. <strong style="color:var(--white)">You get selected.</strong></p>
+    <div class="cert-future-box">
+      <div class="cert-future-label">The clock is ticking for those without it</div>
+      <p class="cert-future-text">This certification is new — and that is exactly why <strong>getting it now is a strategic advantage.</strong> Early graduates are the ones who will tell the next generation: "I had this before it was required." As agencies and families raise their standards, the unprepared AuPair will simply not be considered. <strong>This is not a prediction. This is already beginning.</strong></p>
+    </div>
+    <div class="cert-pills">
+      <div class="c-pill">Issued on Day 5</div>
+      <div class="c-pill">Share with families &amp; agencies</div>
+      <div class="c-pill">All 5 days required</div>
+      <div class="c-pill">Unlocks community access</div>
+    </div>
+  </div>
+</div>
+
+
+  <section class="white" id="pricing">
+    <div class="max-w">
+      <div class="section-label">Programmes &amp; pricing</div>
+      <h2 class="section-title">Everything in one place.<br>Transparently priced.</h2>
+      <p class="section-sub">No hidden fees. No surprises. Start free — go deeper when you are ready.</p>
+      <div class="price-grid">
+      <div class="price-card">
+        <div class="price-icon ic-green">📞</div>
+        <div class="price-title">Free discovery call</div>
+        <div class="price-desc">20 minutes. Your topic. Your questions. No commitment — just an honest start.</div>
+        <div class="price-val free-val">Free <span>/ 20 min · 1:1</span></div>
+        <div class="price-tags"><span class="p-tag">Any topic</span><span class="p-tag">No commitment</span><span class="p-tag">1:1 video</span></div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Full preparation</div>
+        <div class="price-icon ic-green">📋</div>
+        <div class="price-title">5-day preparation course</div>
+        <div class="price-desc">Live group training. Handbook, documents, EuroDoot call. Certificate + community on completion.</div>
+        <div class="price-val">€150 <span>/ group · max 20</span></div>
+        <div class="price-divider"></div>
+        <div class="price-detail">Day 1 — who you are &amp; what you want<br>Day 2 — finding your family<br>Day 3 — life in Germany<br>Day 4 — when things go wrong<br>Day 5 — your future + certification</div>
+        <div class="price-tags" style="margin-top:8px;"><span class="p-tag">Certificate</span><span class="p-tag">Handbook</span><span class="p-tag p-tag-gold">EuroDoot call</span><span class="p-tag">Community</span></div>
+      </div>
+      <div class="price-card">
+        <div class="price-icon ic-green">🎯</div>
+        <div class="price-title">Interview preparation</div>
+        <div class="price-desc">2-day intensive 1:1. Your interview — practiced, refined, and confident.</div>
+        <div class="price-val">€70 <span>/ 2 sessions · 1:1 · 1h each</span></div>
+        <div class="price-tags"><span class="p-tag">1:1 personal</span><span class="p-tag">Mock interview</span><span class="p-tag">Real feedback</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+<section style="background:var(--green);padding:56px 48px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;margin-bottom:12px;">Ready to start?</div>
+    <h2 style="font-size:clamp(22px,4vw,34px);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.25;">Book a call or enrol in a programme</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:28px;line-height:1.7;">Tell us which programme interests you, and we will get back to you within 48 hours to set everything up.</p>
+    <button onclick="openCTA('aupair')" style="background:#fff;color:#1D6F5A;border:none;padding:15px 36px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Enrol or book a call &rarr;</button>
+  </div>
+</section>
+
+</div>
+
+<!-- FAMILIES PAGE -->
+<div id="page-families" class="page">
+  <div class="page-hero">
+  <h1>For Host Families</h1>
+  <p>Receive your AuPair prepared — and prepare yourself. For a placement that truly works.</p>
+</div>
+  <section class="light">
+    <div class="max-w">
+      <div class="section-label">Know yourself first</div>
+      <h2 class="section-title" style="margin-bottom:8px;">What kind of host family are you?</h2>
+      <p class="section-sub">An honest quiz to help us find the right AuPair for your home. Takes about 5 minutes.</p>
+      <div id="fc-collect" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px;max-width:520px;margin:0 auto 32px;">
+  <p style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:14px;">Tell us who you are first</p>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <input id="fc-name" type="text" placeholder="Your full name" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+    <input id="fc-email" type="email" placeholder="Your email address" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+    <input id="fc-phone" type="tel" placeholder="Your phone / WhatsApp number" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+    <p id="fc-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all fields.</p>
+    <p style="font-size:14px;font-weight:600;color:var(--text-muted);">Choose your language / Sprache w&auml;hlen:</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button onclick="startFCQuiz('en')" style="background:var(--white);border:2px solid var(--green);border-radius:var(--radius);padding:12px 20px;font-size:14px;font-weight:600;color:var(--green);cursor:pointer;font-family:Inter,sans-serif;">Take quiz in English</button>
+      <button onclick="startFCQuiz('de')" style="background:var(--white);border:2px solid var(--green);border-radius:var(--radius);padding:12px 20px;font-size:14px;font-weight:600;color:var(--green);cursor:pointer;font-family:Inter,sans-serif;">Quiz auf Deutsch starten</button>
+    </div>
+  </div>
+</div>
+<div id="fc-quiz-box" style="display:none;max-width:680px;margin:0 auto 32px;"></div>
+      <div class="divider" style="margin:32px 0;"></div>
+      
+<section class="light" id="for-families">
+  <div class="max-w">
+    <div class="section-label">For host families</div>
+    <h2 class="section-title">Your AuPair is arriving from India.<br>Are you both ready?</h2>
+    <p class="section-sub">Most families think they are prepared. They have children, they have experience. But receiving someone from a completely different culture — without preparation — is where things go wrong. For everyone, especially the children.</p>
+    <div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:22px;margin-bottom:16px;">
+      <h3 style="font-family:'Inter',-apple-system,sans-serif;font-size:18px;color:var(--text);margin-bottom:12px;">What families never think about — until it's too late</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
+        <div style="background:var(--off-white);border-radius:8px;padding:14px;font-size:14px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--text);display:block;margin-bottom:4px;">Childcare differences</strong>Independent play is not a concept in Indian childcare culture. Children are rarely left alone — even for a moment.</div>
+        <div style="background:var(--off-white);border-radius:8px;padding:14px;font-size:14px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--text);display:block;margin-bottom:4px;">Food &amp; mealtimes</strong>German portion sizes, meal structure, and food habits are completely foreign. Someone needs to explain — before day one.</div>
+        <div style="background:var(--off-white);border-radius:8px;padding:14px;font-size:14px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--text);display:block;margin-bottom:4px;">Household appliances</strong>A dishwasher, a Thermomix, a dryer — familiar to you. Completely unknown to someone arriving from India.</div>
+        <div style="background:var(--off-white);border-radius:8px;padding:14px;font-size:14px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--text);display:block;margin-bottom:4px;">Communication style</strong>German directness is often misread as anger or criticism. Without preparation, misunderstandings escalate into conflict.</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+      <p style="font-size:16px;color:var(--text-muted);margin-bottom:16px;line-height:1.7;">A prepared AuPair and a prepared family means <strong style="color:var(--text);">stable, happy children</strong> — which is what everyone actually wants.</p>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </section>
+  <section class="white">
+    <div class="max-w">
+      <div class="section-label">For host families</div>
+      <h2 class="section-title">Family programmes &amp; pricing</h2>
+      <p class="section-sub">Prepare before your AuPair arrives. Invest once — avoid months of avoidable difficulty.</p>
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="price-icon ic-gold">&#x1F4AC;</div>
+          <div class="price-title">Family consultation</div>
+          <div class="price-desc">Focused 1:1 before your AuPair arrives. Expectations, cultural differences, practical preparation.</div>
+          <div class="price-val" style="color:var(--gold-dark);">&euro;80 <span>/ 1h &middot; 1:1</span></div>
+          <div class="price-tags"><span class="p-tag">Before arrival</span><span class="p-tag">Q&amp;A format</span></div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon ic-gold">&#x1F4DA;</div>
+          <div class="price-title">Family preparation training</div>
+          <div class="price-desc">1-hour structured training &mdash; Indian culture, childcare differences, communication styles.</div>
+          <div class="price-val" style="color:var(--gold-dark);">&euro;110 <span>/ 1h &middot; 1:1</span></div>
+          <div class="price-tags"><span class="p-tag">Cultural bridge</span><span class="p-tag">Children focused</span></div>
+        </div>
+        <div class="price-card">
+          <div class="price-icon ic-gold">&#x1F373;</div>
+          <div class="price-title">Practical AuPair training</div>
+          <div class="price-desc">Custom 1:1 for your specific AuPair &mdash; appliances, food for children, routines, your home's exact needs.</div>
+          <div class="price-val" style="color:var(--gold-dark);">&euro;90 <span>/ 1h &middot; 1:1 &middot; tailored</span></div>
+          <div class="price-tags"><span class="p-tag">Your AuPair</span><span class="p-tag">Your home</span><span class="p-tag p-tag-gold">Fully custom</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<section style="background:var(--green);padding:56px 48px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;margin-bottom:12px;">Ready to prepare?</div>
+    <h2 style="font-size:clamp(22px,4vw,34px);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.25;">Book a family session</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:28px;line-height:1.7;">Tell us which programme interests you and we will be in touch within 48 hours to schedule your session.</p>
+    <button onclick="openCTA('family')" style="background:#fff;color:#1D6F5A;border:none;padding:15px 36px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Book a session &rarr;</button>
+  </div>
+</section>
+
+</div>
+
+<!-- AGENCIES PAGE -->
+<div id="page-agencies" class="page">
+  <div class="page-hero">
+  <h1>For AuPair Agencies</h1>
+  <p>Your placements succeed when your AuPairs are prepared. We handle preparation — you handle placement.</p>
+</div>
+  <section class="light"><div class="max-w">
+<section class="white" id="for-agencies">
+  <div class="max-w">
+    <div class="section-label">For AuPair agencies</div>
+    <h2 class="section-title">Your placements succeed<br>when your AuPairs are prepared.</h2>
+    <p class="section-sub">You handle the placement. We handle the preparation. A prepared AuPair means fewer failed placements, fewer complaints, and families that come back to you.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:24px;">
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:18px;">
+        <div style="font-size:22px;margin-bottom:8px;">📉</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;">Fewer failed placements</div>
+        <div style="font-size:14px;color:var(--text-muted);line-height:1.6;">A prepared AuPair knows what to expect, communicates professionally, and handles difficulties without crisis calls to your agency.</div>
+      </div>
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:18px;">
+        <div style="font-size:22px;margin-bottom:8px;">⭐</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;">Better agency reputation</div>
+        <div style="font-size:14px;color:var(--text-muted);line-height:1.6;">Families who receive a certified, prepared AuPair will remember your agency as the one that sends quality candidates.</div>
+      </div>
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:18px;">
+        <div style="font-size:22px;margin-bottom:8px;">🤝</div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;">Simple partnership</div>
+        <div style="font-size:14px;color:var(--text-muted);line-height:1.6;">Send your Indian AuPairs to us before placement. You continue your process. We handle the preparation. Everyone benefits.</div>
+      </div>
+    </div>
+    <div style="background:var(--green-light);border-radius:var(--radius);padding:18px 20px;">
+      <p style="font-size:15px;color:#27500a;line-height:1.7;"><strong>Academy AuPair is not an agency and does not compete with you.</strong> We are the preparation layer that makes your placements succeed. We welcome partnership conversations.</p>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+      
+    </div>
+  </div>
+</section>
+</div></section>
+<section style="background:var(--green);padding:56px 48px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;margin-bottom:12px;">Selected agencies only</div>
+    <h2 style="font-size:clamp(22px,4vw,34px);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.25;">Enquire about a partnership</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:28px;line-height:1.7;">Tell us about your agency. We review every enquiry and respond within 48 hours.</p>
+    <button onclick="openCTA('agency')" style="background:#fff;color:#1D6F5A;border:none;padding:15px 36px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Contact us about a partnership &rarr;</button>
+  </div>
+</section>
+
+</div>
+
+<!-- TUTORS PAGE -->
+<div id="page-tutors" class="page">
+  <div class="page-hero">
+  <h1>For German Language Tutors</h1>
+  <p>Your students want Germany. Academy AuPair is the natural next step — for AuPair and Ausbildung alike.</p>
+</div>
+  <section class="light"><div class="max-w">
+<section class="light" id="for-tutors">
+  <div class="max-w">
+    <div class="section-label">For German language tutors &amp; Ausbildung</div>
+    <h2 class="section-title">Your student wants Germany.<br>Academy AuPair is the next step.</h2>
+    <p class="section-sub">A student learning German in India is most likely thinking about going to Germany. The AuPair programme is one of the most accessible routes. Recommending Academy AuPair gives them a genuine advantage — and shows them you care about their whole journey, not just their language level.</p>
+    <div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px;">
+      <p style="font-size:15px;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--text);">No referral fee. No contract.</strong> Just a genuine recommendation to a quality preparation programme. Your students arrive in Germany better prepared — which reflects well on you as their tutor.</p>
+    </div>
+    <div class="eurodoot-row">
+      <div class="eurodoot-badge">EuroDoot</div>
+      <div class="eurodoot-text"><strong>Looking for Ausbildung or work vacancies in Germany?</strong> Academy AuPair partners with EuroDoot India — specialists in Ausbildung and German work opportunities. Every Academy AuPair graduate receives a free 20-minute EuroDoot consultation on Day 5.</div>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+      <button onclick="openCTA('tutor')" style="background:#fff;color:#1D6F5A;border:none;padding:15px 36px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Get in touch →</button>
+    </div>
+  </div>
+</section>
+</div></section>
+</div>
+
+
+<!-- AUSBILDUNG PAGE -->
+<div id="page-ausbildung" class="page">
+
+  <div class="page-hero">
+    <h1>You made it to Germany.<br><em style="font-style:italic;color:#9FE1CB;">Now what?</em></h1>
+    <p>The AuPair year was the beginning. Ausbildung is your path to staying, building a career, and making Germany your real home.</p>
+  </div>
+
+  <div style="background:var(--green-dark);padding:14px 16px;text-align:center;">
+    <p style="font-size:14px;color:#9FE1CB;font-weight:500;">Most AuPairs miss Ausbildung simply because nobody told them how and when. <strong style="color:#fff;">We are changing that.</strong></p>
+  </div>
+
+  <section class="white">
+    <div class="max-w">
+      <div class="section-label">What is Ausbildung?</div>
+      <h2 class="section-title">Germany's most powerful pathway &mdash;<br>and most AuPairs miss it</h2>
+      <p class="section-sub" style="margin-bottom:32px;">Ausbildung is Germany's vocational training system &mdash; a government-recognised, paid programme where you train on the job in a company while attending vocational school. At the end, you hold a German qualification that opens doors for life.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:32px;">
+        <div class="why-card" style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--green);margin-bottom:4px;">&euro;900&ndash;1,150</div><div style="font-size:13px;color:var(--text-muted);">Monthly training pay</div></div>
+        <div class="why-card" style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--green);margin-bottom:4px;">2&ndash;3 years</div><div style="font-size:13px;color:var(--text-muted);">Duration + qualification</div></div>
+        <div class="why-card" style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--green);margin-bottom:4px;">Legal visa</div><div style="font-size:13px;color:var(--text-muted);">Path to stay long-term</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <div class="why-card"><div class="why-title">You already have an advantage</div><div class="why-text">You are already in Germany. You understand the culture. You speak some German. You have a German reference. Employers see this &mdash; and it matters more than you think.</div></div>
+        <div class="why-card"><div class="why-title">Timing is everything</div><div class="why-text">Most Ausbildung programmes start in September or February. If you are in your AuPair year now, the window to apply is open. Miss it and you wait another year &mdash; or go home.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="light">
+    <div class="max-w">
+      <div class="section-label">Our partnership</div>
+      <h2 class="section-title">Academy AuPair &times; EuroDoot</h2>
+      <p class="section-sub" style="margin-bottom:28px;">EuroDoot is a specialist Germany&ndash;India placement organisation based in NRW &mdash; North Rhine-Westphalia, Germany's largest Indian community hub. They focus exclusively on Ausbildung and employment placements with verified German employers. Together, we guide you from your AuPair year directly into your next chapter.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px;">
+        <div class="why-card"><div class="why-title">Based in NRW, Germany</div><div class="why-text">EuroDoot's Germany team is on the ground in NRW &mdash; where 50,000+ Indians already live. They know the employers, the authorities, and the community.</div></div>
+        <div class="why-card"><div class="why-title">Verified German employers</div><div class="why-text">Real Ausbildung contracts in logistics, warehouse, and transport &mdash; all officially listed shortage occupations with fast-track visa pathways.</div></div>
+        <div class="why-card"><div class="why-title">India &amp; Germany teams</div><div class="why-text">A dedicated India team in Delhi and a Germany team in NRW &mdash; so you are supported on both sides at every stage.</div></div>
+        <div class="why-card"><div class="why-title">Immigration support</div><div class="why-text">EuroDoot collaborates with an immigration lawyer for complex cases &mdash; giving you a clear, legal, protected process from day one.</div></div>
+      </div>
+      <div style="background:var(--green);border-radius:var(--radius);padding:28px 32px;text-align:center;">
+        <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;">Exclusive for Academy AuPair candidates</div>
+        <div style="font-size:26px;font-weight:700;color:#fff;margin-bottom:8px;">20-min free consultation + 15% off</div>
+        <p style="font-size:15px;color:rgba(255,255,255,0.78);line-height:1.7;max-width:520px;margin:0 auto;">When you connect through Academy AuPair, you receive a complimentary 20-minute consultation with EuroDoot's Germany executives &mdash; and a 15% discount on their programme fee. This offer is not available directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="white">
+    <div class="max-w">
+      <div class="section-label">How it works</div>
+      <h2 class="section-title">From AuPair year to Ausbildung &mdash; step by step</h2>
+      <div class="steps-grid" style="margin-top:16px;">
+        <div class="step-card"><div class="step-num">1</div><div class="step-title">Connect with us</div><div class="step-desc">Fill in the form below. Tell us where you are, when your AuPair year ends, and what you are looking for. We respond within 48 hours.</div></div>
+        <div class="step-card"><div class="step-num">2</div><div class="step-title">Free EuroDoot consultation</div><div class="step-desc">We connect you with EuroDoot's Germany team. Your complimentary 20-minute consultation &mdash; honest guidance, no obligations.</div></div>
+        <div class="step-card"><div class="step-num">3</div><div class="step-title">Enrol with 15% discount</div><div class="step-desc">If EuroDoot is the right fit, you enrol with your exclusive Academy AuPair discount &mdash; and your Ausbildung journey begins.</div></div>
+        <div class="step-card"><div class="step-num">4</div><div class="step-title">Land your Ausbildung place</div><div class="step-desc">EuroDoot matches you with a verified NRW employer, handles documentation, and supports your visa extension. Your German career starts.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="light">
+    <div class="max-w">
+      <div class="section-label">Get connected</div>
+      <h2 class="section-title">Ready to talk about your next chapter?</h2>
+      <p class="section-sub" style="margin-bottom:28px;">Fill in this short form and we will connect you with EuroDoot for your free 20-minute consultation &mdash; and confirm your exclusive 15% discount.</p>
+      <div id="ed-form-wrap" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;max-width:540px;">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <input id="ed-name"  type="text"  placeholder="Your full name"         style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+          <input id="ed-email" type="email" placeholder="Your email address"     style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+          <input id="ed-phone" type="tel"   placeholder="Your WhatsApp number"   style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
+          <select id="ed-arrival" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;background:#fff;">
+            <option value="" disabled selected>When did you arrive in Germany?</option>
+            <option>Less than 3 months ago</option>
+            <option>3-6 months ago</option>
+            <option>6-12 months ago</option>
+            <option>More than a year ago</option>
+          </select>
+          <select id="ed-state" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;background:#fff;">
+            <option value="" disabled selected>Which state (Bundesland) do you live in?</option>
+            <option>North Rhine-Westphalia (NRW)</option>
+            <option>Bavaria</option>
+            <option>Baden-Wurttemberg</option>
+            <option>Berlin</option>
+            <option>Hamburg</option>
+            <option>Hesse</option>
+            <option>Lower Saxony</option>
+            <option>Rhineland-Palatinate</option>
+            <option>Saxony</option>
+            <option>Other</option>
+          </select>
+          <textarea id="ed-msg" rows="3" placeholder="Any specific questions or situation you would like to share?" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>
+          <button onclick="submitEurodoot()" style="background:var(--green);color:#fff;border:none;padding:14px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Connect me with EuroDoot &#x2192;</button>
+          <p id="ed-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all fields.</p>
+          <p id="ed-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours. Your free consultation and discount are confirmed.</p>
+          <p style="font-size:12px;color:#999;text-align:center;line-height:1.5;margin:0;">eurodoot.in &middot; eurodoot.de &middot; In partnership with Academy AuPair</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Academy <span>AuPair</span></div>
+      <div class="footer-sub">Your guide from India to Germany</div>
+      <div style="margin-top:10px;display:flex;gap:5px;">
+        <div style="width:10px;height:10px;border-radius:50%;background:#222;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:#CC0000;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:#b8933a;"></div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="showPage('aupairs')">For AuPairs</a>
+      <a href="javascript:void(0)" onclick="showPage('agencies')">For agencies</a>
+      <a href="javascript:void(0)" onclick="showPage('families')">For families</a>
+      <a href="javascript:void(0)" onclick="showPage('tutors')">For tutors</a>
+      <a href="javascript:void(0)" onclick="showPage('ausbildung')">Ausbildung</a>
+    <a href="javascript:void(0)" onclick="goToAbout()">About</a>
+      <a href="javascript:void(0)" onclick="goToContact()">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Academy AuPair · academyaupair.com · All rights reserved</div>
+    <div class="footer-copy">Materials protected · Personal use only</div>
+  </div>
+</footer>
+
+<script>
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const navOffset = 100;
+      const y = target.getBoundingClientRect().top + window.pageYOffset - navOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
+});
+
+// Animate numbers in FOMO strip on scroll
+// scroll animations handled by main script
+</script>
+
+
+<script>
+
+// ── PAGE ROUTER ─────────────────────────────────────────────────────────
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  var el = document.getElementById('page-' + name);
+  if (el) el.classList.add('active');
+  window.scrollTo(0, 0);
+  var menu = document.getElementById('mobileMenu');
+  if (menu) menu.classList.remove('open');
+}
+
+function goToContact() {
+  showPage('home');
+  setTimeout(function() {
+    var c = document.getElementById('contact');
+    if (c) c.scrollIntoView({behavior:'smooth'});
+  }, 150);
+}
+
+function goToAbout() {
+  showPage('home');
+  setTimeout(function() {
+    var a = document.getElementById('about');
+    if (a) a.scrollIntoView({behavior:'smooth'});
+  }, 150);
+}
+
+// ── MOBILE MENU ──────────────────────────────────────────────────────────
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  var hamburger = document.querySelector('.hamburger');
+  if (menu && hamburger && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+// ── SCROLL ANIMATIONS ────────────────────────────────────────────────────
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {threshold: 0.1});
+
+document.querySelectorAll('.why-card, .step-card, .aud-card').forEach(function(el) {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+// ── EMAIL HELPER ─────────────────────────────────────────────────────────
+function sendEmail(name, email, phone, quizType, answers, questions, resultType, resultTitle) {
+  var lines = answers.map(function(ans, qi) {
+    if (ans === null) return '';
+    return 'Q' + (qi+1) + ': ' + questions[qi].text + '\nA: ' + questions[qi].opts[ans].text;
+  }).filter(Boolean).join('\n\n');
+  var msg = quizType + ' Quiz\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone +
+    '\n\nResult: ' + resultType + '\nTitle: ' + resultTitle + '\n\n--- Answers ---\n\n' + lines;
+  emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: msg})
+    .then(function() { console.log('EmailJS OK'); })
+    .catch(function(e) { console.error('EmailJS error:', e); });
+}
+
+// ── QUIZ HTML BUILDER ────────────────────────────────────────────────────
+function buildQuizHTML(containerId) {
+  var wrap = document.getElementById(containerId);
+  wrap.innerHTML =
+    '<div style="background:#fff;border-radius:16px;border:1px solid #e8e8e4;padding:2rem;">' +
+      '<div style="margin-bottom:1.75rem;">' +
+        '<div style="display:flex;justify-content:space-between;font-size:12px;color:#999;margin-bottom:8px;">' +
+          '<span id="q-num">Question 1</span><span id="q-pct">0%</span>' +
+        '</div>' +
+        '<div style="height:5px;background:#eee;border-radius:3px;">' +
+          '<div id="prog" style="height:5px;background:#1D9E75;border-radius:3px;width:0%;transition:width 0.4s ease;"></div>' +
+        '</div>' +
+      '</div>' +
+      '<div id="q-text" style="font-size:18px;font-weight:600;color:#1a1a1a;line-height:1.5;margin-bottom:1.5rem;"></div>' +
+      '<div id="opts" style="display:flex;flex-direction:column;gap:10px;margin-bottom:1.75rem;"></div>' +
+      '<div style="display:flex;justify-content:space-between;">' +
+        '<button id="btn-back" style="background:#fff;border:1.5px solid #ddd;border-radius:8px;padding:11px 24px;font-size:14px;color:#444;cursor:pointer;font-family:Inter,sans-serif;" disabled>Back</button>' +
+        '<button id="btn-next" style="background:#1D9E75;border:none;border-radius:8px;padding:11px 24px;font-size:14px;font-weight:600;color:#fff;cursor:pointer;font-family:Inter,sans-serif;" disabled>Next</button>' +
+      '</div>' +
+      '<div id="result-area" style="display:none;text-align:center;margin-top:1.5rem;"></div>' +
+    '</div>';
+}
+
+function renderStep(qs, current, answers, backLabel, nextLabel, resultLabel, questionLabel, ofLabel) {
+  var q = qs[current];
+  var pct = Math.round((current / qs.length) * 100);
+  document.getElementById('q-num').textContent = questionLabel + ' ' + (current+1) + ' ' + ofLabel + ' ' + qs.length;
+  document.getElementById('q-pct').textContent = pct + '%';
+  document.getElementById('prog').style.width = pct + '%';
+  document.getElementById('q-text').textContent = q.text;
+  var optsEl = document.getElementById('opts');
+  optsEl.innerHTML = '';
+  q.opts.forEach(function(o, i) {
+    var btn = document.createElement('button');
+    btn.style.cssText = 'background:#fff;border:1.5px solid #e4e4e0;border-radius:12px;padding:14px 18px;cursor:pointer;font-size:15px;color:#1a1a1a;text-align:left;line-height:1.5;font-family:Inter,sans-serif;width:100%;transition:all 0.15s;';
+    btn.textContent = o.text;
+    if (answers[current] === i) {
+      btn.style.borderColor = '#1D9E75';
+      btn.style.background = '#E6F4F1';
+      btn.style.color = '#085041';
+      btn.style.fontWeight = '500';
+    }
+    btn.addEventListener('click', function() {
+      answers[current] = i;
+      optsEl.querySelectorAll('button').forEach(function(b, idx) {
+        if (idx === i) {
+          b.style.borderColor = '#1D9E75'; b.style.background = '#E6F4F1';
+          b.style.color = '#085041'; b.style.fontWeight = '500';
+        } else {
+          b.style.borderColor = '#e4e4e0'; b.style.background = '#fff';
+          b.style.color = '#1a1a1a'; b.style.fontWeight = '400';
+        }
+      });
+      document.getElementById('btn-next').disabled = false;
+    });
+    optsEl.appendChild(btn);
+  });
+  var backBtn = document.getElementById('btn-back');
+  var nextBtn = document.getElementById('btn-next');
+  backBtn.disabled = current === 0;
+  backBtn.textContent = backLabel;
+  nextBtn.disabled = answers[current] === null;
+  nextBtn.textContent = current === qs.length - 1 ? resultLabel : nextLabel;
+}
+
+function showResultCard(answers, qs, resultType, resultTitle, resultDesc, barLabel1, barLabel2, profileTitle, ctaLabel, progPct, needsPct) {
+  document.getElementById('prog').style.width = '100%';
+  var qArea = document.getElementById('q-area');
+  if (qArea) qArea.style.display = 'none';
+  var ra = document.getElementById('result-area');
+  ra.style.display = 'block';
+
+  var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="#1D6F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>';
+
+  var ctaBtn = document.createElement('button');
+  ctaBtn.style.cssText = 'display:inline-block;background:#1D9E75;color:#fff;border:none;border-radius:10px;padding:14px 32px;font-size:15px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;margin-top:0.5rem;';
+  ctaBtn.textContent = ctaLabel;
+  ctaBtn.addEventListener('click', function() { goToContact(); });
+
+  ra.innerHTML =
+    '<div style="width:64px;height:64px;border-radius:50%;background:#E6F4F1;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">' + icon + '</div>' +
+    '<div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:8px;">' + resultType + '</div>' +
+    '<div style="font-size:20px;font-weight:700;color:#1a1a1a;margin-bottom:1rem;line-height:1.3;">' + resultTitle + '</div>' +
+    '<hr style="border:none;border-top:1px solid #eee;margin:1rem 0;">' +
+    '<div style="font-size:15px;color:#555;line-height:1.75;margin-bottom:1.5rem;text-align:left;">' + resultDesc + '</div>' +
+    '<div style="background:#f7f7f5;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;text-align:left;">' +
+      '<div style="font-size:12px;color:#999;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;">' + profileTitle + '</div>' +
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">' +
+        '<span style="font-size:13px;min-width:120px;color:#555;">' + barLabel1 + '</span>' +
+        '<div style="flex:1;height:6px;background:#e4e4e0;border-radius:3px;"><div id="res-bar1" style="height:6px;border-radius:3px;background:#1D9E75;width:0%;transition:width 1s ease;"></div></div>' +
+        '<span style="font-size:12px;color:#999;min-width:32px;">' + progPct + '%</span>' +
+      '</div>' +
+      '<div style="display:flex;align-items:center;gap:12px;">' +
+        '<span style="font-size:13px;min-width:120px;color:#555;">' + barLabel2 + '</span>' +
+        '<div style="flex:1;height:6px;background:#e4e4e0;border-radius:3px;"><div id="res-bar2" style="height:6px;border-radius:3px;background:#BA7517;width:0%;transition:width 1s ease;"></div></div>' +
+        '<span style="font-size:12px;color:#999;min-width:32px;">' + needsPct + '%</span>' +
+      '</div>' +
+    '</div>';
+  ra.appendChild(ctaBtn);
+
+  setTimeout(function() {
+    var b1 = document.getElementById('res-bar1');
+    var b2 = document.getElementById('res-bar2');
+    if (b1) b1.style.width = progPct + '%';
+    if (b2) b2.style.width = needsPct + '%';
+  }, 100);
+}
+
+// ── AUPAIR QUIZ ──────────────────────────────────────────────────────────
+var apQuestions = [
+  {
+    text: "When you imagine your daily life as an AuPair, what comes to mind first?",
+    opts: [
+      { text: "Playing with the children, helping them grow and learn", score: 0 },
+      { text: "Exploring the city, meeting new people, building my future", score: 2 },
+      { text: "A mix of family life and personal exploration", score: 1 },
+      { text: "Gaining work experience and improving my German", score: 2 }
+    ]
+  },
+  {
+    text: "A child in your care is having a very difficult day — crying, refusing to eat, not listening. How do you feel?",
+    opts: [
+      { text: "I feel calm and patient — this is part of caring for children", score: 0 },
+      { text: "A little overwhelmed but I would manage", score: 1 },
+      { text: "Stressed — I am not sure how to handle this", score: 2 },
+      { text: "I would follow the parents' instructions and get through it", score: 1 }
+    ]
+  },
+  {
+    text: "How much experience do you have with children?",
+    opts: [
+      { text: "A lot — I have cared for younger siblings, relatives, or worked with children", score: 0 },
+      { text: "Some — babysitting or occasional time with younger kids", score: 1 },
+      { text: "Not much — but I am willing to learn", score: 2 },
+      { text: "Very little — children are not really my area", score: 3 }
+    ]
+  },
+  {
+    text: "The host family has a different way of doing things than you are used to — different food, different routines, different rules. How do you react?",
+    opts: [
+      { text: "I am genuinely curious and adapt easily", score: 0 },
+      { text: "I need some time but eventually adjust", score: 1 },
+      { text: "I find it difficult but try to respect their ways", score: 2 },
+      { text: "I would try to do things my own way where possible", score: 3 }
+    ]
+  },
+  {
+    text: "Why did you choose the AuPair program specifically?",
+    opts: [
+      { text: "I love children and wanted a real family experience abroad", score: 0 },
+      { text: "It is a way to get to Germany and start my life there", score: 3 },
+      { text: "It combines cultural experience with helping a family", score: 0 },
+      { text: "It is the most accessible visa path to Europe for me", score: 3 }
+    ]
+  },
+  {
+    text: "A 4-year-old refuses to sleep and cries for 45 minutes. You are alone with them. What do you do?",
+    opts: [
+      { text: "Stay calm, try gentle routines, singing, or reading until they settle", score: 0 },
+      { text: "Call the parents for guidance and follow their advice", score: 1 },
+      { text: "Try my best but feel quite anxious about it", score: 2 },
+      { text: "I honestly do not know — I have never faced this", score: 2 }
+    ]
+  },
+  {
+    text: "What are your plans after the AuPair year?",
+    opts: [
+      { text: "Return home with a beautiful experience and memories", score: 0 },
+      { text: "Stay in Germany — through Ausbildung or another path", score: 3 },
+      { text: "I am not sure yet, I want to see how the year goes", score: 1 },
+      { text: "Continue in Germany or Europe in any way I can", score: 3 }
+    ]
+  },
+  {
+    text: "How would you describe your relationship with children in your life?",
+    opts: [
+      { text: "Children love me and I naturally enjoy being around them", score: 0 },
+      { text: "I get along fine with children when needed", score: 1 },
+      { text: "I do not have much connection with children in my life", score: 2 },
+      { text: "I prefer adult company honestly", score: 3 }
+    ]
+  },
+  {
+    text: "The host family asks you to skip your German class one week to help with an unexpected situation. How do you respond?",
+    opts: [
+      { text: "Of course — the family comes first, I can reschedule", score: 0 },
+      { text: "I would help but let them know my class matters to me", score: 1 },
+      { text: "I would feel frustrated but agree", score: 2 },
+      { text: "I would try to negotiate — my class is very important to my goals", score: 3 }
+    ]
+  },
+  {
+    text: "What does 'being part of a family' mean to you in this context?",
+    opts: [
+      { text: "Genuinely sharing daily life, meals, routines — feeling like family", score: 0 },
+      { text: "Being respectful and helpful while keeping some independence", score: 1 },
+      { text: "Doing my duties well and having my own space", score: 2 },
+      { text: "Fulfilling the role professionally — it is a job arrangement", score: 3 }
+    ]
+  },
+  {
+    text: "How important is it to you to learn the German language during your AuPair year?",
+    opts: [
+      { text: "Important, but secondary to the family experience", score: 0 },
+      { text: "Very important — it is one of the main reasons I am going", score: 2 },
+      { text: "Critical — my future plans in Germany depend on it", score: 3 },
+      { text: "Moderately important alongside everything else", score: 1 }
+    ]
+  },
+  {
+    text: "If the AuPair program did not exist, would you still want to go to Germany?",
+    opts: [
+      { text: "Not necessarily — the family experience is the point for me", score: 0 },
+      { text: "Yes — I would find another way", score: 3 },
+      { text: "Probably yes — Germany is where I want to build my future", score: 3 },
+      { text: "Maybe — but the AuPair experience itself really appeals to me", score: 1 }
+    ]
+  }
+];
+
+var apCurrent = 0, apAnswers = [], apN = '', apE = '', apP = '';
+
+function startAPQuiz() {
+  var n = document.getElementById('ap-name').value.trim();
+  var e = document.getElementById('ap-email').value.trim();
+  var p = document.getElementById('ap-phone').value.trim();
+  if (!n || !e || !p) { document.getElementById('ap-err').style.display = 'block'; return; }
+  apN = n; apE = e; apP = p;
+  apCurrent = 0;
+  apAnswers = new Array(apQuestions.length).fill(null);
+  document.getElementById('ap-collect').style.display = 'none';
+  var box = document.getElementById('ap-quiz-box');
+  box.style.display = 'block';
+  buildQuizHTML('ap-quiz-box');
+  document.getElementById('btn-back').addEventListener('click', function() {
+    if (apCurrent > 0) { apCurrent--; apRender(); }
+  });
+  document.getElementById('btn-next').addEventListener('click', function() {
+    if (apAnswers[apCurrent] === null) return;
+    if (apCurrent === apQuestions.length - 1) { apShowResult(); return; }
+    apCurrent++; apRender();
+  });
+  apRender();
+}
+
+function apRender() {
+  renderStep(apQuestions, apCurrent, apAnswers, 'Back', 'Next', 'See my result', 'Question', 'of');
+}
+
+function apShowResult() {
+  var total = apAnswers.reduce(function(s, a, qi) { return s + (a !== null ? apQuestions[qi].opts[a].score : 0); }, 0);
+  var pct = Math.round((total / (apQuestions.length * 3)) * 100);
+  var heartPct = 100 - pct;
+  var type, title, desc;
+  if (pct <= 30) {
+    type = 'The heart-first AuPair';
+    title = 'You are here for the children — and it shows';
+    desc = 'Your answers reflect a genuine love for children and a real openness to family life. You are the kind of AuPair host families dream of. Academy AuPair would love to work with you and help you find the right family.';
+  } else if (pct <= 60) {
+    type = 'The balanced AuPair';
+    title = 'You bring both heart and ambition';
+    desc = 'You genuinely care about the experience and the family — and you also have personal goals for your future. With the right preparation, you can have both a meaningful family experience and a strong foundation for your future in Germany.';
+  } else {
+    type = 'The future-builder AuPair';
+    title = 'Your goal is Germany — and that is honest';
+    desc = 'Your ambition is understandable — but the AuPair programme places you at the centre of a family with children who depend on you. Before moving forward, we would love to have an honest conversation with you. Ausbildung may also be a more direct route to your goals.';
+  }
+  showResultCard(apAnswers, apQuestions, type, title, desc, 'Child-focused', 'Future-focused', 'Your motivation profile', 'Get in touch with Academy AuPair', heartPct, pct);
+  sendEmail(apN, apE, apP, 'AuPair', apAnswers, apQuestions, type, title);
+}
+
+// ── FAMILY QUIZ ──────────────────────────────────────────────────────────
+var fcENQuestions = [
+  {
+    text: "Why do you want to have an AuPair in your home?",
+    opts: [
+      { text: "We want to give a young person a real family experience and a chance to grow", score: 0 },
+      { text: "We need reliable help with the children so both parents can work", score: 2 },
+      { text: "We love cultural exchange and want our children to grow up with that experience", score: 0 },
+      { text: "It is more affordable than a nanny or daycare", score: 3 }
+    ]
+  },
+  {
+    text: "How do you see the AuPair's place in your household?",
+    opts: [
+      { text: "As a real member of the family — included in meals, outings, and family life", score: 0 },
+      { text: "As a trusted helper who has their own space and privacy", score: 1 },
+      { text: "As a professional helping us manage the household", score: 2 },
+      { text: "As an extra pair of hands to cover what we cannot manage ourselves", score: 3 }
+    ]
+  },
+  {
+    text: "Your AuPair has a German class every Tuesday evening. How do you feel about this?",
+    opts: [
+      { text: "We actively support it — learning German is important for their future", score: 0 },
+      { text: "That is fine, we will plan around it", score: 1 },
+      { text: "It depends on whether our schedule allows it that week", score: 2 },
+      { text: "It is inconvenient — we need flexibility in the evenings", score: 3 }
+    ]
+  },
+  {
+    text: "The AuPair programme allows a maximum of 30 working hours per week. How do you approach this?",
+    opts: [
+      { text: "We respect this fully — we would never ask for more", score: 0 },
+      { text: "We try to respect it but some weeks things come up", score: 1 },
+      { text: "We think it depends on the situation", score: 2 },
+      { text: "Honestly, there will be weeks where more is needed", score: 3 }
+    ]
+  },
+  {
+    text: "Your AuPair seems homesick and is having a difficult week. What do you do?",
+    opts: [
+      { text: "We check in with them, include them more, and give them space to talk", score: 0 },
+      { text: "We give them some time off and let them know we are there", score: 0 },
+      { text: "We hope they manage — it is part of living abroad", score: 2 },
+      { text: "As long as they are doing their job, it is not really our concern", score: 3 }
+    ]
+  },
+  {
+    text: "Have you talked with your children about what it means to have an AuPair?",
+    opts: [
+      { text: "Yes — we prepared them and they are genuinely excited", score: 0 },
+      { text: "We explained the basics and they seem fine with it", score: 1 },
+      { text: "Not really — children adapt", score: 2 },
+      { text: "No — it is our decision, not theirs", score: 3 }
+    ]
+  },
+  {
+    text: "What does a typical weekend look like for your AuPair in your home?",
+    opts: [
+      { text: "They have their free time — we sometimes invite them to join us but never expect it", score: 0 },
+      { text: "They are free but occasionally help with something small", score: 1 },
+      { text: "We expect some availability depending on our plans", score: 2 },
+      { text: "Weekends are often when we need extra help", score: 3 }
+    ]
+  },
+  {
+    text: "How would you handle a disagreement or conflict with your AuPair?",
+    opts: [
+      { text: "We would talk openly and work through it together respectfully", score: 0 },
+      { text: "We would address it calmly and find a solution", score: 1 },
+      { text: "We would make clear what our expectations are", score: 2 },
+      { text: "They are in our home — our rules come first", score: 3 }
+    ]
+  },
+  {
+    text: "Your AuPair wants to explore Ausbildung opportunities after their year with you. How do you feel?",
+    opts: [
+      { text: "We would actively support and encourage them — it is their future", score: 0 },
+      { text: "We are happy for them and would help if we can", score: 1 },
+      { text: "That is their business — we focus on the year itself", score: 2 },
+      { text: "We hope they renew with us — we need continuity", score: 3 }
+    ]
+  },
+  {
+    text: "How did you decide on the pocket money amount for your AuPair?",
+    opts: [
+      { text: "We follow the official guidelines and add a little extra when we can", score: 0 },
+      { text: "We pay exactly what the programme requires", score: 1 },
+      { text: "We negotiated based on our budget", score: 2 },
+      { text: "We pay the minimum — we already provide room and board", score: 3 }
+    ]
+  },
+  {
+    text: "What would you do if the match is not working after two months?",
+    opts: [
+      { text: "Have an honest conversation, try to understand both sides, and look for a solution", score: 0 },
+      { text: "Contact the agency or Academy AuPair and handle it properly", score: 1 },
+      { text: "Give them a clear list of what needs to change", score: 2 },
+      { text: "End the arrangement — we cannot afford for it not to work", score: 3 }
+    ]
+  },
+  {
+    text: "If you are honest with yourself — what is the main thing you are hoping the AuPair will bring to your family?",
+    opts: [
+      { text: "A real connection, cultural richness, and someone our children will remember", score: 0 },
+      { text: "Reliable childcare and a positive presence in our home", score: 1 },
+      { text: "Practical help that allows our family to function better", score: 2 },
+      { text: "A cost-effective solution to our childcare needs", score: 3 }
+    ]
+  }
+];
+var fcENResults   = [
+  {
+    type: "The programme-first host family",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    title: "Your home is ready — and so is your heart",
+    desc: "Your answers show that you understand what the AuPair programme is really about. You see the AuPair as a person, not a position. You are prepared to give them a real place in your family, respect their time, support their growth, and create an experience that both they and your children will carry for life. This is exactly the kind of family Academy AuPair matches with our prepared AuPairs. We would love to work with you.",
+    barLabel1: "Programme-focused", barLabel2: "Needs-focused",
+    cta: "Reach out at academyaupair.com", restart: "Take the quiz again",
+    profileTitle: "Your host family profile", complete: "complete"
+  },
+  {
+    type: "The practical host family",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    title: "You are honest — and that is a good start",
+    desc: "Your answers show a mix of genuine care and practical need. You want reliable help, and that is completely understandable — but the AuPair programme comes with responsibilities toward the young person in your home that go beyond the practical. The good news is that with the right preparation and honest expectations on both sides, this can work beautifully. Academy AuPair would like to have a conversation with you before matching to make sure both you and your AuPair start on the right foundation.",
+    barLabel1: "Programme-focused", barLabel2: "Needs-focused",
+    cta: "Reach out at academyaupair.com", restart: "Take the quiz again",
+    profileTitle: "Your host family profile", complete: "complete"
+  },
+  {
+    type: "The needs-first host family",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+    title: "Before we match you — let us talk",
+    desc: "Your answers suggest that your primary need is practical support, and cost and convenience are central to your thinking. We understand that childcare is genuinely difficult and expensive. But the AuPair programme places a young person — often far from home for the first time — at the centre of your family. They have legal rights, emotional needs, and a life beyond your household. A placement that does not respect this tends to fail — and when it does, children are always affected too. We would welcome an honest conversation with you about what you are looking for and whether the AuPair programme — or a different solution — is the right fit.",
+    barLabel1: "Programme-focused", barLabel2: "Needs-focused",
+    cta: "Reach out at academyaupair.com", restart: "Take the quiz again",
+    profileTitle: "Your host family profile", complete: "complete"
+  }
+];
+var fcDEQuestions = [
+  {
+    text: "Warum möchten Sie ein AuPair in Ihrem Zuhause aufnehmen?",
+    opts: [
+      { text: "Wir möchten einem jungen Menschen eine echte Familienerfahrung und eine Chance zum Wachsen geben", score: 0 },
+      { text: "Wir brauchen zuverlässige Unterstützung bei den Kindern, damit beide Elternteile arbeiten können", score: 2 },
+      { text: "Wir lieben kulturellen Austausch und möchten, dass unsere Kinder damit aufwachsen", score: 0 },
+      { text: "Es ist günstiger als eine Nanny oder eine Kita", score: 3 }
+    ]
+  },
+  {
+    text: "Wie sehen Sie die Rolle des AuPairs in Ihrem Haushalt?",
+    opts: [
+      { text: "Als echtes Familienmitglied — bei Mahlzeiten, Ausflügen und dem Familienleben dabei", score: 0 },
+      { text: "Als vertrauenswürdige Hilfe mit eigenem Raum und Privatsphäre", score: 1 },
+      { text: "Als professionelle Unterstützung bei der Haushaltsführung", score: 2 },
+      { text: "Als zusätzliche Unterstützung für das, was wir selbst nicht schaffen", score: 3 }
+    ]
+  },
+  {
+    text: "Ihr AuPair hat jeden Dienstagabend einen Deutschkurs. Wie stehen Sie dazu?",
+    opts: [
+      { text: "Wir unterstützen das aktiv — Deutsch lernen ist wichtig für ihre Zukunft", score: 0 },
+      { text: "Das ist in Ordnung, wir planen entsprechend", score: 1 },
+      { text: "Es kommt darauf an, ob unser Zeitplan es in der Woche erlaubt", score: 2 },
+      { text: "Das ist ungünstig — wir brauchen abends Flexibilität", score: 3 }
+    ]
+  },
+  {
+    text: "Das AuPair-Programm erlaubt maximal 30 Arbeitsstunden pro Woche. Wie gehen Sie damit um?",
+    opts: [
+      { text: "Wir halten das vollständig ein — wir würden nie mehr verlangen", score: 0 },
+      { text: "Wir versuchen es einzuhalten, aber manchmal ergeben sich Situationen", score: 1 },
+      { text: "Wir denken, es kommt auf die Situation an", score: 2 },
+      { text: "Ehrlich gesagt wird es Wochen geben, in denen mehr nötig ist", score: 3 }
+    ]
+  },
+  {
+    text: "Ihr AuPair scheint Heimweh zu haben und hat eine schwierige Woche. Was tun Sie?",
+    opts: [
+      { text: "Wir erkundigen uns, beziehen sie mehr ein und geben ihnen Raum zum Reden", score: 0 },
+      { text: "Wir geben ihnen etwas Auszeit und signalisieren, dass wir da sind", score: 0 },
+      { text: "Wir hoffen, dass sie damit umgehen — das gehört zum Leben im Ausland", score: 2 },
+      { text: "Solange sie ihre Aufgaben erledigen, ist es nicht wirklich unser Problem", score: 3 }
+    ]
+  },
+  {
+    text: "Haben Sie mit Ihren Kindern darüber gesprochen, was es bedeutet, ein AuPair zu haben?",
+    opts: [
+      { text: "Ja — wir haben sie vorbereitet und sie freuen sich wirklich darauf", score: 0 },
+      { text: "Wir haben die Grundlagen erklärt und sie scheinen damit einverstanden zu sein", score: 1 },
+      { text: "Nicht wirklich — Kinder passen sich an", score: 2 },
+      { text: "Nein — das ist unsere Entscheidung, nicht ihre", score: 3 }
+    ]
+  },
+  {
+    text: "Wie sieht ein typisches Wochenende für Ihr AuPair bei Ihnen aus?",
+    opts: [
+      { text: "Sie haben ihre Freizeit — manchmal laden wir sie ein, aber wir erwarten nichts", score: 0 },
+      { text: "Sie sind frei, helfen aber gelegentlich bei etwas Kleinem", score: 1 },
+      { text: "Wir erwarten eine gewisse Verfügbarkeit, je nach unseren Plänen", score: 2 },
+      { text: "Am Wochenende brauchen wir oft besonders viel Unterstützung", score: 3 }
+    ]
+  },
+  {
+    text: "Wie würden Sie mit einer Meinungsverschiedenheit oder einem Konflikt mit Ihrem AuPair umgehen?",
+    opts: [
+      { text: "Wir würden offen sprechen und es gemeinsam respektvoll lösen", score: 0 },
+      { text: "Wir würden es ruhig ansprechen und eine Lösung finden", score: 1 },
+      { text: "Wir würden deutlich machen, was unsere Erwartungen sind", score: 2 },
+      { text: "Sie sind in unserem Zuhause — unsere Regeln gelten", score: 3 }
+    ]
+  },
+  {
+    text: "Ihr AuPair möchte nach dem Jahr bei Ihnen Ausbildungsmöglichkeiten erkunden. Wie fühlen Sie sich dabei?",
+    opts: [
+      { text: "Wir würden sie aktiv unterstützen und ermutigen — es ist ihre Zukunft", score: 0 },
+      { text: "Wir freuen uns für sie und helfen, wenn wir können", score: 1 },
+      { text: "Das ist ihre Sache — wir konzentrieren uns auf das laufende Jahr", score: 2 },
+      { text: "Wir hoffen, dass sie bei uns verlängern — wir brauchen Kontinuität", score: 3 }
+    ]
+  },
+  {
+    text: "Wie haben Sie das Taschengeld für Ihr AuPair festgelegt?",
+    opts: [
+      { text: "Wir folgen den offiziellen Richtlinien und geben wenn möglich etwas mehr", score: 0 },
+      { text: "Wir zahlen genau das, was das Programm vorschreibt", score: 1 },
+      { text: "Wir haben es basierend auf unserem Budget ausgehandelt", score: 2 },
+      { text: "Wir zahlen das Minimum — Unterkunft und Verpflegung stellen wir ja bereits", score: 3 }
+    ]
+  },
+  {
+    text: "Was würden Sie tun, wenn die Zusammenarbeit nach zwei Monaten nicht funktioniert?",
+    opts: [
+      { text: "Ein offenes Gespräch führen, beide Seiten verstehen und eine Lösung suchen", score: 0 },
+      { text: "Die Agentur oder Academy AuPair kontaktieren und es ordentlich regeln", score: 1 },
+      { text: "Klar benennen, was sich ändern muss", score: 2 },
+      { text: "Die Vereinbarung beenden — wir können uns kein Scheitern leisten", score: 3 }
+    ]
+  },
+  {
+    text: "Wenn Sie ehrlich sind — was ist das Wichtigste, das Sie sich vom AuPair für Ihre Familie erhoffen?",
+    opts: [
+      { text: "Eine echte Verbindung, kulturelle Bereicherung und jemanden, an den sich unsere Kinder erinnern werden", score: 0 },
+      { text: "Zuverlässige Kinderbetreuung und eine positive Präsenz in unserem Zuhause", score: 1 },
+      { text: "Praktische Unterstützung, die unserer Familie den Alltag erleichtert", score: 2 },
+      { text: "Eine kostengünstige Lösung für unsere Betreuungsanforderungen", score: 3 }
+    ]
+  }
+];
+var fcDEResults   = [
+  {
+    type: "Die programmfokussierte Gastfamilie",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    title: "Ihr Zuhause ist bereit — und Ihr Herz auch",
+    desc: "Ihre Antworten zeigen, dass Sie verstehen, worum es beim AuPair-Programm wirklich geht. Sie sehen das AuPair als Mensch, nicht als Stelle. Sie sind bereit, ihm einen echten Platz in Ihrer Familie zu geben, seine Zeit zu respektieren, sein Wachstum zu fördern und eine Erfahrung zu schaffen, die sowohl das AuPair als auch Ihre Kinder ein Leben lang begleiten wird. Genau solche Familien vermittelt Academy AuPair an unsere vorbereiteten AuPairs. Wir würden sehr gerne mit Ihnen zusammenarbeiten.",
+    barLabel1: "Programmfokussiert", barLabel2: "Bedarfsfokussiert",
+    cta: "Kontaktieren Sie uns auf academyaupair.com", restart: "Quiz erneut starten",
+    profileTitle: "Ihr Gastfamilien-Profil", complete: "abgeschlossen"
+  },
+  {
+    type: "Die pragmatische Gastfamilie",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    title: "Sie sind ehrlich — und das ist ein guter Anfang",
+    desc: "Ihre Antworten zeigen eine Mischung aus echter Fürsorge und praktischem Bedarf. Sie möchten zuverlässige Unterstützung, und das ist absolut verständlich — aber das AuPair-Programm bringt Verantwortung gegenüber dem jungen Menschen in Ihrem Zuhause mit sich, die über das Praktische hinausgeht. Die gute Nachricht ist: Mit der richtigen Vorbereitung und ehrlichen Erwartungen auf beiden Seiten kann das wunderbar funktionieren. Academy AuPair würde vor einem Match gerne ein Gespräch mit Ihnen führen, damit beide Seiten auf dem richtigen Fundament starten.",
+    barLabel1: "Programmfokussiert", barLabel2: "Bedarfsfokussiert",
+    cta: "Kontaktieren Sie uns auf academyaupair.com", restart: "Quiz erneut starten",
+    profileTitle: "Ihr Gastfamilien-Profil", complete: "abgeschlossen"
+  },
+  {
+    type: "Die bedarfsorientierte Gastfamilie",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+    title: "Bevor wir Sie vermitteln — lassen Sie uns sprechen",
+    desc: "Ihre Antworten lassen vermuten, dass praktische Unterstützung Ihr Hauptbedarf ist und dass Kosten und Bequemlichkeit eine zentrale Rolle spielen. Wir verstehen, dass Kinderbetreuung wirklich schwierig und teuer sein kann. Aber das AuPair-Programm stellt einen jungen Menschen — oft zum ersten Mal weit von zu Hause entfernt — in den Mittelpunkt Ihrer Familie. Er oder sie hat gesetzliche Rechte, emotionale Bedürfnisse und ein Leben jenseits Ihres Haushalts. Eine Vermittlung, die das nicht respektiert, scheitert in der Regel — und wenn das passiert, sind immer auch die Kinder betroffen. Wir laden Sie herzlich ein, mit uns offen darüber zu sprechen, was Sie suchen und ob das AuPair-Programm — oder eine andere Lösung — wirklich der richtige Weg für Sie ist.",
+    barLabel1: "Programmfokussiert", barLabel2: "Bedarfsfokussiert",
+    cta: "Kontaktieren Sie uns auf academyaupair.com", restart: "Quiz erneut starten",
+    profileTitle: "Ihr Gastfamilien-Profil", complete: "abgeschlossen"
+  }
+];
+
+var fcCurrent = 0, fcAnswers = [], fcLang = 'en', fcN = '', fcE = '', fcP = '';
+
+function startFCQuiz(lang) {
+  var n = document.getElementById('fc-name').value.trim();
+  var e = document.getElementById('fc-email').value.trim();
+  var p = document.getElementById('fc-phone').value.trim();
+  if (!n || !e || !p) { document.getElementById('fc-err').style.display = 'block'; return; }
+  fcN = n; fcE = e; fcP = p; fcLang = lang;
+  var qs = lang === 'en' ? fcENQuestions : fcDEQuestions;
+  fcCurrent = 0;
+  fcAnswers = new Array(qs.length).fill(null);
+  document.getElementById('fc-collect').style.display = 'none';
+  var box = document.getElementById('fc-quiz-box');
+  box.style.display = 'block';
+  buildQuizHTML('fc-quiz-box');
+  document.getElementById('btn-back').addEventListener('click', function() {
+    if (fcCurrent > 0) { fcCurrent--; fcRender(); }
+  });
+  document.getElementById('btn-next').addEventListener('click', function() {
+    var qs2 = fcLang === 'en' ? fcENQuestions : fcDEQuestions;
+    if (fcAnswers[fcCurrent] === null) return;
+    if (fcCurrent === qs2.length - 1) { fcShowResult(); return; }
+    fcCurrent++; fcRender();
+  });
+  fcRender();
+}
+
+function fcRender() {
+  var qs = fcLang === 'en' ? fcENQuestions : fcDEQuestions;
+  var back   = fcLang === 'en' ? 'Back'            : 'Zurück';
+  var next   = fcLang === 'en' ? 'Next'            : 'Weiter';
+  var result = fcLang === 'en' ? 'See my result'   : 'Mein Ergebnis sehen';
+  var qLabel = fcLang === 'en' ? 'Question'        : 'Frage';
+  var ofLbl  = fcLang === 'en' ? 'of'              : 'von';
+  renderStep(qs, fcCurrent, fcAnswers, back, next, result, qLabel, ofLbl);
+}
+
+function fcShowResult() {
+  var qs = fcLang === 'en' ? fcENQuestions : fcDEQuestions;
+  var rs = fcLang === 'en' ? fcENResults   : fcDEResults;
+  var total = fcAnswers.reduce(function(s, a, qi) { return s + (a !== null ? qs[qi].opts[a].score : 0); }, 0);
+  var pct = Math.round((total / (qs.length * 3)) * 100);
+  var progPct = 100 - pct;
+  var r = pct <= 30 ? rs[0] : pct <= 60 ? rs[1] : rs[2];
+  showResultCard(fcAnswers, qs, r.type, r.title, r.desc, r.barLabel1, r.barLabel2, r.profileTitle, r.cta, progPct, pct);
+  sendEmail(fcN, fcE, fcP, 'Host Family (' + fcLang.toUpperCase() + ')', fcAnswers, qs, r.type, r.title);
+}
+
+// ── CTA MODAL SYSTEM ─────────────────────────────────────────────────────
+function openCTA(type) {
+  var modal = document.getElementById('cta-modal');
+  var title = document.getElementById('cta-modal-title');
+  var body = document.getElementById('cta-modal-body');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  if (type === 'aupair') {
+    title.textContent = 'Enrol or book a call';
+    body.innerHTML =
+      '<p style="font-size:14px;color:#666;margin-bottom:16px;line-height:1.6;">Tell us about yourself and which programme interests you. We will get back to you within 48 hours.</p>' +
+      '<div style="display:flex;flex-direction:column;gap:10px;">' +
+      '<input id="m-name" type="text" placeholder="Your full name" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-email" type="email" placeholder="Your email address" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-phone" type="tel" placeholder="Your WhatsApp number" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<select id="m-program" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;background:#fff;">' +
+      '<option value="" disabled selected>Which programme are you interested in?</option>' +
+      '<option>5-Day AuPair Preparation Programme (€150)</option>' +
+      '<option>Language & Communication Coaching (€90)</option>' +
+      '<option>Interview Preparation (€70)</option>' +
+      '<option>Not sure yet — I want to find out more</option>' +
+      '</select>' +
+      '<textarea id="m-msg" rows="3" placeholder="Anything specific you would like to share or ask?" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>' +
+      '<button onclick="submitCTA(\'AuPair Enrolment\')" style="background:#1D9E75;color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Send my request →</button>' +
+      '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all required fields.</p>' +
+      '<p id="m-ok" style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
+      '</div>';
+  } else if (type === 'family') {
+    title.textContent = 'Book a family session';
+    body.innerHTML =
+      '<p style="font-size:14px;color:#666;margin-bottom:16px;line-height:1.6;">Tell us which programme interests you and we will get back to you within 48 hours to schedule.</p>' +
+      '<div style="display:flex;flex-direction:column;gap:10px;">' +
+      '<input id="m-name" type="text" placeholder="Your full name" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-email" type="email" placeholder="Your email address" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-phone" type="tel" placeholder="Your phone number (optional)" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<select id="m-program" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;background:#fff;">' +
+      '<option value="" disabled selected>Which programme are you interested in?</option>' +
+      '<option>Family Consultation — 1h 1:1 (€80)</option>' +
+      '<option>Family Preparation Training — 1h 1:1 (€110)</option>' +
+      '<option>Practical AuPair Training — tailored 1:1 (€90)</option>' +
+      '<option>Not sure yet — I want to find out more</option>' +
+      '</select>' +
+      '<textarea id="m-msg" rows="3" placeholder="Any specific questions or situation you would like to share?" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>' +
+      '<button onclick="submitCTA(\'Host Family Session\')" style="background:#1D9E75;color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Send my request →</button>' +
+      '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in name and email.</p>' +
+      '<p id="m-ok" style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
+      '</div>';
+  } else if (type === 'agency') {
+    title.textContent = 'Agency partnership enquiry';
+    body.innerHTML =
+      '<p style="font-size:14px;color:#666;margin-bottom:16px;line-height:1.6;">Tell us about your agency and we will be in touch within 48 hours to discuss a potential partnership.</p>' +
+      '<div style="display:flex;flex-direction:column;gap:10px;">' +
+      '<input id="m-name" type="text" placeholder="Your full name" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-email" type="email" placeholder="Your email address" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-phone" type="tel" placeholder="Your phone / WhatsApp number" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<textarea id="m-msg" rows="4" placeholder="Tell us about your agency — how long you have been operating, your main markets, and what you are looking for in this partnership." style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>' +
+      '<button onclick="submitCTA(\'Agency Partnership Enquiry\')" style="background:#1D9E75;color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Send my enquiry →</button>' +
+      '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all required fields.</p>' +
+      '<p id="m-ok" style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
+      '</div>';
+  } else if (type === 'tutor') {
+    title.textContent = 'Connect with Academy AuPair';
+    body.innerHTML =
+      '<p style="font-size:14px;color:#666;margin-bottom:16px;line-height:1.6;">We would love to speak with you about how we can work together for your students.</p>' +
+      '<div style="display:flex;flex-direction:column;gap:10px;">' +
+      '<input id="m-name" type="text" placeholder="Your full name" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-email" type="email" placeholder="Your email address" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<input id="m-phone" type="tel" placeholder="Your phone / WhatsApp number" style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;" />' +
+      '<textarea id="m-msg" rows="3" placeholder="Tell us about your students and how we can help them." style="padding:11px 13px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>' +
+      '<button onclick="submitCTA(\'From Tutor — Partnership Enquiry\')" style="background:#1D9E75;color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Get in touch →</button>' +
+      '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all required fields.</p>' +
+      '<p id="m-ok" style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
+      '</div>';
+  }
+}
+
+function closeCTA() {
+  document.getElementById('cta-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function submitCTA(subject) {
+  var name  = document.getElementById('m-name')  ? document.getElementById('m-name').value.trim()  : '';
+  var email = document.getElementById('m-email') ? document.getElementById('m-email').value.trim() : '';
+  var phone = document.getElementById('m-phone') ? document.getElementById('m-phone').value.trim() : '';
+  var prog  = document.getElementById('m-program') ? document.getElementById('m-program').value : '';
+  var msg   = document.getElementById('m-msg')   ? document.getElementById('m-msg').value.trim()   : '';
+  var err   = document.getElementById('m-err');
+  var ok    = document.getElementById('m-ok');
+
+  if (!name || !email) { err.style.display = 'block'; return; }
+  err.style.display = 'none';
+
+  var message = subject + '\n\n' +
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    (phone ? 'Phone: ' + phone + '\n' : '') +
+    (prog  ? 'Programme: ' + prog + '\n' : '') +
+    (msg   ? '\nMessage:\n' + msg : '');
+
+  emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: message})
+    .then(function() {
+      ok.style.display = 'block';
+      setTimeout(function() { closeCTA(); }, 2500);
+    })
+    .catch(function(e) {
+      console.error('EmailJS error:', e);
+      ok.textContent = 'Something went wrong — please email us directly at academyaupair@gmail.com';
+      ok.style.color = '#cc0000';
+      ok.style.display = 'block';
+    });
+}
+
+function submitEurodoot() {
+  var name    = document.getElementById('ed-name').value.trim();
+  var email   = document.getElementById('ed-email').value.trim();
+  var phone   = document.getElementById('ed-phone').value.trim();
+  var arrival = document.getElementById('ed-arrival').value;
+  var state   = document.getElementById('ed-state').value;
+  var msg     = document.getElementById('ed-msg').value.trim();
+  var err     = document.getElementById('ed-err');
+  var ok      = document.getElementById('ed-ok');
+
+  if (!name || !email || !phone || !arrival || !state) { err.style.display = 'block'; return; }
+  err.style.display = 'none';
+
+  var message = 'EuroDoot Connection Request\n\n' +
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    'Phone: ' + phone + '\n' +
+    'Arrived in Germany: ' + arrival + '\n' +
+    'State (Bundesland): ' + state + '\n' +
+    (msg ? '\nMessage:\n' + msg : '');
+
+  emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: message})
+    .then(function() {
+      ok.style.display = 'block';
+      document.getElementById('ed-form-wrap').style.opacity = '0.4';
+    })
+    .catch(function(e) {
+      console.error('EmailJS error:', e);
+      err.textContent = 'Something went wrong — please email us at academyaupair@gmail.com';
+      err.style.display = 'block';
+    });
+}
+
+// Close modal on backdrop click
+document.addEventListener('click', function(e) {
+  var modal = document.getElementById('cta-modal');
+  if (modal && e.target === modal) { closeCTA(); }
+});
+
+</script>
+
+
+<!-- CTA MODAL -->
+<div id="cta-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;padding:16px;">
+  <div style="background:#fff;border-radius:16px;padding:28px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative;">
+    <button onclick="closeCTA()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#999;line-height:1;">&#x2715;</button>
+    <h3 id="cta-modal-title" style="font-family:Inter,sans-serif;font-size:20px;font-weight:700;color:#1a1a1a;margin-bottom:4px;padding-right:24px;"></h3>
+    <div id="cta-modal-body"></div>
+  </div>
+</div>
+
+</body>
+</html>
