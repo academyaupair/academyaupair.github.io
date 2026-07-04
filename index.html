@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Academy AuPair — Prepared AuPairs. Real Matches. Successful Stories.</title>
-<meta name="description" content="Academy AuPair prepares Indian AuPairs for real family life in Germany. 5-day preparation programme, interview coaching, and the Academy AuPair certificate — recognised by host families and agencies.">
+<title>Academy AuPair | Prepared AuPairs. Real Matches. Successful Stories.</title>
+<meta name="description" content="Academy AuPair prepares Indian AuPairs for real family life in Germany. 5-day preparation programme, interview coaching, and the Academy AuPair certificate, recognised by host families and agencies.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1216,12 +1216,12 @@ footer {
   .fomo-strip { gap: 0; padding: 20px 16px; }
   .fomo-item { padding: 0 12px; }
   .fomo-num { font-size: 26px; }
-  .schedule-table th, .schedule-table td { padding: 10px 10px; font-size: 13px; }
-  .founder-box, .community-box { flex-direction: column; }
+  .schedule-table th.schedule-table td { padding: 10px 10px; font-size: 13px; }
+  .founder-box.community-box { flex-direction: column; }
   .footer-top { flex-direction: column; gap: 16px; }
   .footer-top { padding: 0 16px; }
   .day-row { grid-template-columns: 40px 1fr auto; gap: 8px; padding: 12px 14px; }
-  .cert-section, .vision-block, .caution-section, .enrol-section { padding: 40px 16px; }
+  .cert-section.vision-block.caution-section.enrol-section { padding: 40px 16px; }
   footer { padding: 32px 16px 20px; }
   .trust-bar { padding: 12px 16px; }
 }
@@ -1266,21 +1266,15 @@ footer {
 
 /* Fix white text on light backgrounds */
 section.light .why-card .why-title,
-section.white .why-card .why-title,
-.light .why-card .why-title,
-.white .why-card .why-title {
+section.white .why-card .why-title.light .why-card .why-title.white .why-card .why-title {
   color: var(--ink) !important;
 }
 section.light .why-card .why-text,
-section.white .why-card .why-text,
-.light .why-card .why-text,
-.white .why-card .why-text {
+section.white .why-card .why-text.light .why-card .why-text.white .why-card .why-text {
   color: var(--ink-mid) !important;
 }
 section.light .why-card,
-section.white .why-card,
-.light .why-card,
-.white .why-card {
+section.white .why-card.light .why-card.white .why-card {
   background: rgba(26,61,43,0.04) !important;
   border: 1px solid var(--rule) !important;
 }
@@ -1288,7 +1282,7 @@ section.white .why-card,
 </head>
 <body>
 
-<div class="urgency-bar">&#x1F514; Cohort 1 is filling — only 20 spots available for the first preparation programme</div>
+<div class="urgency-bar">&#x1F514; Cohort 1 is filling. Only 20 spots available for the first preparation programme</div>
 
 <nav>
   <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;">
@@ -1322,10 +1316,10 @@ section.white .why-card,
 
 <div id="page-home" class="page active">
 <div class="hero">
-  <div class="hero-spots">Cohort 1 — only 20 spots</div>
-  <div class="hero-thesis">The AuPair programme works when everyone is genuinely prepared — and genuinely matched</div>
+  <div class="hero-spots">Cohort 1: only 20 spots</div>
+  <div class="hero-thesis">The AuPair programme works when everyone is genuinely prepared, and genuinely matched</div>
   <h1>Prepared AuPair.<br>Prepared family.<br><em>Real match.</em></h1>
-  <p class="hero-sub">Too many placements fail. Not because people are bad — because nobody prepared them, and nobody matched them honestly. We exist to change that.</p>
+  <p class="hero-sub">Too many placements fail. Not because people are bad. Nobody prepared them, and nobody matched them honestly. We exist to change that.</p>
   <div class="hero-btns">
     <a href="javascript:void(0)" onclick="showPage('aupairs')" class="btn-primary">I am an AuPair &rarr;</a>
     <a href="javascript:void(0)" onclick="showPage('families')" class="btn-secondary">I am a host family</a>
@@ -1336,12 +1330,12 @@ section.white .why-card,
 <section class="light">
   <div class="max-w">
     <div class="section-label">Why preparation and honest matching matters</div>
-    <h2 class="section-title">What happens when an AuPair<br>is not truly prepared — or truly matched</h2>
-    <p class="section-sub" style="margin-bottom:36px;">These are not rare exceptions. They happen every year across Germany. The AuPair programme is built on trust — and that trust breaks the moment the AuPair is not ready, or when the match was never real to begin with.</p>
+    <h2 class="section-title">What happens when an AuPair<br>is not truly prepared, or truly matched</h2>
+    <p class="section-sub" style="margin-bottom:36px;">These are not rare exceptions. They happen every year across Germany. The AuPair programme is built on trust, and that trust breaks the moment the AuPair is not ready, or when the match was never real to begin with.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:36px;">
       <div class="risk-card">
         <div class="risk-title">&#x26A0; The child who choked</div>
-        <div class="risk-text">A 2-year-old choked on a piece of food. The AuPair had never been taught what to do. She panicked and called the parents instead of acting. The child survived — but it was close. The AuPair had assured the family she had childcare experience. She did not.</div>
+        <div class="risk-text">A 2-year-old choked on a piece of food. The AuPair had never been taught what to do. She panicked and called the parents instead of acting. The child survived. It was close. The AuPair had assured the family she had childcare experience. She did not.</div>
       </div>
       <div class="risk-card">
         <div class="risk-title">&#x26A0; Left alone with a newborn</div>
@@ -1349,15 +1343,15 @@ section.white .why-card,
       </div>
       <div class="risk-card">
         <div class="risk-title">&#x26A0; The match that was never real</div>
-        <div class="risk-text">An AuPair applied to 40 families in one week. She accepted the first offer. She had never asked herself what she truly wanted from the year. The family had never asked themselves either. Within six weeks both sides were miserable — and the children were in the middle of it.</div>
+        <div class="risk-text">An AuPair applied to 40 families in one week. She accepted the first offer. She had never asked herself what she truly wanted from the year. The family had never asked themselves either. Within six weeks both sides were miserable, and the children were in the middle of it.</div>
       </div>
       <div class="risk-card">
         <div class="risk-title">&#x26A0; The AuPair who needed a bridge</div>
-        <div class="risk-text">She wanted Germany. Not the family, not the children — Germany. She was charming in the interview. She accepted the offer. She lasted four months before disappearing to a city where she had friends. The family was left without childcare and their children without someone they had grown attached to.</div>
+        <div class="risk-text">She wanted Germany. Not the family, not the children. Germany. She was charming in the interview. She accepted the offer. She lasted four months before disappearing to a city where she had friends. The family was left without childcare and their children without someone they had grown attached to.</div>
       </div>
     </div>
     <div style="background:var(--green);border-radius:var(--radius);padding:24px 28px;text-align:center;">
-      <p style="font-size:17px;color:#fff;font-weight:600;line-height:1.6;margin:0;">These children did nothing wrong. The system failed them — because nobody prepared anyone, and nobody matched honestly.</p>
+      <p style="font-size:17px;color:#fff;font-weight:600;line-height:1.6;margin:0;">These children did nothing wrong. The system failed them because nobody prepared anyone, and nobody matched honestly.</p>
     </div>
   </div>
 </section>
@@ -1368,12 +1362,12 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">What we do</div>
     <h2 class="section-title">Preparation. Honest matching.<br>One certificate.</h2>
-    <p class="section-sub" style="margin-bottom:36px;">We prepare AuPairs for real family life. We help them understand what they truly want — and find the family that truly fits. We prepare host families too. And the AuPairs who complete our programme carry a certificate that host families and agencies recognise immediately.</p>
+    <p class="section-sub" style="margin-bottom:36px;">We prepare AuPairs for real family life. We help them understand what they truly want, and find the family that truly fits. We prepare host families too. And the AuPairs who complete our programme carry a certificate that host families and agencies recognise immediately.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-      <div class="why-card"><div class="why-title">Real preparation, not just information</div><div class="why-text">Our 5-day programme covers actual scenarios — childcare, safety, cooking for children, household rules, communication in a German home. Not a brochure. Real readiness.</div></div>
-      <div class="why-card"><div class="why-title">Interview preparation that finds the right match</div><div class="why-text">We help AuPairs prepare for family interviews — not to impress every family, but to find the right one. How to read red flags. How to be honest about who you are. How to ask the questions that matter.</div></div>
+      <div class="why-card"><div class="why-title">Real preparation, not just information</div><div class="why-text">Our 5-day programme covers actual scenarios: childcare, safety, cooking for children, household rules, communication in a German home. Not a brochure. Real readiness.</div></div>
+      <div class="why-card"><div class="why-title">Interview preparation that finds the right match</div><div class="why-text">We help AuPairs prepare for family interviews. Not to impress every family, but to find the right one. How to read red flags. How to be honest about who you are. How to ask the questions that matter.</div></div>
       <div class="why-card"><div class="why-title">A quality mark that means something</div><div class="why-text">The Academy AuPair certificate is issued only to candidates who complete the programme and pass the final assessment. Host families and agencies trust it because it stands for something real.</div></div>
-      <div class="why-card"><div class="why-title">Ausbildung — the next chapter</div><div class="why-text">For AuPairs already in Germany, we guide the path to Ausbildung in partnership with EuroDoot — so the AuPair year becomes the beginning of a real future in Germany, not just a chapter that ends.</div></div>
+      <div class="why-card"><div class="why-title">Ausbildung: the next chapter</div><div class="why-text">For AuPairs already in Germany, we guide the path to Ausbildung in partnership with EuroDoot, so the AuPair year becomes the beginning of a real future in Germany, not just a chapter that ends.</div></div>
     </div>
   </div>
 </section>
@@ -1384,7 +1378,7 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">About</div>
     <h2 class="section-title">We are not an agency.<br>We are a preparation and quality standard.</h2>
-    <p class="section-sub" style="margin-bottom:24px;">Academy AuPair was founded by a European host mother based in Germany with direct experience of what happens when an AuPair arrives unprepared — and what happens when they do not. The team behind Academy AuPair lives in Germany, works with Indian AuPairs, and speaks from experience rather than theory.</p>
+    <p class="section-sub" style="margin-bottom:24px;">Academy AuPair was founded by a European host mother based in Germany with direct experience of what happens when an AuPair arrives unprepared, and what happens when they do not. The team behind Academy AuPair lives in Germany, works with Indian AuPairs, and speaks from experience rather than theory.</p>
     <p style="font-size:16px;color:var(--text-muted);line-height:1.75;margin-bottom:28px;">We do not place AuPairs. We do not charge placement fees. We prepare people, certify the ones who are truly ready, and guide AuPairs already in Germany toward Ausbildung. In partnership with EuroDoot, we make sure the story does not end when the AuPair year does.</p>
     <div class="cert-badge" style="max-width:480px;">
       <div class="cert-badge-title">&#x1F3C5; The Academy AuPair Certificate</div>
@@ -1399,7 +1393,7 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">Get in touch</div>
     <h2 class="section-title">Ready to start?</h2>
-    <p class="section-sub" style="margin-bottom:32px;">Whether you are an AuPair candidate, a host family, or an agency — tell us who you are and we will be in touch within 48 hours.</p>
+    <p class="section-sub" style="margin-bottom:32px;">Whether you are an AuPair candidate, a host family, or an agency, tell us who you are and we will be in touch within 48 hours.</p>
     <div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;max-width:520px;">
       <div style="display:flex;flex-direction:column;gap:12px;">
         <input id="ct-name"  type="text"  placeholder="Your full name"       style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
@@ -1411,7 +1405,7 @@ section.white .why-card,
           <option>Host family in Germany</option>
           <option>AuPair agency</option>
           <option>German language tutor in India</option>
-          <option>AuPair already in Germany — interested in Ausbildung</option>
+          <option>AuPair already in Germany, interested in Ausbildung</option>
         </select>
         <textarea id="ct-msg" rows="3" placeholder="Your message or question" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>
         <button onclick="submitContact()" style="background:var(--green);color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Send message &rarr;</button>
@@ -1426,18 +1420,18 @@ section.white .why-card,
 <div id="page-aupairs" class="page">
 <div class="page-hero">
   <h1>For AuPairs from India</h1>
-  <p>You want to go to Germany and live with a family. That is a beautiful goal. But the family you choose — and how prepared you are when you arrive — will define everything.</p>
+  <p>You want to go to Germany and live with a family. That is a beautiful goal. But the family you choose, and how prepared you are when you arrive, will define everything.</p>
 </div>
 
 <div style="background:#085041;padding:14px 16px;text-align:center;">
-  <p style="font-size:14px;color:#9FE1CB;font-weight:500;">Host families choose prepared AuPairs. Agencies recommend certified candidates. Our certificate changes how you are seen — before you even arrive.</p>
+  <p style="font-size:14px;color:#9FE1CB;font-weight:500;">Host families choose prepared AuPairs. Agencies recommend certified candidates. Our certificate changes how you are seen before you even arrive.</p>
 </div>
 
 <section class="light">
   <div class="max-w">
-    <div class="section-label">Two types of AuPairs — and why it matters</div>
+    <div class="section-label">Two types of AuPairs, and why it matters</div>
     <h2 class="section-title">The AuPair who was ready.<br>The AuPair who was not.</h2>
-    <p class="section-sub" style="margin-bottom:28px;">Both applied to the same families. Both were excited. Both said all the right things. But only one had truly prepared — and understood what she actually wanted from the year. The difference was visible within the first week.</p>
+    <p class="section-sub" style="margin-bottom:28px;">Both applied to the same families. Both were excited. Both said all the right things. But only one had truly prepared and understood what she actually wanted from the year. The difference was visible within the first week.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:36px;">
       <div class="match-story good">
         <div class="match-story-label">&#x2713; The prepared AuPair</div>
@@ -1451,7 +1445,7 @@ section.white .why-card,
 
     <div class="section-label" style="text-align:left;margin-bottom:8px;">Know yourself first</div>
     <h3 style="font-size:22px;font-weight:600;color:var(--text);margin-bottom:8px;">What kind of AuPair are you?</h3>
-    <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;line-height:1.65;">Before we talk about preparation — let us find out where you are starting from. 3 honest minutes.</p>
+    <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;line-height:1.65;">Before we talk about preparation, let us find out where you are starting from. 3 honest minutes.</p>
     <div id="ap-collect" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px;max-width:520px;margin:0 auto 32px;">
       <p style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:14px;">Tell us who you are first</p>
       <div style="display:flex;flex-direction:column;gap:10px;">
@@ -1466,27 +1460,27 @@ section.white .why-card,
 
     <div class="divider" style="margin:32px 0;"></div>
 
-    <div class="section-label">Programme 1 — The 5-day preparation</div>
-    <h2 class="section-title" style="text-align:left;font-size:clamp(20px,3vw,28px);">What you will actually learn — and practise</h2>
-    <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;line-height:1.7;">Five days of real preparation. Practical, scenario-based — not theory. You will leave knowing exactly what to do in the situations that define whether a placement succeeds or fails.</p>
+    <div class="section-label">Programme 1: The 5-day preparation</div>
+    <h2 class="section-title" style="text-align:left;font-size:clamp(20px,3vw,28px);">What you will actually learn and practise</h2>
+    <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;line-height:1.7;">Five days of real preparation. Practical, scenario-based. Not theory. You will leave knowing exactly what to do in the situations that define whether a placement succeeds or fails.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:32px;">
-      <div class="why-card"><div class="why-title">&#x1F3E0; Day 1 — The German household</div><div class="why-text">How German families organise their homes. Safety standards in kitchen, bathroom, outdoor spaces. What children can reach at each age. Rules you will be expected to follow without being told twice.</div></div>
-      <div class="why-card"><div class="why-title">&#x1F37D;&#xFE0F; Day 2 — Cooking for children</div><div class="why-text">What German children eat, what they don't, how to prepare simple meals. Allergies, portion sizes, mealtimes, what to do when a child refuses to eat. The kitchen is where most AuPairs struggle first.</div></div>
-      <div class="why-card"><div class="why-title">&#x1F476; Day 3 — Childcare in practice</div><div class="why-text">Age-appropriate activities, supervision levels, sleep routines, nappy changes, screen time, outdoor play. The difference between managing and truly caring for a child.</div></div>
-      <div class="why-card"><div class="why-title">&#x1F4AC; Day 4 — Communication in a German home</div><div class="why-text">How to communicate clearly with German parents who are direct and have high expectations. How to raise a problem without causing conflict. How to ask for help without appearing incompetent.</div></div>
-      <div class="why-card"><div class="why-title">&#x26A0;&#xFE0F; Day 5 — Emergencies and certification</div><div class="why-text">What to do in every type of emergency — medical, accident, child distress. First aid basics. Emergency contacts. Final assessment and the Academy AuPair certificate.</div></div>
+      <div class="why-card"><div class="why-title">&#x1F3E0; Day 1: The German household</div><div class="why-text">How German families organise their homes. Safety standards in kitchen, bathroom, outdoor spaces. What children can reach at each age. Rules you will be expected to follow without being told twice.</div></div>
+      <div class="why-card"><div class="why-title">&#x1F37D;&#xFE0F; Day 2: Cooking for children</div><div class="why-text">What German children eat, what they don't, how to prepare simple meals. Allergies, portion sizes, mealtimes, what to do when a child refuses to eat. The kitchen is where most AuPairs struggle first.</div></div>
+      <div class="why-card"><div class="why-title">&#x1F476; Day 3: Childcare in practice</div><div class="why-text">Age-appropriate activities, supervision levels, sleep routines, nappy changes, screen time, outdoor play. The difference between managing and truly caring for a child.</div></div>
+      <div class="why-card"><div class="why-title">&#x1F4AC; Day 4: Communication in a German home</div><div class="why-text">How to communicate clearly with German parents who are direct and have high expectations. How to raise a problem without causing conflict. How to ask for help without appearing incompetent.</div></div>
+      <div class="why-card"><div class="why-title">&#x26A0;&#xFE0F; Day 5: Emergencies and certification</div><div class="why-text">What to do in every type of emergency , medical, accident, child distress. First aid basics. Emergency contacts. Final assessment and the Academy AuPair certificate.</div></div>
     </div>
 
     <div class="divider" style="margin:32px 0;"></div>
 
-    <div class="section-label">Programme 2 — Interview preparation &amp; CV</div>
+    <div class="section-label">Programme 2: Interview preparation &amp; CV</div>
     <h2 class="section-title" style="text-align:left;font-size:clamp(20px,3vw,28px);">Find your real match.<br>Not just any family.</h2>
-    <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;line-height:1.7;">The interview is not about impressing every family. It is about finding the right one. Most AuPairs approach interviews as a performance — saying what families want to hear. We teach you something different: how to show up honestly, ask the right questions, and recognise the family that will make your year genuinely good.</p>
+    <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px;line-height:1.7;">The interview is not about impressing every family. It is about finding the right one. Most AuPairs approach interviews as a performance , saying what families want to hear. We teach you something different: how to show up honestly, ask the right questions, and recognise the family that will make your year genuinely good.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:28px;">
-      <div class="why-card"><div class="why-title">Your CV — honest and strong</div><div class="why-text">We help you build a CV that presents your real experience accurately. Not exaggerated, not undersold. Host families can see through exaggeration — and they remember the candidates who were honest.</div></div>
+      <div class="why-card"><div class="why-title">Your CV , honest and strong</div><div class="why-text">We help you build a CV that presents your real experience accurately. Not exaggerated, not undersold. Host families can see through exaggeration , and they remember the candidates who were honest.</div></div>
       <div class="why-card"><div class="why-title">How to read red flags</div><div class="why-text">A family that cannot answer basic questions about the children's routine. A family that mentions "flexibility" repeatedly. A family that rushes you to decide. We teach you what to look for before you sign anything.</div></div>
-      <div class="why-card"><div class="why-title">What do you actually want?</div><div class="why-text">Before the interview comes an honest conversation with yourself. Do you want the programme — the family, the children, the cultural experience? Or do you want Germany? Both are real. But they need different paths. We help you figure out which one is you.</div></div>
-      <div class="why-card"><div class="why-title">The interview — practised and confident</div><div class="why-text">Mock interview sessions, real questions families ask, how to answer without overpromising. How to ask your own questions without seeming difficult. How to say no to a family that is not right for you.</div></div>
+      <div class="why-card"><div class="why-title">What do you actually want?</div><div class="why-text">Before the interview comes an honest conversation with yourself. Do you want the programme , the family, the children, the cultural experience? Or do you want Germany? Both are real. But they need different paths. We help you figure out which one is you.</div></div>
+      <div class="why-card"><div class="why-title">The interview , practised and confident</div><div class="why-text">Mock interview sessions, real questions families ask, how to answer without overpromising. How to ask your own questions without seeming difficult. How to say no to a family that is not right for you.</div></div>
     </div>
   </div>
 </section>
@@ -1517,7 +1511,7 @@ section.white .why-card,
           <li>Red flag recognition</li>
           <li>Understanding what you truly want</li>
           <li>Mock interview sessions</li>
-          <li>Real questions — real practice</li>
+          <li>Real questions , real practice</li>
         </ul>
       </div>
       <div class="price-pkg">
@@ -1541,10 +1535,10 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">The certificate</div>
     <h2 class="section-title">Host families and agencies<br>recognise it immediately</h2>
-    <p class="section-sub" style="margin-bottom:28px;">When a host family sees the Academy AuPair certificate, they know something specific: this AuPair did not just apply — she prepared. She went through five days of real training. She knows what to do. That is a different kind of candidate entirely.</p>
+    <p class="section-sub" style="margin-bottom:28px;">When a host family sees the Academy AuPair certificate, they know something specific: this AuPair did not just apply , she prepared. She went through five days of real training. She knows what to do. That is a different kind of candidate entirely.</p>
     <div class="cert-badge" style="max-width:500px;">
       <div class="cert-badge-title">&#x1F3C5; Academy AuPair Certificate</div>
-      <div class="cert-badge-sub">Issued only to AuPairs who complete the full programme and pass the final assessment. Not a participation award — a real quality mark that tells families and agencies this person is ready.</div>
+      <div class="cert-badge-sub">Issued only to AuPairs who complete the full programme and pass the final assessment. Not a participation award , a real quality mark that tells families and agencies this person is ready.</div>
     </div>
   </div>
 </section>
@@ -1561,26 +1555,26 @@ section.white .why-card,
 <div id="page-families" class="page">
 <div class="page-hero">
   <h1>For Host Families</h1>
-  <p>You are about to invite someone into your home and trust them with your children. What you need is not just a willing person — you need a prepared one. And an honest match.</p>
+  <p>You are about to invite someone into your home and trust them with your children. What you need is not just a willing person , you need a prepared one. And an honest match.</p>
 </div>
 
 <section class="light">
   <div class="max-w">
     <div class="section-label">The risk no family talks about</div>
     <h2 class="section-title">What host families discover<br>after it is too late</h2>
-    <p class="section-sub" style="margin-bottom:32px;">Every family who has had a bad AuPair experience says the same thing: she seemed wonderful in the interview. The problem is that the AuPair genuinely did not know what she did not know — and the match was never real. Until she was alone with your children.</p>
+    <p class="section-sub" style="margin-bottom:32px;">Every family who has had a bad AuPair experience says the same thing: she seemed wonderful in the interview. The problem is that the AuPair genuinely did not know what she did not know , and the match was never real. Until she was alone with your children.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:36px;">
       <div class="risk-card">
-        <div class="risk-title">&#x26A0; "She said she was independent — she was not"</div>
-        <div class="risk-text">AuPairs apply to many families. They know what families want to hear. They say they are independent, confident, experienced with children. In the interview they are charming and enthusiastic. But being alone with a toddler and an infant for 8 hours is a completely different situation — and many are simply not ready for it.</div>
+        <div class="risk-title">&#x26A0; "She said she was independent, but she was not"</div>
+        <div class="risk-text">AuPairs apply to many families. They know what families want to hear. They say they are independent, confident, experienced with children. In the interview they are charming and enthusiastic. But being alone with a toddler and an infant for 8 hours is a completely different situation , and many are simply not ready for it.</div>
       </div>
       <div class="risk-card">
         <div class="risk-title">&#x26A0; She did not know basic child safety</div>
-        <div class="risk-text">She had never been taught at what age a child can be left in the bath alone. She did not know that grapes must be cut in half. She did not know not to leave a baby on a changing table unattended. These are not instincts — they are knowledge. Knowledge that must be taught before she arrives, not discovered through a near-miss in your home.</div>
+        <div class="risk-text">She had never been taught at what age a child can be left in the bath alone. She did not know that grapes must be cut in half. She did not know not to leave a baby on a changing table unattended. These are not instincts , they are knowledge. Knowledge that must be taught before she arrives, not discovered through a near-miss in your home.</div>
       </div>
       <div class="risk-card">
-        <div class="risk-title">&#x26A0; She wanted Germany — not your family</div>
-        <div class="risk-text">She applied to your family to get a visa and live in Germany. She was not dishonest in a cruel way — she had simply never been asked to think clearly about what she truly wanted. She left after four months. Your children had grown attached to her. You were left without childcare and with the damage of an abrupt goodbye they did not understand.</div>
+        <div class="risk-title">&#x26A0; She wanted Germany , not your family</div>
+        <div class="risk-text">She applied to your family to get a visa and live in Germany. She was not dishonest in a cruel way , she had simply never been asked to think clearly about what she truly wanted. She left after four months. Your children had grown attached to her. You were left without childcare and with the damage of an abrupt goodbye they did not understand.</div>
       </div>
       <div class="risk-card">
         <div class="risk-title">&#x26A0; The placement that destroyed family life</div>
@@ -1588,7 +1582,7 @@ section.white .why-card,
       </div>
     </div>
     <div style="background:var(--green);border-radius:var(--radius);padding:24px 28px;text-align:center;">
-      <p style="font-size:17px;color:#fff;font-weight:600;line-height:1.6;margin:0;">You deserve an AuPair who arrives knowing what to do — and who genuinely chose your family for the right reasons.</p>
+      <p style="font-size:17px;color:#fff;font-weight:600;line-height:1.6;margin:0;">You deserve an AuPair who arrives knowing what to do, and who genuinely chose your family for the right reasons.</p>
     </div>
   </div>
 </section>
@@ -1599,7 +1593,7 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">Two types of families too</div>
     <h2 class="section-title">The AuPair programme works<br>when both sides are honest</h2>
-    <p class="section-sub" style="margin-bottom:28px;">Just as there are two types of AuPairs, there are two types of host families. The ones who genuinely want the programme — the cultural exchange, the connection, a young person who becomes part of the family. And the ones who primarily need affordable help in the home. Both exist. But they need different AuPairs. And the match has to be real.</p>
+    <p class="section-sub" style="margin-bottom:28px;">Just as there are two types of AuPairs, there are two types of host families. The ones who genuinely want the programme: the cultural exchange, the connection, a young person who becomes part of the family. And the ones who primarily need affordable help in the home. Both exist. But they need different AuPairs. And the match has to be real.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:32px;">
       <div class="match-story good">
         <div class="match-story-label">&#x2713; The family that was ready</div>
@@ -1607,7 +1601,7 @@ section.white .why-card,
       </div>
       <div class="match-story bad">
         <div class="match-story-label">&#x26A0; The mismatch that hurt everyone</div>
-        <div class="match-story-text">The family needed reliable help — both parents worked long hours and the children needed consistent care. But they were matched with an AuPair who wanted the programme: the cultural exchange, the relationship, the experience. She felt like an employee. They felt like she was not professional enough. Neither was wrong. The match was simply never right — and no one had asked the honest questions before it started.</div>
+        <div class="match-story-text">The family needed reliable help , both parents worked long hours and the children needed consistent care. But they were matched with an AuPair who wanted the programme: the cultural exchange, the relationship, the experience. She felt like an employee. They felt like she was not professional enough. Neither was wrong. The match was simply never right , and no one had asked the honest questions before it started.</div>
       </div>
     </div>
   </div>
@@ -1619,7 +1613,7 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">Know yourself first</div>
     <h2 class="section-title" style="margin-bottom:8px;">What kind of host family are you?</h2>
-    <p class="section-sub" style="margin-bottom:24px;">An honest quiz to help us understand your situation — and make a match that actually works. Available in English and German.</p>
+    <p class="section-sub" style="margin-bottom:24px;">An honest quiz to help us understand your situation , and make a match that actually works. Available in English and German.</p>
     <div id="fc-collect" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px;max-width:520px;margin:0 auto 32px;">
       <p style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:14px;">Tell us who you are first</p>
       <div style="display:flex;flex-direction:column;gap:10px;">
@@ -1644,11 +1638,11 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">Family preparation</div>
     <h2 class="section-title">Preparation is not only<br>the AuPair's job</h2>
-    <p class="section-sub" style="margin-bottom:28px;">Successful placements happen when both sides are ready. We offer preparation sessions for host families — so you understand what is coming, how to communicate across cultures, and how to set your placement up for success from the start.</p>
+    <p class="section-sub" style="margin-bottom:28px;">Successful placements happen when both sides are ready. We offer preparation sessions for host families, so you understand what is coming, how to communicate across cultures, and how to set your placement up for success from the start.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:28px;">
-      <div class="why-card"><div class="why-title">Family consultation &mdash; €80</div><div class="why-text">60 minutes, 1:1. Expectations, cultural differences, practical preparation for your specific family situation. Before your AuPair arrives.</div></div>
-      <div class="why-card"><div class="why-title">Cultural preparation session &mdash; €110</div><div class="why-text">Structured 60-minute training on Indian culture, communication styles, what your AuPair brings with them, and how to bridge the gap from day one.</div></div>
-      <div class="why-card"><div class="why-title">Custom AuPair training &mdash; €90</div><div class="why-text">Tailored to your home, your children, your AuPair. Your appliances, your rules, your routines — explained so they are truly prepared for your specific situation.</div></div>
+      <div class="why-card"><div class="why-title">Family consultation: €80</div><div class="why-text">60 minutes, 1:1. Expectations, cultural differences, practical preparation for your specific family situation. Before your AuPair arrives.</div></div>
+      <div class="why-card"><div class="why-title">Cultural preparation session: €110</div><div class="why-text">Structured 60-minute training on Indian culture, communication styles, what your AuPair brings with them, and how to bridge the gap from day one.</div></div>
+      <div class="why-card"><div class="why-title">Custom AuPair training: €90</div><div class="why-text">Tailored to your home, your children, your AuPair. Your appliances, your rules, your routines , explained so they are truly prepared for your specific situation.</div></div>
     </div>
   </div>
 </section>
@@ -1665,18 +1659,18 @@ section.white .why-card,
 <div id="page-agencies" class="page">
 <div class="page-hero">
   <h1>For AuPair Agencies</h1>
-  <p>Your placements fail when the AuPair was not ready — or when the match was never real. We solve both. So your agency stops managing damage and starts building a reputation for quality.</p>
+  <p>Your placements fail when the AuPair was not ready , or when the match was never real. We solve both. So your agency stops managing damage and starts building a reputation for quality.</p>
 </div>
 <section class="light">
   <div class="max-w">
     <div class="section-label">The problem agencies know well</div>
     <h2 class="section-title">Failed placements cost you<br>more than you think</h2>
-    <p class="section-sub" style="margin-bottom:28px;">Every failed placement costs your agency time, money, and reputation. The host family does not complain about the AuPair — they complain about the agency that sent them someone unprepared, or someone who was never the right fit. The calls, the rematchings, the refunds, the reviews. All of it traces back to one thing: nobody prepared the person, and nobody matched honestly.</p>
+    <p class="section-sub" style="margin-bottom:28px;">Every failed placement costs your agency time, money, and reputation. The host family does not complain about the AuPair , they complain about the agency that sent them someone unprepared, or someone who was never the right fit. The calls, the rematchings, the refunds, the reviews. All of it traces back to one thing: nobody prepared the person, and nobody matched honestly.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:32px;">
-      <div class="why-card"><div class="why-title">Fewer failed placements</div><div class="why-text">Certified AuPairs arrive knowing what is expected. They handle the kitchen, the children, the communication, the culture — because they were trained before they left India. Your rematch rate drops.</div></div>
-      <div class="why-card"><div class="why-title">Better matched candidates</div><div class="why-text">Our interview preparation helps AuPairs understand what they truly want — so they choose families for the right reasons, not just to get a visa. Honest matches last. Dishonest ones end badly for everyone.</div></div>
+      <div class="why-card"><div class="why-title">Fewer failed placements</div><div class="why-text">Certified AuPairs arrive knowing what is expected. They handle the kitchen, the children, the communication, the culture , because they were trained before they left India. Your rematch rate drops.</div></div>
+      <div class="why-card"><div class="why-title">Better matched candidates</div><div class="why-text">Our interview preparation helps AuPairs understand what they truly want , so they choose families for the right reasons, not just to get a visa. Honest matches last. Dishonest ones end badly for everyone.</div></div>
       <div class="why-card"><div class="why-title">A quality mark on your candidates</div><div class="why-text">The Academy AuPair certificate is visible on every candidate profile. Host families and employers see it immediately. Your agency becomes the one that sends prepared people.</div></div>
-      <div class="why-card"><div class="why-title">Selected agencies only</div><div class="why-text">We partner with established, recognised agencies that care about what happens after the contract is signed. If that is you — we want to hear from you.</div></div>
+      <div class="why-card"><div class="why-title">Selected agencies only</div><div class="why-text">We partner with established, recognised agencies that care about what happens after the contract is signed. If that is you , we want to hear from you.</div></div>
     </div>
     <div style="background:var(--green);border-radius:var(--radius);padding:24px 28px;text-align:center;">
       <p style="font-size:17px;color:#fff;font-weight:600;line-height:1.6;margin:0;">The agencies that move first will define the new standard. The ones that wait will be competing against candidates who have the certificate they do not.</p>
@@ -1695,17 +1689,17 @@ section.white .why-card,
 <div id="page-tutors" class="page">
 <div class="page-hero">
   <h1>For German Language Tutors</h1>
-  <p>Your students are learning German and dreaming of Germany. The preparation they need for AuPair or Ausbildung starts before they leave India — and you are the trusted person who can point them in the right direction.</p>
+  <p>Your students are learning German and dreaming of Germany. The preparation they need for AuPair or Ausbildung starts before they leave India , and you are the trusted person who can point them in the right direction.</p>
 </div>
 <section class="light">
   <div class="max-w">
     <div class="section-label">Why this matters for your students</div>
     <h2 class="section-title">Language is only part<br>of what they need</h2>
-    <p class="section-sub" style="margin-bottom:28px;">German language skills are essential — but they are not what makes an AuPair year succeed. The AuPairs who fail are often the ones who had decent German but had never been prepared for what real family life in Germany actually looks like. Your students deserve both the language and the preparation.</p>
+    <p class="section-sub" style="margin-bottom:28px;">German language skills are essential , but they are not what makes an AuPair year succeed. The AuPairs who fail are often the ones who had decent German but had never been prepared for what real family life in Germany actually looks like. Your students deserve both the language and the preparation.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:32px;">
-      <div class="why-card"><div class="why-title">You already have the relationship</div><div class="why-text">Your students trust you. When you tell them about Academy AuPair, they listen. That is more powerful than any advertisement — and it costs you nothing to mention us.</div></div>
+      <div class="why-card"><div class="why-title">You already have the relationship</div><div class="why-text">Your students trust you. When you tell them about Academy AuPair, they listen. That is more powerful than any advertisement , and it costs you nothing to mention us.</div></div>
       <div class="why-card"><div class="why-title">Prepared candidates stand out</div><div class="why-text">An AuPair who is certified by Academy AuPair is a completely different candidate. The German you teach them lands on a foundation of real preparation. The combination is what gets them selected by the best families.</div></div>
-      <div class="why-card"><div class="why-title">Ausbildung is also a pathway</div><div class="why-text">Not all your students want AuPair. Some want Ausbildung directly. We guide both — and through our EuroDoot partnership, we support students who are already in Germany toward Ausbildung.</div></div>
+      <div class="why-card"><div class="why-title">Ausbildung is also a pathway</div><div class="why-text">Not all your students want AuPair. Some want Ausbildung directly. We guide both , and through our EuroDoot partnership, we support students who are already in Germany toward Ausbildung.</div></div>
     </div>
     <p style="font-size:16px;color:var(--text-muted);line-height:1.75;max-width:600px;">Point your students to <strong>academyaupair.com</strong>. They take the quiz, we take it from there. No paperwork for you. No commission. Just your student arriving in Germany genuinely prepared.</p>
   </div>
@@ -1714,7 +1708,7 @@ section.white .why-card,
   <div style="max-width:600px;margin:0 auto;">
     <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;margin-bottom:12px;">Let us connect</div>
     <h2 style="font-size:clamp(22px,4vw,34px);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.25;">Your students deserve to know this exists</h2>
-    <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:28px;line-height:1.7;">Get in touch and we will show you exactly what we do — so you can recommend us with full confidence.</p>
+    <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:28px;line-height:1.7;">Get in touch and we will show you exactly what we do , so you can recommend us with full confidence.</p>
     <button onclick="openCTA('tutor')" style="background:#fff;color:#1a3d2b;border:none;padding:15px 36px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Get in touch →</button>
   </div>
 </section>
@@ -1730,16 +1724,16 @@ section.white .why-card,
 <section class="white">
   <div class="max-w">
     <div class="section-label">What is Ausbildung?</div>
-    <h2 class="section-title">Germany's most powerful pathway &mdash;<br>and most AuPairs miss it</h2>
-    <p class="section-sub" style="margin-bottom:32px;">Ausbildung is Germany's vocational training system &mdash; a government-recognised, paid programme where you train on the job in a company while attending vocational school. At the end, you hold a German qualification that opens doors for life.</p>
+    <h2 class="section-title">Germany's most powerful pathway ,<br>and most AuPairs miss it</h2>
+    <p class="section-sub" style="margin-bottom:32px;">Ausbildung is Germany's vocational training system , a government-recognised paid programme where you train on the job in a company while attending vocational school. At the end, you hold a German qualification that opens doors for life.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:32px;">
       <div class="why-card" style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--green);margin-bottom:4px;">&euro;900&ndash;1,150</div><div style="font-size:13px;color:var(--text-muted);">Monthly training pay</div></div>
       <div class="why-card" style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--green);margin-bottom:4px;">2&ndash;3 years</div><div style="font-size:13px;color:var(--text-muted);">Duration + qualification</div></div>
       <div class="why-card" style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--green);margin-bottom:4px;">Legal visa</div><div style="font-size:13px;color:var(--text-muted);">Path to stay long-term</div></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-      <div class="why-card"><div class="why-title">You already have an advantage</div><div class="why-text">You are already in Germany. You understand the culture. You speak some German. You have a German reference. Employers see this &mdash; and it matters more than you think.</div></div>
-      <div class="why-card"><div class="why-title">Timing is everything</div><div class="why-text">Most Ausbildung programmes start in September or February. If you are in your AuPair year now, the window to apply is open. Miss it and you wait another year &mdash; or go home.</div></div>
+      <div class="why-card"><div class="why-title">You already have an advantage</div><div class="why-text">You are already in Germany. You understand the culture. You speak some German. You have a German reference. Employers see this , and it matters more than you think.</div></div>
+      <div class="why-card"><div class="why-title">Timing is everything</div><div class="why-text">Most Ausbildung programmes start in September or February. If you are in your AuPair year now, the window to apply is open. Miss it and you wait another year , or go home.</div></div>
     </div>
   </div>
 </section>
@@ -1748,17 +1742,17 @@ section.white .why-card,
   <div class="max-w">
     <div class="section-label">Our partnership</div>
     <h2 class="section-title">Academy AuPair &times; EuroDoot</h2>
-    <p class="section-sub" style="margin-bottom:28px;">EuroDoot is a specialist Germany&ndash;India placement organisation based in NRW &mdash; North Rhine-Westphalia, Germany's largest Indian community hub. They focus on Ausbildung and employment placements with verified German employers. Together, we guide you from your AuPair year directly into your next chapter.</p>
+    <p class="section-sub" style="margin-bottom:28px;">EuroDoot is a specialist Germany&ndash;India placement organisation based in NRW , North Rhine-Westphalia, Germany's largest Indian community hub. They focus on Ausbildung and employment placements with verified German employers. Together, we guide you from your AuPair year directly into your next chapter.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px;">
-      <div class="why-card"><div class="why-title">Based in NRW, Germany</div><div class="why-text">EuroDoot's Germany team is on the ground in NRW &mdash; where 50,000+ Indians already live. They know the employers, the authorities, and the community.</div></div>
-      <div class="why-card"><div class="why-title">Verified German employers</div><div class="why-text">Real Ausbildung contracts in logistics, warehouse, and transport &mdash; officially listed shortage occupations with fast-track visa pathways.</div></div>
-      <div class="why-card"><div class="why-title">India &amp; Germany teams</div><div class="why-text">A dedicated India team in Delhi and a Germany team in NRW &mdash; so you are supported on both sides at every stage.</div></div>
-      <div class="why-card"><div class="why-title">Immigration support</div><div class="why-text">EuroDoot collaborates with an immigration lawyer for complex cases &mdash; a clear, legal, protected process from day one.</div></div>
+      <div class="why-card"><div class="why-title">Based in NRW, Germany</div><div class="why-text">EuroDoot's Germany team is on the ground in NRW , where 50,000+ Indians already live. They know the employers, the authorities, and the community.</div></div>
+      <div class="why-card"><div class="why-title">Verified German employers</div><div class="why-text">Real Ausbildung contracts in logistics, warehouse, and transport , officially listed shortage occupations with fast-track visa pathways.</div></div>
+      <div class="why-card"><div class="why-title">India &amp; Germany teams</div><div class="why-text">A dedicated India team in Delhi and a Germany team in NRW , so you are supported on both sides at every stage.</div></div>
+      <div class="why-card"><div class="why-title">Immigration support</div><div class="why-text">EuroDoot collaborates with an immigration lawyer for complex cases , a clear, legal, protected process from day one.</div></div>
     </div>
     <div style="background:var(--green);border-radius:var(--radius);padding:28px 32px;text-align:center;">
       <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;">Exclusive for Academy AuPair candidates</div>
       <div style="font-size:26px;font-weight:700;color:#fff;margin-bottom:8px;">20-min free consultation + 15% off</div>
-      <p style="font-size:15px;color:rgba(255,255,255,0.78);line-height:1.7;max-width:520px;margin:0 auto;">When you connect through Academy AuPair, you receive a complimentary 20-minute consultation with EuroDoot's Germany executives &mdash; and a 15% discount on their programme fee. Not available directly.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.78);line-height:1.7;max-width:520px;margin:0 auto;">When you connect through Academy AuPair, you receive a complimentary 20-minute consultation with EuroDoot's Germany executives , and a 15% discount on their programme fee. Not available directly.</p>
     </div>
   </div>
 </section>
@@ -1769,7 +1763,7 @@ section.white .why-card,
     <h2 class="section-title">From AuPair year to Ausbildung</h2>
     <div class="steps-grid" style="margin-top:16px;">
       <div class="step-card"><div class="step-num">1</div><div class="step-title">Connect with us</div><div class="step-desc">Fill in the form below. Tell us where you are, when your AuPair year ends, and what you are looking for.</div></div>
-      <div class="step-card"><div class="step-num">2</div><div class="step-title">Free EuroDoot consultation</div><div class="step-desc">We connect you with EuroDoot's Germany team for your complimentary 20-minute consultation &mdash; honest guidance, no obligations.</div></div>
+      <div class="step-card"><div class="step-num">2</div><div class="step-title">Free EuroDoot consultation</div><div class="step-desc">We connect you with EuroDoot's Germany team for your complimentary 20-minute consultation , honest guidance, no obligations.</div></div>
       <div class="step-card"><div class="step-num">3</div><div class="step-title">Enrol with 15% discount</div><div class="step-desc">If EuroDoot is the right fit, you enrol with your exclusive Academy AuPair discount and your Ausbildung journey begins.</div></div>
       <div class="step-card"><div class="step-num">4</div><div class="step-title">Land your Ausbildung place</div><div class="step-desc">EuroDoot matches you with a verified NRW employer, handles documentation, and supports your visa extension.</div></div>
     </div>
@@ -1818,17 +1812,17 @@ section.white .why-card,
 </div>
 
 <div id="page-companies" class="page">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">For Companies in Germany</span><h1>You hired internationally.<br>Now make it actually work.</h1><p>German companies hiring Indian staff face the same structural gap &mdash; motivated people, genuine effort, and a cultural preparation step that was never done.</p><a href="mailto:hello@academyaupair.com?subject=Company Training Enquiry" class="btn btn-gold btn-lg">Start a conversation &#8594;</a></div></section>
-<section style="background:#fff"><div class="wrap"><div class="why-story"><span class="eyebrow">The gap most companies don&rsquo;t name</span><h2 style="margin-bottom:28px">The person you hired is capable. The friction is cultural &mdash; and it is fixable.</h2><p>Your new team member from India is qualified. She or he wants to do well. And yet &mdash; communication feels difficult. Feedback lands differently than intended. Expectations on both sides go unspoken until something goes wrong.</p><p>This is not a skills problem. It is a cultural preparation problem. And it exists on both sides: the international hire was not prepared for German workplace culture, and the German team was not prepared for them.</p><div class="why-highlight">Goodwill on both sides is not enough. Preparation is what turns goodwill into a working relationship.</div><p>Academy AuPair has spent years building this preparation at the individual level &mdash; for AuPairs arriving in German homes. The same methodology applies to Indian professionals arriving in German workplaces.</p></div></div></section>
-<section style="background:var(--cream)"><div class="wrap"><div class="sec-head"><span class="eyebrow">Training programmes</span><h2>What we offer German companies.</h2><p>Practical, focused training &mdash; not a generic diversity workshop.</p></div><div class="grid-3">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">For Companies in Germany</span><h1>You hired internationally.<br>Now make it actually work.</h1><p>German companies hiring Indian staff face the same structural gap , motivated people, genuine effort, and a cultural preparation step that was never done.</p><a href="mailto:hello@academyaupair.com?subject=Company Training Enquiry" class="btn btn-gold btn-lg">Start a conversation &#8594;</a></div></section>
+<section style="background:#fff"><div class="wrap"><div class="why-story"><span class="eyebrow">The gap most companies don&rsquo;t name</span><h2 style="margin-bottom:28px">The person you hired is capable. The friction is cultural , and it is fixable.</h2><p>Your new team member from India is qualified. She or he wants to do well. And yet , communication feels difficult. Feedback lands differently than intended. Expectations on both sides go unspoken until something goes wrong.</p><p>This is not a skills problem. It is a cultural preparation problem. And it exists on both sides: the international hire was not prepared for German workplace culture, and the German team was not prepared for them.</p><div class="why-highlight">Goodwill on both sides is not enough. Preparation is what turns goodwill into a working relationship.</div><p>Academy AuPair has spent years building this preparation at the individual level , for AuPairs arriving in German homes. The same methodology applies to Indian professionals arriving in German workplaces.</p></div></div></section>
+<section style="background:var(--cream)"><div class="wrap"><div class="sec-head"><span class="eyebrow">Training programmes</span><h2>What we offer German companies.</h2><p>Practical, focused training , not a generic diversity workshop.</p></div><div class="grid-3">
 <div class="card"><div style="font-size:26px;margin-bottom:14px">&#127470;&#127475;</div><h4 style="color:var(--forest);margin-bottom:8px">Cultural onboarding for Indian staff</h4><p style="font-size:15px">A focused programme for Indian employees joining a German team. German workplace norms, communication styles, hierarchy, feedback culture, and what to do when something feels wrong.</p></div>
 <div class="card"><div style="font-size:26px;margin-bottom:14px">&#127465;&#127466;</div><h4 style="color:var(--forest);margin-bottom:8px">German team preparation</h4><p style="font-size:15px">A session for the existing German team preparing to work with Indian colleagues. What to expect, how to give feedback that lands, and how to build trust across cultural difference.</p></div>
-<div class="card"><div style="font-size:26px;margin-bottom:14px">&#129309;</div><h4 style="color:var(--forest);margin-bottom:8px">Joint integration workshop</h4><p style="font-size:15px">Both sides in the room together. Structured conversation, practical exercises, and a shared framework for working across cultural difference &mdash; built for real teams, not HR presentations.</p></div>
-<div class="card"><div style="font-size:26px;margin-bottom:14px">&#128172;</div><h4 style="color:var(--forest);margin-bottom:8px">Communication coaching</h4><p style="font-size:15px">1:1 or small group sessions focused on specific communication challenges &mdash; giving and receiving feedback, raising problems, managing expectations across cultures.</p></div>
-<div class="card"><div style="font-size:26px;margin-bottom:14px">&#128203;</div><h4 style="color:var(--forest);margin-bottom:8px">Ausbildung candidate preparation</h4><p style="font-size:15px">Preparing Indian Ausbildung candidates for the German workplace before their training begins &mdash; in partnership with EuroDoot India, who handles the placement side.</p></div>
+<div class="card"><div style="font-size:26px;margin-bottom:14px">&#129309;</div><h4 style="color:var(--forest);margin-bottom:8px">Joint integration workshop</h4><p style="font-size:15px">Both sides in the room together. Structured conversation, practical exercises, and a shared framework for working across cultural difference , built for real teams, not HR presentations.</p></div>
+<div class="card"><div style="font-size:26px;margin-bottom:14px">&#128172;</div><h4 style="color:var(--forest);margin-bottom:8px">Communication coaching</h4><p style="font-size:15px">1:1 or small group sessions focused on specific communication challenges , giving and receiving feedback, raising problems, managing expectations across cultures.</p></div>
+<div class="card"><div style="font-size:26px;margin-bottom:14px">&#128203;</div><h4 style="color:var(--forest);margin-bottom:8px">Ausbildung candidate preparation</h4><p style="font-size:15px">Preparing Indian Ausbildung candidates for the German workplace before their training begins , in partnership with EuroDoot India, who handles the placement side.</p></div>
 <div class="card"><div style="font-size:26px;margin-bottom:14px">&#127961;&#65039;</div><h4 style="color:var(--forest);margin-bottom:8px">Arrival &amp; life admin onboarding</h4><p style="font-size:15px">When your Indian staff arrives in Germany, we guide them through everything they need to get settled: city registration (Anmeldung), bank account opening, health insurance, tax registration, and more.</p></div>
 </div></div></section>
-<section style="background:#fff"><div class="wrap"><div class="info-split"><div><span class="eyebrow">Who this is for</span><h2 style="margin-bottom:16px">German companies hiring international staff &mdash; specifically from India.</h2><p style="font-size:17px;margin-bottom:14px">Germany is actively recruiting skilled workers from India in healthcare, engineering, IT, care work, and Ausbildung programmes. The number of Indian professionals working in German companies is growing every year.</p><p style="font-size:17px;margin-bottom:14px">The recruitment is happening. The preparation often is not. Academy AuPair fills that gap &mdash; with the specific knowledge of Indian and German cultural dynamics that generic intercultural training does not have.</p><p style="font-size:17px">We are based in Germany. We live this. We know what actually works.</p></div><div><div style="background:var(--sage);border-radius:8px;padding:32px"><div class="eyebrow">Sectors we work with</div><div class="steps"><div class="step"><div class="step-n">&#8594;</div><div><h4>Healthcare &amp; care work</h4><p style="font-size:14px">Nursing, elder care, and medical staff &mdash; one of the largest areas of Indian-to-German recruitment.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>Ausbildung host companies</h4><p style="font-size:14px">Companies taking Indian Ausbildung candidates through EuroDoot or other placement pathways.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>Family and household services</h4><p style="font-size:14px">Including AuPair-adjacent roles &mdash; house management, family support, childcare services.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>SMEs with international teams</h4><p style="font-size:14px">Smaller German companies building diverse teams without a dedicated HR function.</p></div></div></div></div></div></div></div></section>
+<section style="background:#fff"><div class="wrap"><div class="info-split"><div><span class="eyebrow">Who this is for</span><h2 style="margin-bottom:16px">German companies hiring international staff , specifically from India.</h2><p style="font-size:17px;margin-bottom:14px">Germany is actively recruiting skilled workers from India in healthcare, engineering, IT, care work, and Ausbildung programmes. The number of Indian professionals working in German companies is growing every year.</p><p style="font-size:17px;margin-bottom:14px">The recruitment is happening. The preparation often is not. Academy AuPair fills that gap , with the specific knowledge of Indian and German cultural dynamics that generic intercultural training does not have.</p><p style="font-size:17px">We are based in Germany. We live this. We know what actually works.</p></div><div><div style="background:var(--sage);border-radius:8px;padding:32px"><div class="eyebrow">Sectors we work with</div><div class="steps"><div class="step"><div class="step-n">&#8594;</div><div><h4>Healthcare &amp; care work</h4><p style="font-size:14px">Nursing, elder care, and medical staff , one of the largest areas of Indian-to-German recruitment.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>Ausbildung host companies</h4><p style="font-size:14px">Companies taking Indian Ausbildung candidates through EuroDoot or other placement pathways.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>Family and household services</h4><p style="font-size:14px">Including AuPair-adjacent roles , house management, family support, childcare services.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>SMEs with international teams</h4><p style="font-size:14px">Smaller German companies building diverse teams without a dedicated HR function.</p></div></div></div></div></div></div></div></section>
 <section class="cta-band"><div class="wrap"><h2>Let us understand your situation.</h2><p>A short call. No commitment. We will tell you directly whether we can help.</p><div class="cta-actions"><a href="mailto:hello@academyaupair.com?subject=Company Training Enquiry" class="btn btn-gold btn-lg">Contact us &#8594;</a></div><p class="cta-note">Companies: <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a></p><p class="cta-tagline">Based in NRW, Germany &middot; Working across Germany</p></div></section>
 </div>
 
@@ -1918,7 +1912,7 @@ var observer = new IntersectionObserver(function(entries) {
     }
   });
 }, {threshold: 0.1});
-document.querySelectorAll('.why-card, .step-card, .aud-card, .risk-card').forEach(function(el) {
+document.querySelectorAll('.why-card.step-card.aud-card.risk-card').forEach(function(el) {
   el.style.opacity = '0';
   el.style.transform = 'translateY(16px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -2021,7 +2015,7 @@ function submitCTA(subject) {
   var message = subject + '\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + (msg ? '\n\nMessage:\n' + msg : '');
   emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: message})
     .then(function() { ok.style.display = 'block'; setTimeout(function() { closeCTA(); }, 2500); })
-    .catch(function() { ok.textContent = 'Error — please email hello@academyaupair.com'; ok.style.color='#cc0000'; ok.style.display='block'; });
+    .catch(function() { ok.textContent = 'Error , please email hello@academyaupair.com'; ok.style.color='#cc0000'; ok.style.display='block'; });
 }
 
 document.addEventListener('click', function(e) {
@@ -2044,7 +2038,7 @@ function submitEurodoot() {
     '\nArrived in Germany: ' + arrival + '\nState: ' + state + (msg ? '\n\nMessage:\n' + msg : '');
   emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: message})
     .then(function() { ok.style.display='block'; document.getElementById('ed-form-wrap').style.opacity='0.4'; })
-    .catch(function() { err.textContent='Error — please email hello@academyaupair.com'; err.style.display='block'; });
+    .catch(function() { err.textContent='Error , please email hello@academyaupair.com'; err.style.display='block'; });
 }
 
 // ── QUIZ BUILDER ─────────────────────────────────────────────────────────
@@ -2124,25 +2118,25 @@ var apQuestions = [
     ]
   },
   {
-    text: "A child in your care is having a very difficult day — crying, refusing to eat, not listening. How do you feel?",
+    text: "A child in your care is having a very difficult day , crying, refusing to eat, not listening. How do you feel?",
     opts: [
-      { text: "I feel calm and patient — this is part of caring for children", score: 0 },
+      { text: "I feel calm and patient , this is part of caring for children", score: 0 },
       { text: "A little overwhelmed but I would manage", score: 1 },
-      { text: "Stressed — I am not sure how to handle this", score: 2 },
+      { text: "Stressed , I am not sure how to handle this", score: 2 },
       { text: "I would follow the parents' instructions and get through it", score: 1 }
     ]
   },
   {
     text: "How much experience do you have with children?",
     opts: [
-      { text: "A lot — I have cared for younger siblings, relatives, or worked with children", score: 0 },
-      { text: "Some — babysitting or occasional time with younger kids", score: 1 },
-      { text: "Not much — but I am willing to learn", score: 2 },
-      { text: "Very little — children are not really my area", score: 3 }
+      { text: "A lot , I have cared for younger siblings, relatives, or worked with children", score: 0 },
+      { text: "Some , babysitting or occasional time with younger kids", score: 1 },
+      { text: "Not much , but I am willing to learn", score: 2 },
+      { text: "Very little , children are not really my area", score: 3 }
     ]
   },
   {
-    text: "The host family has a different way of doing things than you are used to — different food, different routines, different rules. How do you react?",
+    text: "The host family has a different way of doing things than you are used to , different food, different routines, different rules. How do you react?",
     opts: [
       { text: "I am genuinely curious and adapt easily", score: 0 },
       { text: "I need some time but eventually adjust", score: 1 },
@@ -2165,14 +2159,14 @@ var apQuestions = [
       { text: "Stay calm, try gentle routines, singing, or reading until they settle", score: 0 },
       { text: "Call the parents for guidance and follow their advice", score: 1 },
       { text: "Try my best but feel quite anxious about it", score: 2 },
-      { text: "I honestly do not know — I have never faced this", score: 2 }
+      { text: "I honestly do not know , I have never faced this", score: 2 }
     ]
   },
   {
     text: "What are your plans after the AuPair year?",
     opts: [
       { text: "Return home with a beautiful experience and memories", score: 0 },
-      { text: "Stay in Germany — through Ausbildung or another path", score: 3 },
+      { text: "Stay in Germany , through Ausbildung or another path", score: 3 },
       { text: "I am not sure yet, I want to see how the year goes", score: 1 },
       { text: "Continue in Germany or Europe in any way I can", score: 3 }
     ]
@@ -2189,37 +2183,37 @@ var apQuestions = [
   {
     text: "The host family asks you to skip your German class one week to help with an unexpected situation. How do you respond?",
     opts: [
-      { text: "Of course — the family comes first, I can reschedule", score: 0 },
+      { text: "Of course , the family comes first, I can reschedule", score: 0 },
       { text: "I would help but let them know my class matters to me", score: 1 },
       { text: "I would feel frustrated but agree", score: 2 },
-      { text: "I would try to negotiate — my class is very important to my goals", score: 3 }
+      { text: "I would try to negotiate , my class is very important to my goals", score: 3 }
     ]
   },
   {
     text: "What does 'being part of a family' mean to you in this context?",
     opts: [
-      { text: "Genuinely sharing daily life, meals, routines — feeling like family", score: 0 },
+      { text: "Genuinely sharing daily life, meals, routines , feeling like family", score: 0 },
       { text: "Being respectful and helpful while keeping some independence", score: 1 },
       { text: "Doing my duties well and having my own space", score: 2 },
-      { text: "Fulfilling the role professionally — it is a job arrangement", score: 3 }
+      { text: "Fulfilling the role professionally , it is a job arrangement", score: 3 }
     ]
   },
   {
     text: "How important is it to you to learn the German language during your AuPair year?",
     opts: [
       { text: "Important, but secondary to the family experience", score: 0 },
-      { text: "Very important — it is one of the main reasons I am going", score: 2 },
-      { text: "Critical — my future plans in Germany depend on it", score: 3 },
+      { text: "Very important , it is one of the main reasons I am going", score: 2 },
+      { text: "Critical , my future plans in Germany depend on it", score: 3 },
       { text: "Moderately important alongside everything else", score: 1 }
     ]
   },
   {
     text: "If the AuPair program did not exist, would you still want to go to Germany?",
     opts: [
-      { text: "Not necessarily — the family experience is the point for me", score: 0 },
-      { text: "Yes — I would find another way", score: 3 },
-      { text: "Probably yes — Germany is where I want to build my future", score: 3 },
-      { text: "Maybe — but the AuPair experience itself really appeals to me", score: 1 }
+      { text: "Not necessarily , the family experience is the point for me", score: 0 },
+      { text: "Yes , I would find another way", score: 3 },
+      { text: "Probably yes , Germany is where I want to build my future", score: 3 },
+      { text: "Maybe , but the AuPair experience itself really appeals to me", score: 1 }
     ]
   }
 ];
@@ -2236,7 +2230,7 @@ var fcENQuestions = [
   {
     text: "How do you see the AuPair's place in your household?",
     opts: [
-      { text: "As a real member of the family — included in meals, outings, and family life", score: 0 },
+      { text: "As a real member of the family , included in meals, outings, and family life", score: 0 },
       { text: "As a trusted helper who has their own space and privacy", score: 1 },
       { text: "As a professional helping us manage the household", score: 2 },
       { text: "As an extra pair of hands to cover what we cannot manage ourselves", score: 3 }
@@ -2245,16 +2239,16 @@ var fcENQuestions = [
   {
     text: "Your AuPair has a German class every Tuesday evening. How do you feel about this?",
     opts: [
-      { text: "We actively support it — learning German is important for their future", score: 0 },
+      { text: "We actively support it , learning German is important for their future", score: 0 },
       { text: "That is fine, we will plan around it", score: 1 },
       { text: "It depends on whether our schedule allows it that week", score: 2 },
-      { text: "It is inconvenient — we need flexibility in the evenings", score: 3 }
+      { text: "It is inconvenient , we need flexibility in the evenings", score: 3 }
     ]
   },
   {
     text: "The AuPair programme allows a maximum of 30 working hours per week. How do you approach this?",
     opts: [
-      { text: "We respect this fully — we would never ask for more", score: 0 },
+      { text: "We respect this fully , we would never ask for more", score: 0 },
       { text: "We try to respect it but some weeks things come up", score: 1 },
       { text: "We think it depends on the situation", score: 2 },
       { text: "Honestly, there will be weeks where more is needed", score: 3 }
@@ -2265,23 +2259,23 @@ var fcENQuestions = [
     opts: [
       { text: "We check in with them, include them more, and give them space to talk", score: 0 },
       { text: "We give them some time off and let them know we are there", score: 0 },
-      { text: "We hope they manage — it is part of living abroad", score: 2 },
+      { text: "We hope they manage , it is part of living abroad", score: 2 },
       { text: "As long as they are doing their job, it is not really our concern", score: 3 }
     ]
   },
   {
     text: "Have you talked with your children about what it means to have an AuPair?",
     opts: [
-      { text: "Yes — we prepared them and they are genuinely excited", score: 0 },
+      { text: "Yes , we prepared them and they are genuinely excited", score: 0 },
       { text: "We explained the basics and they seem fine with it", score: 1 },
-      { text: "Not really — children adapt", score: 2 },
-      { text: "No — it is our decision, not theirs", score: 3 }
+      { text: "Not really , children adapt", score: 2 },
+      { text: "No , it is our decision, not theirs", score: 3 }
     ]
   },
   {
     text: "What does a typical weekend look like for your AuPair in your home?",
     opts: [
-      { text: "They have their free time — we sometimes invite them to join us but never expect it", score: 0 },
+      { text: "They have their free time , we sometimes invite them to join us but never expect it", score: 0 },
       { text: "They are free but occasionally help with something small", score: 1 },
       { text: "We expect some availability depending on our plans", score: 2 },
       { text: "Weekends are often when we need extra help", score: 3 }
@@ -2293,16 +2287,16 @@ var fcENQuestions = [
       { text: "We would talk openly and work through it together respectfully", score: 0 },
       { text: "We would address it calmly and find a solution", score: 1 },
       { text: "We would make clear what our expectations are", score: 2 },
-      { text: "They are in our home — our rules come first", score: 3 }
+      { text: "They are in our home , our rules come first", score: 3 }
     ]
   },
   {
     text: "Your AuPair wants to explore Ausbildung opportunities after their year with you. How do you feel?",
     opts: [
-      { text: "We would actively support and encourage them — it is their future", score: 0 },
+      { text: "We would actively support and encourage them , it is their future", score: 0 },
       { text: "We are happy for them and would help if we can", score: 1 },
-      { text: "That is their business — we focus on the year itself", score: 2 },
-      { text: "We hope they renew with us — we need continuity", score: 3 }
+      { text: "That is their business , we focus on the year itself", score: 2 },
+      { text: "We hope they renew with us , we need continuity", score: 3 }
     ]
   },
   {
@@ -2311,7 +2305,7 @@ var fcENQuestions = [
       { text: "We follow the official guidelines and add a little extra when we can", score: 0 },
       { text: "We pay exactly what the programme requires", score: 1 },
       { text: "We negotiated based on our budget", score: 2 },
-      { text: "We pay the minimum — we already provide room and board", score: 3 }
+      { text: "We pay the minimum , we already provide room and board", score: 3 }
     ]
   },
   {
@@ -2320,11 +2314,11 @@ var fcENQuestions = [
       { text: "Have an honest conversation, try to understand both sides, and look for a solution", score: 0 },
       { text: "Contact the agency or Academy AuPair and handle it properly", score: 1 },
       { text: "Give them a clear list of what needs to change", score: 2 },
-      { text: "End the arrangement — we cannot afford for it not to work", score: 3 }
+      { text: "End the arrangement , we cannot afford for it not to work", score: 3 }
     ]
   },
   {
-    text: "If you are honest with yourself — what is the main thing you are hoping the AuPair will bring to your family?",
+    text: "If you are honest with yourself , what is the main thing you are hoping the AuPair will bring to your family?",
     opts: [
       { text: "A real connection, cultural richness, and someone our children will remember", score: 0 },
       { text: "Reliable childcare and a positive presence in our home", score: 1 },
@@ -2337,7 +2331,7 @@ var fcENResults   = [
   {
     type: "The programme-first host family",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-    title: "Your home is ready — and so is your heart",
+    title: "Your home is ready , and so is your heart",
     desc: "Your answers show that you understand what the AuPair programme is really about. You see the AuPair as a person, not a position. You are prepared to give them a real place in your family, respect their time, support their growth, and create an experience that both they and your children will carry for life. This is exactly the kind of family Academy AuPair matches with our prepared AuPairs. We would love to work with you.",
     barLabel1: "Programme-focused", barLabel2: "Needs-focused",
     cta: "Reach out at academyaupair.com", restart: "Take the quiz again",
@@ -2346,8 +2340,8 @@ var fcENResults   = [
   {
     type: "The practical host family",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    title: "You are honest — and that is a good start",
-    desc: "Your answers show a mix of genuine care and practical need. You want reliable help, and that is completely understandable — but the AuPair programme comes with responsibilities toward the young person in your home that go beyond the practical. The good news is that with the right preparation and honest expectations on both sides, this can work beautifully. Academy AuPair would like to have a conversation with you before matching to make sure both you and your AuPair start on the right foundation.",
+    title: "You are honest , and that is a good start",
+    desc: "Your answers show a mix of genuine care and practical need. You want reliable help, and that is completely understandable , but the AuPair programme comes with responsibilities toward the young person in your home that go beyond the practical. The good news is that with the right preparation and honest expectations on both sides, this can work beautifully. Academy AuPair would like to have a conversation with you before matching to make sure both you and your AuPair start on the right foundation.",
     barLabel1: "Programme-focused", barLabel2: "Needs-focused",
     cta: "Reach out at academyaupair.com", restart: "Take the quiz again",
     profileTitle: "Your host family profile", complete: "complete"
@@ -2355,8 +2349,8 @@ var fcENResults   = [
   {
     type: "The needs-first host family",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
-    title: "Before we match you — let us talk",
-    desc: "Your answers suggest that your primary need is practical support, and cost and convenience are central to your thinking. We understand that childcare is genuinely difficult and expensive. But the AuPair programme places a young person — often far from home for the first time — at the centre of your family. They have legal rights, emotional needs, and a life beyond your household. A placement that does not respect this tends to fail — and when it does, children are always affected too. We would welcome an honest conversation with you about what you are looking for and whether the AuPair programme — or a different solution — is the right fit.",
+    title: "Before we match you , let us talk",
+    desc: "Your answers suggest that your primary need is practical support, and cost and convenience are central to your thinking. We understand that childcare is genuinely difficult and expensive. But the AuPair programme places a young person , often far from home for the first time , at the centre of your family. They have legal rights, emotional needs, and a life beyond your household. A placement that does not respect this tends to fail , and when it does, children are always affected too. We would welcome an honest conversation with you about what you are looking for and whether the AuPair programme , or a different solution , is the right fit.",
     barLabel1: "Programme-focused", barLabel2: "Needs-focused",
     cta: "Reach out at academyaupair.com", restart: "Take the quiz again",
     profileTitle: "Your host family profile", complete: "complete"
@@ -2375,7 +2369,7 @@ var fcDEQuestions = [
   {
     text: "Wie sehen Sie die Rolle des AuPairs in Ihrem Haushalt?",
     opts: [
-      { text: "Als echtes Familienmitglied — bei Mahlzeiten, Ausflügen und dem Familienleben dabei", score: 0 },
+      { text: "Als echtes Familienmitglied , bei Mahlzeiten, Ausflügen und dem Familienleben dabei", score: 0 },
       { text: "Als vertrauenswürdige Hilfe mit eigenem Raum und Privatsphäre", score: 1 },
       { text: "Als professionelle Unterstützung bei der Haushaltsführung", score: 2 },
       { text: "Als zusätzliche Unterstützung für das, was wir selbst nicht schaffen", score: 3 }
@@ -2384,16 +2378,16 @@ var fcDEQuestions = [
   {
     text: "Ihr AuPair hat jeden Dienstagabend einen Deutschkurs. Wie stehen Sie dazu?",
     opts: [
-      { text: "Wir unterstützen das aktiv — Deutsch lernen ist wichtig für ihre Zukunft", score: 0 },
+      { text: "Wir unterstützen das aktiv , Deutsch lernen ist wichtig für ihre Zukunft", score: 0 },
       { text: "Das ist in Ordnung, wir planen entsprechend", score: 1 },
       { text: "Es kommt darauf an, ob unser Zeitplan es in der Woche erlaubt", score: 2 },
-      { text: "Das ist ungünstig — wir brauchen abends Flexibilität", score: 3 }
+      { text: "Das ist ungünstig , wir brauchen abends Flexibilität", score: 3 }
     ]
   },
   {
     text: "Das AuPair-Programm erlaubt maximal 30 Arbeitsstunden pro Woche. Wie gehen Sie damit um?",
     opts: [
-      { text: "Wir halten das vollständig ein — wir würden nie mehr verlangen", score: 0 },
+      { text: "Wir halten das vollständig ein , wir würden nie mehr verlangen", score: 0 },
       { text: "Wir versuchen es einzuhalten, aber manchmal ergeben sich Situationen", score: 1 },
       { text: "Wir denken, es kommt auf die Situation an", score: 2 },
       { text: "Ehrlich gesagt wird es Wochen geben, in denen mehr nötig ist", score: 3 }
@@ -2404,23 +2398,23 @@ var fcDEQuestions = [
     opts: [
       { text: "Wir erkundigen uns, beziehen sie mehr ein und geben ihnen Raum zum Reden", score: 0 },
       { text: "Wir geben ihnen etwas Auszeit und signalisieren, dass wir da sind", score: 0 },
-      { text: "Wir hoffen, dass sie damit umgehen — das gehört zum Leben im Ausland", score: 2 },
+      { text: "Wir hoffen, dass sie damit umgehen , das gehört zum Leben im Ausland", score: 2 },
       { text: "Solange sie ihre Aufgaben erledigen, ist es nicht wirklich unser Problem", score: 3 }
     ]
   },
   {
     text: "Haben Sie mit Ihren Kindern darüber gesprochen, was es bedeutet, ein AuPair zu haben?",
     opts: [
-      { text: "Ja — wir haben sie vorbereitet und sie freuen sich wirklich darauf", score: 0 },
+      { text: "Ja , wir haben sie vorbereitet und sie freuen sich wirklich darauf", score: 0 },
       { text: "Wir haben die Grundlagen erklärt und sie scheinen damit einverstanden zu sein", score: 1 },
-      { text: "Nicht wirklich — Kinder passen sich an", score: 2 },
-      { text: "Nein — das ist unsere Entscheidung, nicht ihre", score: 3 }
+      { text: "Nicht wirklich , Kinder passen sich an", score: 2 },
+      { text: "Nein , das ist unsere Entscheidung, nicht ihre", score: 3 }
     ]
   },
   {
     text: "Wie sieht ein typisches Wochenende für Ihr AuPair bei Ihnen aus?",
     opts: [
-      { text: "Sie haben ihre Freizeit — manchmal laden wir sie ein, aber wir erwarten nichts", score: 0 },
+      { text: "Sie haben ihre Freizeit , manchmal laden wir sie ein, aber wir erwarten nichts", score: 0 },
       { text: "Sie sind frei, helfen aber gelegentlich bei etwas Kleinem", score: 1 },
       { text: "Wir erwarten eine gewisse Verfügbarkeit, je nach unseren Plänen", score: 2 },
       { text: "Am Wochenende brauchen wir oft besonders viel Unterstützung", score: 3 }
@@ -2432,16 +2426,16 @@ var fcDEQuestions = [
       { text: "Wir würden offen sprechen und es gemeinsam respektvoll lösen", score: 0 },
       { text: "Wir würden es ruhig ansprechen und eine Lösung finden", score: 1 },
       { text: "Wir würden deutlich machen, was unsere Erwartungen sind", score: 2 },
-      { text: "Sie sind in unserem Zuhause — unsere Regeln gelten", score: 3 }
+      { text: "Sie sind in unserem Zuhause , unsere Regeln gelten", score: 3 }
     ]
   },
   {
     text: "Ihr AuPair möchte nach dem Jahr bei Ihnen Ausbildungsmöglichkeiten erkunden. Wie fühlen Sie sich dabei?",
     opts: [
-      { text: "Wir würden sie aktiv unterstützen und ermutigen — es ist ihre Zukunft", score: 0 },
+      { text: "Wir würden sie aktiv unterstützen und ermutigen , es ist ihre Zukunft", score: 0 },
       { text: "Wir freuen uns für sie und helfen, wenn wir können", score: 1 },
-      { text: "Das ist ihre Sache — wir konzentrieren uns auf das laufende Jahr", score: 2 },
-      { text: "Wir hoffen, dass sie bei uns verlängern — wir brauchen Kontinuität", score: 3 }
+      { text: "Das ist ihre Sache , wir konzentrieren uns auf das laufende Jahr", score: 2 },
+      { text: "Wir hoffen, dass sie bei uns verlängern , wir brauchen Kontinuität", score: 3 }
     ]
   },
   {
@@ -2450,7 +2444,7 @@ var fcDEQuestions = [
       { text: "Wir folgen den offiziellen Richtlinien und geben wenn möglich etwas mehr", score: 0 },
       { text: "Wir zahlen genau das, was das Programm vorschreibt", score: 1 },
       { text: "Wir haben es basierend auf unserem Budget ausgehandelt", score: 2 },
-      { text: "Wir zahlen das Minimum — Unterkunft und Verpflegung stellen wir ja bereits", score: 3 }
+      { text: "Wir zahlen das Minimum , Unterkunft und Verpflegung stellen wir ja bereits", score: 3 }
     ]
   },
   {
@@ -2459,11 +2453,11 @@ var fcDEQuestions = [
       { text: "Ein offenes Gespräch führen, beide Seiten verstehen und eine Lösung suchen", score: 0 },
       { text: "Die Agentur oder Academy AuPair kontaktieren und es ordentlich regeln", score: 1 },
       { text: "Klar benennen, was sich ändern muss", score: 2 },
-      { text: "Die Vereinbarung beenden — wir können uns kein Scheitern leisten", score: 3 }
+      { text: "Die Vereinbarung beenden , wir können uns kein Scheitern leisten", score: 3 }
     ]
   },
   {
-    text: "Wenn Sie ehrlich sind — was ist das Wichtigste, das Sie sich vom AuPair für Ihre Familie erhoffen?",
+    text: "Wenn Sie ehrlich sind , was ist das Wichtigste, das Sie sich vom AuPair für Ihre Familie erhoffen?",
     opts: [
       { text: "Eine echte Verbindung, kulturelle Bereicherung und jemanden, an den sich unsere Kinder erinnern werden", score: 0 },
       { text: "Zuverlässige Kinderbetreuung und eine positive Präsenz in unserem Zuhause", score: 1 },
@@ -2476,7 +2470,7 @@ var fcDEResults   = [
   {
     type: "Die programmfokussierte Gastfamilie",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-    title: "Ihr Zuhause ist bereit — und Ihr Herz auch",
+    title: "Ihr Zuhause ist bereit , und Ihr Herz auch",
     desc: "Ihre Antworten zeigen, dass Sie verstehen, worum es beim AuPair-Programm wirklich geht. Sie sehen das AuPair als Mensch, nicht als Stelle. Sie sind bereit, ihm einen echten Platz in Ihrer Familie zu geben, seine Zeit zu respektieren, sein Wachstum zu fördern und eine Erfahrung zu schaffen, die sowohl das AuPair als auch Ihre Kinder ein Leben lang begleiten wird. Genau solche Familien vermittelt Academy AuPair an unsere vorbereiteten AuPairs. Wir würden sehr gerne mit Ihnen zusammenarbeiten.",
     barLabel1: "Programmfokussiert", barLabel2: "Bedarfsfokussiert",
     cta: "Kontaktieren Sie uns auf academyaupair.com", restart: "Quiz erneut starten",
@@ -2485,8 +2479,8 @@ var fcDEResults   = [
   {
     type: "Die pragmatische Gastfamilie",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    title: "Sie sind ehrlich — und das ist ein guter Anfang",
-    desc: "Ihre Antworten zeigen eine Mischung aus echter Fürsorge und praktischem Bedarf. Sie möchten zuverlässige Unterstützung, und das ist absolut verständlich — aber das AuPair-Programm bringt Verantwortung gegenüber dem jungen Menschen in Ihrem Zuhause mit sich, die über das Praktische hinausgeht. Die gute Nachricht ist: Mit der richtigen Vorbereitung und ehrlichen Erwartungen auf beiden Seiten kann das wunderbar funktionieren. Academy AuPair würde vor einem Match gerne ein Gespräch mit Ihnen führen, damit beide Seiten auf dem richtigen Fundament starten.",
+    title: "Sie sind ehrlich , und das ist ein guter Anfang",
+    desc: "Ihre Antworten zeigen eine Mischung aus echter Fürsorge und praktischem Bedarf. Sie möchten zuverlässige Unterstützung, und das ist absolut verständlich , aber das AuPair-Programm bringt Verantwortung gegenüber dem jungen Menschen in Ihrem Zuhause mit sich, die über das Praktische hinausgeht. Die gute Nachricht ist: Mit der richtigen Vorbereitung und ehrlichen Erwartungen auf beiden Seiten kann das wunderbar funktionieren. Academy AuPair würde vor einem Match gerne ein Gespräch mit Ihnen führen, damit beide Seiten auf dem richtigen Fundament starten.",
     barLabel1: "Programmfokussiert", barLabel2: "Bedarfsfokussiert",
     cta: "Kontaktieren Sie uns auf academyaupair.com", restart: "Quiz erneut starten",
     profileTitle: "Ihr Gastfamilien-Profil", complete: "abgeschlossen"
@@ -2494,8 +2488,8 @@ var fcDEResults   = [
   {
     type: "Die bedarfsorientierte Gastfamilie",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
-    title: "Bevor wir Sie vermitteln — lassen Sie uns sprechen",
-    desc: "Ihre Antworten lassen vermuten, dass praktische Unterstützung Ihr Hauptbedarf ist und dass Kosten und Bequemlichkeit eine zentrale Rolle spielen. Wir verstehen, dass Kinderbetreuung wirklich schwierig und teuer sein kann. Aber das AuPair-Programm stellt einen jungen Menschen — oft zum ersten Mal weit von zu Hause entfernt — in den Mittelpunkt Ihrer Familie. Er oder sie hat gesetzliche Rechte, emotionale Bedürfnisse und ein Leben jenseits Ihres Haushalts. Eine Vermittlung, die das nicht respektiert, scheitert in der Regel — und wenn das passiert, sind immer auch die Kinder betroffen. Wir laden Sie herzlich ein, mit uns offen darüber zu sprechen, was Sie suchen und ob das AuPair-Programm — oder eine andere Lösung — wirklich der richtige Weg für Sie ist.",
+    title: "Bevor wir Sie vermitteln , lassen Sie uns sprechen",
+    desc: "Ihre Antworten lassen vermuten, dass praktische Unterstützung Ihr Hauptbedarf ist und dass Kosten und Bequemlichkeit eine zentrale Rolle spielen. Wir verstehen, dass Kinderbetreuung wirklich schwierig und teuer sein kann. Aber das AuPair-Programm stellt einen jungen Menschen , oft zum ersten Mal weit von zu Hause entfernt , in den Mittelpunkt Ihrer Familie. Er oder sie hat gesetzliche Rechte, emotionale Bedürfnisse und ein Leben jenseits Ihres Haushalts. Eine Vermittlung, die das nicht respektiert, scheitert in der Regel , und wenn das passiert, sind immer auch die Kinder betroffen. Wir laden Sie herzlich ein, mit uns offen darüber zu sprechen, was Sie suchen und ob das AuPair-Programm , oder eine andere Lösung , wirklich der richtige Weg für Sie ist.",
     barLabel1: "Programmfokussiert", barLabel2: "Bedarfsfokussiert",
     cta: "Kontaktieren Sie uns auf academyaupair.com", restart: "Quiz erneut starten",
     profileTitle: "Ihr Gastfamilien-Profil", complete: "abgeschlossen"
@@ -2534,9 +2528,9 @@ function apShowResult(){
   var pct=Math.round((total/(apQuestions.length*3))*100);
   var heartPct=100-pct;
   var type,title,desc;
-  if(pct<=30){type='The heart-first AuPair';title='You are here for the children — and it shows';desc='Your answers reflect a genuine love for children and a real openness to family life. You are exactly who host families are looking for. Academy AuPair would love to prepare you and help you stand out with our certificate.';}
+  if(pct<=30){type='The heart-first AuPair';title='You are here for the children , and it shows';desc='Your answers reflect a genuine love for children and a real openness to family life. You are exactly who host families are looking for. Academy AuPair would love to prepare you and help you stand out with our certificate.';}
   else if(pct<=60){type='The balanced AuPair';title='You bring both heart and ambition';desc='You care about the family experience and have personal goals too. That is honest. With real preparation, you can be a genuinely great AuPair. The Academy AuPair programme will make sure you arrive truly ready.';}
-  else{type='The future-builder AuPair';title='Your goal is Germany — and that is honest';desc='Your primary motivation is building a future in Germany. The AuPair programme places you at the centre of a family with children who depend on you completely. We would love to have an honest conversation with you before you apply — preparation is not optional, it is what will make or break your year.';}
+  else{type='The future-builder AuPair';title='Your goal is Germany , and that is honest';desc='Your primary motivation is building a future in Germany. The AuPair programme places you at the centre of a family with children who depend on you completely. We would love to have an honest conversation with you before you apply , preparation is not optional, it is what will make or break your year.';}
   showResultCard(apAnswers,apQuestions,type,title,desc,'Child-focused','Future-focused','Your motivation profile','Get in touch with Academy AuPair',heartPct,pct);
   sendEmail(apN,apE,apP,'AuPair',apAnswers,apQuestions,type,title);
 }
@@ -2600,7 +2594,7 @@ function submitContact() {
   var message='Contact Form\n\nName: '+name+'\nEmail: '+email+(phone?'\nPhone: '+phone:'')+(type?'\nType: '+type:'')+(msg?'\n\nMessage:\n'+msg:'');
   emailjs.send('service_y8uj80e','template_f0vp2h3',{message:message})
     .then(function(){document.getElementById('ct-ok').style.display='block';})
-    .catch(function(){document.getElementById('ct-err').textContent='Error — please email hello@academyaupair.com';document.getElementById('ct-err').style.display='block';});
+    .catch(function(){document.getElementById('ct-err').textContent='Error , please email hello@academyaupair.com';document.getElementById('ct-err').style.display='block';});
 }
 
 </script>
