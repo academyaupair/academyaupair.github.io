@@ -1930,6 +1930,63 @@ function sendEmail(name, email, phone, quizType, answers, questions, resultType,
   emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: msg})
     .then(function() { console.log('EmailJS OK'); })
     .catch(function(e) { console.error('EmailJS error:', e); });
+
+  // Sync this submission to HubSpot so it can trigger the automated,
+  // delayed personal-result email + follow-up workflow.
+  var totalScore = answers.reduce(function(s, a, qi) {
+    return s + (a !== null ? questions[qi].opts[a].score : 0);
+  }, 0);
+  var scorePct = Math.round((totalScore / (questions.length * 3)) * 100);
+  submitToHubSpot(name, email, phone, quizType, scorePct, resultType, resultTitle, lines);
+}
+
+// ── HUBSPOT CRM SYNC ─────────────────────────────────────────────────────
+// Every quiz completion is pushed into HubSpot as a Contact via the public
+// Forms Submission API. This requires ZERO API key (safe to run in the
+// browser) but does require a HubSpot Form to exist with the internal field
+// names below. See setup notes shared separately for how to create it.
+var HUBSPOT_PORTAL_ID = '148776655';
+var HUBSPOT_FORM_GUID = '4c723763-6aa1-49fd-85e3-9e6e5c1346ec';
+
+function submitToHubSpot(name, email, phone, quizTrack, scorePct, resultType, resultTitle, answersSummary) {
+  if (!HUBSPOT_FORM_GUID || HUBSPOT_FORM_GUID === 'REPLACE_WITH_YOUR_FORM_GUID') {
+    console.warn('HubSpot form GUID not configured yet — skipping CRM sync for this submission.');
+    return;
+  }
+  var nameParts = name.trim().split(/\s+/);
+  var firstname = nameParts.shift() || name;
+  var lastname = nameParts.join(' ');
+
+  var payload = {
+    fields: [
+      { name: 'email',                value: email },
+      { name: 'firstname',            value: firstname },
+      { name: 'lastname',             value: lastname },
+      { name: 'phone',                value: phone },
+      { name: 'quiz_track',           value: quizTrack },
+      { name: 'quiz_score',           value: String(scorePct) },
+      { name: 'quiz_result_type',     value: resultType },
+      { name: 'quiz_result_title',    value: resultTitle },
+      { name: 'quiz_answers_summary', value: answersSummary }
+    ],
+    context: {
+      pageUri: window.location.href,
+      pageName: document.title
+    }
+  };
+
+  // NOTE: this portal is on the EU data center (app-eu1.hubspot.com),
+  // so submissions must go to the EU forms endpoint.
+  fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function(res) {
+    if (!res.ok) { return res.text().then(function(t) { throw new Error(t); }); }
+    console.log('HubSpot sync OK');
+  })
+  .catch(function(e) { console.error('HubSpot sync error:', e); });
 }
 
 // ── CTA MODAL ────────────────────────────────────────────────────────────
