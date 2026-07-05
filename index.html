@@ -1251,7 +1251,7 @@ footer {
 .match-story-text{font-size:14px;line-height:1.7;}
 .match-story.good .match-story-text{color:#0a3020;}
 .match-story.bad .match-story-text{color:#5a2020;}
-.price-pkg{background:var(--white);border:2px solid var(--green);border-radius:var(--radius);padding:28px;text-align:center;}
+.price-pkg{background:var(--white);border:2px solid var(--green);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.2s;}.price-pkg:hover{box-shadow:0 6px 24px rgba(26,61,43,0.15);transform:translateY(-2px);}
 .price-pkg-title{font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px;}
 .price-pkg-price{font-size:38px;font-weight:700;color:var(--green);margin-bottom:4px;}
 .price-pkg-sub{font-size:14px;color:var(--text-muted);margin-bottom:16px;}
@@ -1401,7 +1401,7 @@ section.white .why-card.light .why-card.white .why-card {
         <input id="ct-phone" type="tel"   placeholder="Your WhatsApp number" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
         <select id="ct-type" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;background:#fff;">
           <option value="" disabled selected>I am a...</option>
-          <option>AuPair candidate from India</option>
+          <option>I am an AuPair</option>
           <option>Host family in Germany</option>
           <option>AuPair agency</option>
           <option>German language tutor in India</option>
@@ -1490,7 +1490,7 @@ section.white .why-card.light .why-card.white .why-card {
     <div class="section-label">Pricing</div>
     <h2 class="section-title">Simple. Transparent.<br>No hidden fees.</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:800px;margin-top:24px;">
-      <div class="price-pkg" style="border-color:var(--border);border-width:1.5px;">
+      <div class="price-pkg" style="border-color:var(--border);border-width:1.5px;cursor:pointer;" onclick="openCTAWithProgram('5-Day AuPair Preparation Programme (€150)')">
         <div class="price-pkg-title">5-Day Preparation</div>
         <div class="price-pkg-price">&euro;150</div>
         <div class="price-pkg-sub">Full programme + certificate</div>
@@ -1502,7 +1502,7 @@ section.white .why-card.light .why-card.white .why-card {
           <li>Academy AuPair certificate</li>
         </ul>
       </div>
-      <div class="price-pkg" style="border-color:var(--border);border-width:1.5px;">
+      <div class="price-pkg" style="border-color:var(--border);border-width:1.5px;cursor:pointer;" onclick="openCTAWithProgram('Interview Preparation & CV (€70)')">
         <div class="price-pkg-title">Interview Prep &amp; CV</div>
         <div class="price-pkg-price">&euro;70</div>
         <div class="price-pkg-sub">Find your right match</div>
@@ -1514,7 +1514,7 @@ section.white .why-card.light .why-card.white .why-card {
           <li>Real questions , real practice</li>
         </ul>
       </div>
-      <div class="price-pkg">
+      <div class="price-pkg" style="cursor:pointer;" onclick="openCTAWithProgram('Complete Package - Preparation + Interview + Certificate (€220)')">
         <div class="price-pkg-title">Complete Package</div>
         <div class="price-pkg-price">&euro;220</div>
         <div class="price-pkg-sub">Preparation + interview + certificate</div>
@@ -1920,6 +1920,9 @@ document.querySelectorAll('.why-card.step-card.aud-card.risk-card').forEach(func
 });
 
 // ── EMAIL HELPER ─────────────────────────────────────────────────────────
+var apQuizSubmitted = false;
+var fcQuizSubmitted = false;
+
 function sendEmail(name, email, phone, quizType, answers, questions, resultType, resultTitle) {
   var lines = answers.map(function(ans, qi) {
     if (ans === null) return '';
@@ -1927,7 +1930,8 @@ function sendEmail(name, email, phone, quizType, answers, questions, resultType,
   }).filter(Boolean).join('\n\n');
   var msg = quizType + ' Quiz\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone +
     '\n\nResult: ' + resultType + '\nTitle: ' + resultTitle + '\n\n--- Answers ---\n\n' + lines;
-  emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: msg})
+  var subj = quizType + ' Quiz Result — ' + name;
+  emailjs.send('service_y8uj80e', 'template_f0vp2h3', {message: msg, subject: subj, name: name, email: email})
     .then(function() { console.log('EmailJS OK'); })
     .catch(function(e) { console.error('EmailJS error:', e); });
 
@@ -2557,6 +2561,7 @@ var fcDEResults   = [
 var apCurrent=0, apAnswers=[], apN='', apE='', apP='';
 
 function startAPQuiz() {
+  apQuizSubmitted = false;
   var n=document.getElementById('ap-name').value.trim();
   var e=document.getElementById('ap-email').value.trim();
   var p=document.getElementById('ap-phone').value.trim();
@@ -2589,13 +2594,17 @@ function apShowResult(){
   else if(pct<=60){type='The balanced AuPair';title='You bring both heart and ambition';desc='You care about the family experience and have personal goals too. That is honest. With real preparation, you can be a genuinely great AuPair. The Academy AuPair programme will make sure you arrive truly ready.';}
   else{type='The future-builder AuPair';title='Your goal is Germany , and that is honest';desc='Your primary motivation is building a future in Germany. The AuPair programme places you at the centre of a family with children who depend on you completely. We would love to have an honest conversation with you before you apply , preparation is not optional, it is what will make or break your year.';}
   showResultCard(apAnswers,apQuestions,type,title,desc,'Child-focused','Future-focused','Your motivation profile','Get in touch with Academy AuPair',heartPct,pct);
-  sendEmail(apN,apE,apP,'AuPair',apAnswers,apQuestions,type,title);
+  if (!apQuizSubmitted) {
+    apQuizSubmitted = true;
+    sendEmail(apN,apE,apP,'AuPair',apAnswers,apQuestions,type,title);
+  }
 }
 
 // ── FAMILY QUIZ ──────────────────────────────────────────────────────────
 var fcCurrent=0, fcAnswers=[], fcLang='en', fcN='', fcE='', fcP='';
 
 function startFCQuiz(lang){
+  fcQuizSubmitted = false;
   var n=document.getElementById('fc-name').value.trim();
   var e=document.getElementById('fc-email').value.trim();
   var p=document.getElementById('fc-phone').value.trim();
@@ -2636,7 +2645,10 @@ function fcShowResult(){
   var pct=Math.round((total/(qs.length*3))*100);
   var r=pct<=30?rs[0]:pct<=60?rs[1]:rs[2];
   showResultCard(fcAnswers,qs,r.type,r.title,r.desc,r.barLabel1,r.barLabel2,r.profileTitle,r.cta,100-pct,pct);
-  sendEmail(fcN,fcE,fcP,'Host Family ('+fcLang.toUpperCase()+')',fcAnswers,qs,r.type,r.title);
+  if (!fcQuizSubmitted) {
+    fcQuizSubmitted = true;
+    sendEmail(fcN,fcE,fcP,'Host Family ('+fcLang.toUpperCase()+')',fcAnswers,qs,r.type,r.title);
+  }
 }
 
 
@@ -2649,9 +2661,48 @@ function submitContact() {
   if(!name||!email){document.getElementById('ct-err').style.display='block';return;}
   document.getElementById('ct-err').style.display='none';
   var message='Contact Form\n\nName: '+name+'\nEmail: '+email+(phone?'\nPhone: '+phone:'')+(type?'\nType: '+type:'')+(msg?'\n\nMessage:\n'+msg:'');
-  emailjs.send('service_y8uj80e','template_f0vp2h3',{message:message})
+  emailjs.send('service_y8uj80e','template_f0vp2h3',{message:message, subject:'Contact Form — '+(type||'General')+' — '+name, name:name, email:email})
     .then(function(){document.getElementById('ct-ok').style.display='block';})
     .catch(function(){document.getElementById('ct-err').textContent='Error , please email hello@academyaupair.com';document.getElementById('ct-err').style.display='block';});
+}
+
+
+// Open enrol modal if URL hash is #enrol
+(function() {
+  function checkHash() {
+    if (window.location.hash === '#enrol') {
+      showPage('aupairs');
+      setTimeout(function() { openCTA('aupair'); }, 300);
+    } else if (window.location.hash === '#quiz') {
+      showPage('aupairs');
+      setTimeout(function() {
+        var el = document.getElementById('ap-collect');
+        if (el) el.scrollIntoView({behavior:'smooth'});
+      }, 300);
+    }
+  }
+  window.addEventListener('hashchange', checkHash);
+  window.addEventListener('load', checkHash);
+})();
+
+
+function openCTAWithProgram(programName) {
+  openCTA('aupair');
+  // After modal opens, pre-select the program if there's a select element
+  setTimeout(function() {
+    var sel = document.getElementById('m-program');
+    if (sel) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text.indexOf(programName.substring(0,15)) !== -1) {
+          sel.selectedIndex = i;
+          break;
+        }
+      }
+    }
+    // Also update modal title
+    var title = document.getElementById('cta-modal-title');
+    if (title) title.textContent = 'Enrol: ' + programName;
+  }, 100);
 }
 
 </script>
