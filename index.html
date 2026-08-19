@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Academy AuPair | Prepared AuPairs. Real Matches. Successful Stories.</title>
 <meta name="description" content="Academy AuPair prepares Indian AuPairs for real family life in Germany. 5-day preparation programme, interview coaching, and the Academy AuPair certificate, recognised by host families and agencies.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>emailjs.init("BojO7YrfgCcMNoInN");</script>
 <style>
+/* ── Inter, self-hosted (no external request, GDPR-safe) ────────── */
+@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/inter-300.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-400.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/inter-500.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-600.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/inter-700.woff2') format('woff2');}
 
 :root {
   --green: #1a3d2b;
@@ -1292,6 +1297,75 @@ section.light .why-card {
   background: rgba(26,61,43,0.04) !important;
   border: 1px solid #e2e8e4 !important;
 }
+
+/* ── LEGAL PAGES (Impressum / Privacy) ──────────────────────── */
+.legal-wrap{max-width:820px;margin:0 auto;padding:56px 24px 80px;}
+.legal-wrap h2{font-size:22px;color:var(--green);margin:38px 0 14px;font-weight:700;letter-spacing:-0.01em;line-height:1.3;}
+.legal-wrap h2:first-of-type{margin-top:0;}
+.legal-wrap h3{font-size:17px;color:var(--green);margin:26px 0 10px;font-weight:700;line-height:1.4;}
+.legal-wrap p{font-size:16px;line-height:1.75;color:#3a4a40;margin-bottom:14px;}
+.legal-wrap ul{margin:0 0 16px 20px;padding:0;}
+.legal-wrap li{font-size:16px;line-height:1.75;color:#3a4a40;margin-bottom:8px;}
+.legal-wrap a{color:var(--green-mid);text-decoration:underline;}
+.legal-wrap a:hover{color:var(--gold-dark);}
+.legal-wrap strong{color:var(--green-dark);font-weight:600;}
+.legal-box{background:var(--green-light);border-left:4px solid var(--green-mid);border-radius:0 8px 8px 0;padding:20px 24px;margin:20px 0;}
+.legal-box p{margin-bottom:8px;}
+.legal-box p:last-child{margin-bottom:0;}
+.legal-note{background:#fdf6e7;border:1px solid #e3cd8a;border-radius:8px;padding:18px 22px;margin:22px 0;}
+.legal-note p{font-size:15px;color:#6b5410;margin-bottom:0;line-height:1.7;}
+.legal-updated{font-size:14px;color:#7a8a80;font-style:italic;margin-top:40px;padding-top:20px;border-top:1px solid #dde5df;}
+.legal-table{width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:15px;}
+.legal-table th{background:var(--green);color:#fff;text-align:left;padding:11px 14px;font-weight:600;font-size:14px;}
+.legal-table td{padding:11px 14px;border-bottom:1px solid #e2e8e4;color:#3a4a40;line-height:1.6;vertical-align:top;}
+.legal-table tr:nth-child(even) td{background:#f7faf8;}
+.legal-toc{background:#f4f8f5;border:1px solid #dde5df;border-radius:8px;padding:20px 24px;margin-bottom:32px;}
+.legal-toc-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--green-mid);margin-bottom:12px;}
+.legal-toc ol{margin:0 0 0 18px;padding:0;}
+.legal-toc li{font-size:15px;margin-bottom:6px;line-height:1.6;}
+@media(max-width:768px){
+  .legal-wrap{padding:36px 16px 60px;}
+  .legal-wrap h2{font-size:20px;}
+  .legal-wrap p,.legal-wrap li{font-size:15.5px;}
+  .legal-table{font-size:13.5px;display:block;overflow-x:auto;white-space:normal;}
+  .legal-table th,.legal-table td{padding:9px 10px;}
+}
+
+/* ── LANGUAGE SWITCH / DIVIDER ──────────────────────────────── */
+.lang-note{background:#f4f8f5;border:1px solid #dde5df;border-radius:8px;padding:14px 20px;margin:0 0 30px;font-size:14.5px;color:#4a5a50;line-height:1.6;}
+.lang-note a{color:var(--green-mid);text-decoration:underline;cursor:pointer;}
+.lang-divider{max-width:820px;margin:0 auto;padding:0 24px;}
+.lang-divider-inner{border-top:2px solid var(--green);padding:34px 0 0;margin:50px 0 0;text-align:center;}
+.lang-divider-badge{display:inline-block;background:var(--green);color:#fff;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:7px 20px;border-radius:50px;margin-bottom:10px;}
+.lang-divider p{font-size:15px;color:#6b7a70;margin:0;}
+@media(max-width:768px){.lang-divider{padding:0 16px;}}
+
+/* ── FORM PRIVACY NOTICE (GDPR Art. 13) ─────────────────────── */
+.form-privacy{font-size:12.5px;line-height:1.6;color:#7a8a80;margin:2px 0 0;}
+.form-privacy a{color:var(--green-mid);text-decoration:underline;cursor:pointer;}
+.form-privacy a:hover{color:var(--gold-dark);}
+
+/* ── COOKIE CONSENT BANNER ──────────────────────────────────── */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#12301f;color:#fff;z-index:99999;padding:22px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);display:none;}
+#cookie-banner.show{display:block;}
+.ck-inner{max-width:1080px;margin:0 auto;display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+.ck-text{flex:1 1 420px;min-width:280px;}
+.ck-text h4{font-size:16px;font-weight:700;color:#fff;margin-bottom:7px;}
+.ck-text p{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.78);margin:0;}
+.ck-text a{color:#e3c579;text-decoration:underline;}
+.ck-actions{display:flex;gap:11px;flex-wrap:wrap;align-items:center;}
+.ck-btn{padding:11px 22px;border-radius:6px;font-size:14.5px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:all 0.15s;white-space:nowrap;}
+.ck-accept{background:#c9a84c;color:#12301f;}
+.ck-accept:hover{background:#e3c579;}
+.ck-reject{background:transparent;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.35);}
+.ck-reject:hover{border-color:#c9a84c;color:#c9a84c;}
+@media(max-width:768px){
+  #cookie-banner{padding:18px 16px;}
+  .ck-inner{gap:16px;}
+  .ck-actions{width:100%;}
+  .ck-btn{flex:1;text-align:center;}
+}
+
 </style>
 </head>
 <body>
@@ -1423,6 +1497,7 @@ section.light .why-card {
         </select>
         <textarea id="ct-msg" rows="3" placeholder="Your message or question" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>
         <button onclick="submitContact()" style="background:var(--green);color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Send message &rarr;</button>
+<p class="form-privacy">By submitting this form you agree that we may store and use your details to respond to your enquiry. See our <a onclick="showPage('privacy')">Privacy Policy</a>. You can request deletion at any time.</p>
         <p id="ct-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in name and email.</p>
         <p id="ct-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>
         <p style="font-size:13px;color:var(--text-muted);text-align:center;">Or email us: <a href="mailto:hello@academyaupair.com" style="color:var(--green);">hello@academyaupair.com</a></p>
@@ -1468,6 +1543,7 @@ section.light .why-card {
         <input id="ap-phone" type="tel"   placeholder="Your WhatsApp number" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;" />
         <button onclick="startAPQuiz()" style="background:var(--green);color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Take the quiz &rarr;</button>
         <p id="ap-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all fields.</p>
+        <p class="form-privacy">Your answers and contact details are stored so we can send you your personalised result. See our <a onclick="showPage('privacy')">Privacy Policy</a>. You can request deletion at any time.</p>
       </div>
     </div>
     <div id="ap-quiz-box" style="display:none;max-width:680px;margin:0 auto 32px;"></div>
@@ -1652,6 +1728,7 @@ section.light .why-card {
           <button onclick="startFCQuiz('de')" style="background:var(--white);border:2px solid var(--green);border-radius:var(--radius);padding:12px 20px;font-size:14px;font-weight:600;color:var(--green);cursor:pointer;font-family:Inter,sans-serif;">Quiz auf Deutsch starten</button>
         </div>
         <p id="fc-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all fields.</p>
+        <p class="form-privacy">Your answers and contact details are stored so we can send you your personalised result. See our <a onclick="showPage('privacy')">Privacy Policy</a>. You can request deletion at any time.</p>
       </div>
     </div>
     <div id="fc-quiz-box" style="display:none;max-width:680px;margin:0 auto 32px;"></div>
@@ -1828,6 +1905,7 @@ section.light .why-card {
         </select>
         <textarea id="ed-msg" rows="3" placeholder="Any specific questions or situation?" style="padding:12px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;font-family:Inter,sans-serif;width:100%;resize:vertical;"></textarea>
         <button onclick="submitEurodoot()" style="background:var(--green);color:#fff;border:none;padding:14px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">Connect me with EuroDoot &#x2192;</button>
+<p class="form-privacy">By submitting this form you agree that we may store and use your details to respond to your enquiry. See our <a onclick="showPage('privacy')">Privacy Policy</a>. You can request deletion at any time.</p>
         <p id="ed-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in all fields.</p>
         <p id="ed-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>
         <p style="font-size:12px;color:#999;text-align:center;margin:0;">eurodoot.in &middot; eurodoot.de &middot; In partnership with Academy AuPair</p>
@@ -1850,6 +1928,792 @@ section.light .why-card {
 </div></div></section>
 <section style="background:#fff"><div class="wrap"><div class="info-split"><div><span class="eyebrow">Who this is for</span><h2 style="margin-bottom:16px">German companies hiring international staff , specifically from India.</h2><p style="font-size:17px;margin-bottom:14px">Germany is actively recruiting skilled workers from India in healthcare, engineering, IT, care work, and Ausbildung programmes. The number of Indian professionals working in German companies is growing every year.</p><p style="font-size:17px;margin-bottom:14px">The recruitment is happening. The preparation often is not. Academy AuPair fills that gap , with the specific knowledge of Indian and German cultural dynamics that generic intercultural training does not have.</p><p style="font-size:17px">We are based in Germany. We live this. We know what actually works.</p></div><div><div style="background:var(--sage);border-radius:8px;padding:32px"><div class="eyebrow">Sectors we work with</div><div class="steps"><div class="step"><div class="step-n">&#8594;</div><div><h4>Healthcare &amp; care work</h4><p style="font-size:14px">Nursing, elder care, and medical staff , one of the largest areas of Indian-to-German recruitment.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>Ausbildung host companies</h4><p style="font-size:14px">Companies taking Indian Ausbildung candidates through EuroDoot or other placement pathways.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>Family and household services</h4><p style="font-size:14px">Including AuPair-adjacent roles , house management, family support, childcare services.</p></div></div><div class="step"><div class="step-n">&#8594;</div><div><h4>SMEs with international teams</h4><p style="font-size:14px">Smaller German companies building diverse teams without a dedicated HR function.</p></div></div></div></div></div></div></div></section>
 <section class="cta-band"><div class="wrap"><h2>Let us understand your situation.</h2><p>A short call. No commitment. We will tell you directly whether we can help.</p><div class="cta-actions"><a href="mailto:hello@academyaupair.com?subject=Company Training Enquiry" class="btn btn-gold btn-lg">Contact us &#8594;</a></div><p class="cta-note">Companies: <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a></p><p class="cta-tagline">Based in NRW, Germany &middot; Working across Germany</p></div></section>
+</div>
+
+
+<!-- ══════════════ IMPRESSUM ══════════════ -->
+<div class="page" id="page-impressum">
+<div class="page-hero">
+  <h1>Impressum</h1>
+  <p>Anbieterkennzeichnung gem&auml;&szlig; &sect; 5 DDG &middot; Legal notice (English below)</p>
+</div>
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>Deutsche Fassung.</strong> Die englische &Uuml;bersetzung finden Sie weiter unten auf dieser Seite.
+    &mdash; <em>German version. The English translation is further down this page.</em>
+  </div>
+
+  <h2>Angaben gem&auml;&szlig; &sect; 5 DDG</h2>
+  <div class="legal-box">
+    <p><strong>Saran Capital Holdings UG (haftungsbeschr&auml;nkt)</strong></p>
+    <p>Heinestra&szlig;e 4<br>47559 Kranenburg<br>Deutschland</p>
+  </div>
+
+  <h2>Kontakt</h2>
+  <div class="legal-box">
+    <p><strong>Telefon:</strong> <a href="tel:+4915567545404">+49 155 6754 5404</a></p>
+    <p><strong>E-Mail:</strong> <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a></p>
+    <p><strong>Website:</strong> academyaupair.com</p>
+  </div>
+
+  <h2>Vertreten durch</h2>
+  <p>Gesch&auml;ftsf&uuml;hrer: <strong>Sameer Saran</strong></p>
+
+  <h2>Registereintrag</h2>
+  <p>Eintragung im Handelsregister.<br>
+  Registergericht: <strong>Amtsgericht Kleve</strong><br>
+  Registernummer: <strong>HRB 18563</strong></p>
+
+  <h2>Umsatzsteuer-Identifikationsnummer</h2>
+  <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27a Umsatzsteuergesetz:<br>
+  <strong>DE358683746</strong></p>
+
+  <h2>Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV</h2>
+  <p><strong>Sameer Saran</strong><br>
+  Saran Capital Holdings UG (haftungsbeschr&auml;nkt)<br>
+  Heinestra&szlig;e 4<br>
+  47559 Kranenburg<br>
+  Deutschland</p>
+
+  <h2>Verbraucherstreitbeilegung</h2>
+  <p>Die Plattform der Europ&auml;ischen Kommission zur Online-Streitbeilegung (OS-Plattform) wurde zum 20. Juli 2025 eingestellt und steht daher nicht mehr zur Verf&uuml;gung.</p>
+  <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle im Sinne des Verbraucherstreitbeilegungsgesetzes (VSBG) teilzunehmen.</p>
+  <p>Bei Anliegen oder Beschwerden wenden Sie sich bitte direkt an <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a>. Wir nehmen jede Nachricht ernst und bem&uuml;hen uns um eine faire L&ouml;sung.</p>
+
+  <h2>Haftung f&uuml;r Inhalte</h2>
+  <p>Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs. 1 DDG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.</p>
+  <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+  <h2>Haftung f&uuml;r Links</h2>
+  <p>Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+  <p>Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+  <h2>Urheberrecht</h2>
+  <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der vorherigen schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+  <p>Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Sollten Sie dennoch auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
+  <p class="legal-updated">Stand: August 2026</p>
+</div>
+
+<div class="lang-divider"><div class="lang-divider-inner">
+  <div class="lang-divider-badge">English version</div>
+  <p>The English translation follows below. In case of any discrepancy, the German version above shall prevail.</p>
+</div></div>
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>English version.</strong> The legally binding German version appears above on this page.
+  </div>
+
+
+  <h2>Information in accordance with &sect; 5 DDG</h2>
+  <div class="legal-box">
+    <p><strong>Saran Capital Holdings UG (haftungsbeschr&auml;nkt)</strong></p>
+    <p>Heinestra&szlig;e 4<br>47559 Kranenburg<br>Germany</p>
+  </div>
+
+  <h2>Contact</h2>
+  <div class="legal-box">
+    <p><strong>Telephone:</strong> <a href="tel:+4915567545404">+49 155 6754 5404</a></p>
+    <p><strong>Email:</strong> <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a></p>
+    <p><strong>Website:</strong> academyaupair.com</p>
+  </div>
+
+  <h2>Represented by</h2>
+  <p>Managing Director (Gesch&auml;ftsf&uuml;hrer): <strong>Sameer Saran</strong></p>
+
+  <h2>Register entry</h2>
+  <p>Entry in the commercial register (Handelsregister).<br>
+  Register court (Registergericht): <strong>Amtsgericht Kleve</strong><br>
+  Register number (Registernummer): <strong>HRB 18563</strong></p>
+
+  <h2>VAT identification number</h2>
+  <p>VAT identification number according to &sect; 27a of the German Value Added Tax Act (Umsatzsteuergesetz):<br>
+  <strong>DE358683746</strong></p>
+
+  <h2>Responsible for content according to &sect; 18 para. 2 MStV</h2>
+  <p><strong>Sameer Saran</strong><br>
+  Saran Capital Holdings UG (haftungsbeschr&auml;nkt)<br>
+  Heinestra&szlig;e 4<br>
+  47559 Kranenburg<br>
+  Germany</p>
+
+  <h2>Consumer dispute resolution</h2>
+  <p>The European Commission's Online Dispute Resolution (ODR) platform ceased operations on 20 July 2025 and is therefore no longer available.</p>
+  <p>We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board (Verbraucherschlichtungsstelle) in accordance with the German Consumer Dispute Resolution Act (VSBG).</p>
+  <p>If you have a concern or complaint, please contact us directly at <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a>. We take every message seriously and aim to find a fair solution.</p>
+
+  <h2>Liability for content</h2>
+  <p>As a service provider, we are responsible for our own content on these pages in accordance with general legislation pursuant to &sect; 7 para. 1 DDG. According to &sect;&sect; 8 to 10 DDG, however, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+  <p>Obligations to remove or block the use of information under general law remain unaffected. However, liability in this respect is only possible from the point in time at which knowledge of a specific infringement of the law is obtained. If we become aware of any such legal infringements, we will remove the relevant content immediately.</p>
+
+  <h2>Liability for links</h2>
+  <p>Our website contains links to external third-party websites over whose content we have no influence. We therefore cannot accept any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for their content.</p>
+  <p>The linked pages were checked for possible legal violations at the time the link was created. No illegal content was identified at that time. However, permanent monitoring of the content of linked pages is not reasonable without concrete evidence of a legal violation. If we become aware of any legal infringements, we will remove such links immediately.</p>
+
+  <h2>Copyright</h2>
+  <p>The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution and any form of commercialisation of such material beyond the scope of copyright law requires the prior written consent of the respective author or creator.</p>
+  <p>Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any infringements, we will remove such content immediately.</p>
+
+  <p class="legal-updated">Last updated: August 2026</p>
+</div>
+</div>
+
+<!-- ══════════════ PRIVACY POLICY ══════════════ -->
+<div class="page" id="page-privacy">
+<div class="page-hero">
+  <h1>Datenschutzerkl&auml;rung</h1>
+  <p>Datenschutzerkl&auml;rung nach DSGVO &middot; Privacy Policy (English below)</p>
+</div>
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>Deutsche Fassung.</strong> Die englische &Uuml;bersetzung finden Sie weiter unten auf dieser Seite.
+    &mdash; <em>German version. The English translation is further down this page.</em>
+  </div>
+
+  <h2>1. Verantwortliche Stelle</h2>
+  <p>Verantwortlich f&uuml;r die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+  <div class="legal-box">
+    <p><strong>Saran Capital Holdings UG (haftungsbeschr&auml;nkt)</strong></p>
+    <p>Heinestra&szlig;e 4<br>47559 Kranenburg<br>Deutschland</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a><br>
+    <strong>Telefon:</strong> <a href="tel:+4915567545404">+49 155 6754 5404</a></p>
+  </div>
+  <p>Einen Datenschutzbeauftragten haben wir nicht bestellt, da wir hierzu nach Art. 37 DSGVO und &sect; 38 BDSG nicht verpflichtet sind. F&uuml;r alle Datenschutzanliegen wenden Sie sich bitte direkt an die oben genannten Kontaktdaten.</p>
+
+  <h2>2. &Uuml;berblick: Welche Daten wir erheben</h2>
+  <p>Wir erheben ausschlie&szlig;lich personenbezogene Daten, die Sie uns aktiv mitteilen, sowie eine begrenzte Menge technischer Daten, die beim Besuch unserer Website automatisch anfallen.</p>
+  <table class="legal-table">
+    <thead><tr><th>Daten</th><th>Wann</th><th>Rechtsgrundlage</th></tr></thead>
+    <tbody>
+      <tr><td>Name, E-Mail-Adresse, Telefon-/WhatsApp-Nummer, Art der Anfrage, Ihre Nachricht</td><td>Bei Absenden eines Kontakt- oder Anfrageformulars</td><td>Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Ma&szlig;nahmen) und Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td></tr>
+      <tr><td>Name, E-Mail-Adresse, Telefonnummer, Ihre Quiz-Antworten, Punktzahl, Ergebniskategorie</td><td>Bei Teilnahme an einem Readiness-Quiz</td><td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td></tr>
+      <tr><td>Ankunftsdatum in Deutschland, Bundesland</td><td>Beim EuroDoot-Formular</td><td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
+      <tr><td>IP-Adresse, Browsertyp und -version, Betriebssystem, Referrer-URL, Datum und Uhrzeit</td><td>Automatisch bei jedem Seitenaufruf (Server-Logfiles)</td><td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</td></tr>
+      <tr><td>Chatnachrichten, Sitzungskennung, IP-Adresse, Browserdaten</td><td>Nur bei Einwilligung in den Live-Chat</td><td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td></tr>
+      <tr><td>Zahlungs- und Rechnungsdaten</td><td>Nur beim Kurskauf (Verarbeitung durch Stripe auf deren Seiten)</td><td>Art. 6 Abs. 1 lit. b DSGVO (Vertragserf&uuml;llung)</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Wir setzen keine Webanalyse-, Werbe- oder Tracking-Tools ein.</strong> Weder Google Analytics noch Meta-/Facebook-Pixel noch vergleichbare Profiling- oder Remarketing-Technologien kommen auf dieser Website zum Einsatz.</p>
+
+  <h2>3. Server-Logfiles</h2>
+  <p>Unser Hosting-Anbieter erhebt und speichert automatisch Informationen in Server-Logfiles, die Ihr Browser automatisch &uuml;bermittelt: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse.</p>
+  <p>Diese Daten werden nicht mit anderen Datenquellen zusammengef&uuml;hrt. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und Optimierung unserer Website sowie an der Erkennung und Abwehr von Missbrauch und Angriffen. Logdaten werden nach kurzer Speicherdauer gel&ouml;scht oder anonymisiert.</p>
+
+  <h2>4. Kontakt- und Anfrageformulare</h2>
+  <p>Unsere Website bietet mehrere Formulare zur Kontaktaufnahme, darunter das allgemeine Kontaktformular, das AuPair-Anfrageformular, das Gastfamilien-Formular, die Partnerformulare f&uuml;r Agenturen und Tutoren sowie das EuroDoot-Formular.</p>
+  <p>Dabei erheben wir die von Ihnen eingegebenen Daten: <strong>Name, E-Mail-Adresse, Telefon- bzw. WhatsApp-Nummer, Art der Anfrage und Ihre Nachricht.</strong> Das EuroDoot-Formular erfragt zus&auml;tzlich Ihr <strong>Ankunftsdatum in Deutschland</strong> und Ihr <strong>Bundesland</strong>.</p>
+  <p><strong>Zweck:</strong> Beantwortung Ihrer Anfrage, Bereitstellung der gew&uuml;nschten Informationen und Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen auf Ihre Anfrage hin.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO, soweit die Verarbeitung einen Vertrag oder vorvertragliche Ma&szlig;nahmen betrifft; im &Uuml;brigen Art. 6 Abs. 1 lit. a DSGVO auf Grundlage Ihrer Einwilligung, die Sie durch das freiwillige Absenden des Formulars erteilen. Sie k&ouml;nnen diese Einwilligung jederzeit mit Wirkung f&uuml;r die Zukunft widerrufen.</p>
+  <h3>Eingesetzte Auftragsverarbeiter</h3>
+  <ul>
+    <li><strong>EmailJS</strong> &mdash; &Uuml;bermittlung des Formularinhalts an unser E-Mail-Postfach. Eine Verarbeitung au&szlig;erhalb der EU ist m&ouml;glich; Transfers sind durch EU-Standardvertragsklauseln abgesichert.</li>
+    <li><strong>HubSpot</strong> (HubSpot Ireland Ltd., 1 Sir John Rogerson's Quay, Dublin 2, Irland) &mdash; unser CRM-System, gehostet im <strong>Rechenzentrum in der Europ&auml;ischen Union</strong>. Datenschutzerkl&auml;rung: <a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener">legal.hubspot.com/privacy-policy</a></li>
+  </ul>
+
+  <h2>5. Readiness-Quizze</h2>
+  <p>Unsere Website bietet Selbsteinsch&auml;tzungs-Quizze f&uuml;r AuPair-Bewerberinnen und f&uuml;r Gastfamilien an. Die Teilnahme ist vollst&auml;ndig freiwillig.</p>
+  <p>Zur Zusendung Ihres Ergebnisses geben Sie <strong>Name, E-Mail-Adresse und Telefonnummer</strong> an. Zus&auml;tzlich speichern wir <strong>Ihre Antworten, die berechnete Punktzahl und die Ihnen zugeordnete Ergebniskategorie</strong>.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO &mdash; Ihre Einwilligung. Sie k&ouml;nnen diese jederzeit per E-Mail an <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a> widerrufen.</p>
+  <p>Ihre Quiz-Antworten werden nicht an Gastfamilien, Agenturen oder sonstige Dritte weitergegeben.</p>
+
+  <h2>6. Live-Chat (Crisp)</h2>
+  <p>Wir setzen den Live-Chat-Dienst <strong>Crisp</strong> der Crisp IM SAS, 2 Boulevard de Launay, 44100 Nantes, Frankreich, ein.</p>
+  <p>Crisp wird <strong>ausschlie&szlig;lich nach Ihrer Einwilligung</strong> &uuml;ber unseren Cookie-Banner geladen. Lehnen Sie ab, wird das Chat-Widget nicht geladen und es werden keine Daten an Crisp &uuml;bermittelt.</p>
+  <p>Bei Nutzung k&ouml;nnen verarbeitet werden: Inhalt Ihrer Chatnachrichten, IP-Adresse, Browser- und Ger&auml;teinformationen, besuchte Seiten sowie eine in Ihrem Browser gespeicherte Sitzungskennung.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit &sect; 25 Abs. 1 TDDDG. Datenschutzerkl&auml;rung: <a href="https://crisp.chat/en/privacy/" target="_blank" rel="noopener">crisp.chat/en/privacy</a></p>
+
+  <h2>7. Zahlungsabwicklung (Stripe)</h2>
+  <p>Beim Kauf eines Kurses erfolgt die Zahlungsabwicklung &uuml;ber <strong>Stripe</strong> (Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Dublin 2, Irland).</p>
+  <p>Sie werden auf eine von Stripe gehostete Checkout-Seite weitergeleitet. <strong>Ihre Zahlungsdaten werden ausschlie&szlig;lich bei Stripe eingegeben und niemals an uns &uuml;bermittelt oder von uns gespeichert.</strong> Wir erhalten lediglich die Best&auml;tigung, ob eine Zahlung erfolgreich war, sowie Name und E-Mail-Adresse zur Freischaltung des Kurses.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO. Datenschutzerkl&auml;rung: <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a></p>
+
+  <h2>8. Schriftarten</h2>
+  <p>Diese Website verwendet die Schriftart &bdquo;Inter&ldquo; unter der SIL Open Font License.</p>
+  <p><strong>Die Schriftdateien werden ausschlie&szlig;lich von unserem eigenen Server ausgeliefert.</strong> Sie werden nicht von Google Fonts oder einem anderen externen Anbieter geladen. Beim Besuch dieser Website wird daher <strong>keine Verbindung zu Google-Servern hergestellt und Ihre IP-Adresse nicht an Google &uuml;bermittelt.</strong></p>
+
+  <h2>9. Content Delivery Network (jsDelivr)</h2>
+  <p>Eine f&uuml;r unsere Kontaktformulare ben&ouml;tigte JavaScript-Bibliothek wird &uuml;ber das Open-Source-CDN <strong>jsDelivr</strong> (Prospect One, Krakau, Polen) geladen. Dabei wird Ihre IP-Adresse an den CDN-Anbieter &uuml;bermittelt.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Datenschutzerkl&auml;rung: <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsdelivr.com/terms/privacy-policy-jsdelivr-net</a></p>
+
+  <h2>10. Cookies und &auml;hnliche Technologien</h2>
+  <p><strong>Unsere Website selbst setzt keine Analyse-, Werbe- oder Tracking-Cookies.</strong> Folgende Dienste k&ouml;nnen Informationen auf Ihrem Endger&auml;t speichern:</p>
+  <table class="legal-table">
+    <thead><tr><th>Dienst</th><th>Zweck</th><th>Wann</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Crisp</strong> (Live-Chat)</td><td>Fortf&uuml;hrung Ihrer Chat-Sitzung &uuml;ber Seitenaufrufe hinweg</td><td>Nur nach Ihrer Zustimmung im Cookie-Banner</td></tr>
+      <tr><td><strong>Stripe</strong></td><td>Betrugspr&auml;vention und sichere Zahlungsabwicklung</td><td>Nur auf den Checkout-Seiten von Stripe</td></tr>
+      <tr><td><strong>Einwilligungsspeicher</strong></td><td>Speichert Ihre Cookie-Entscheidung</td><td>Sobald Sie im Banner w&auml;hlen</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Rechtsgrundlage:</strong> F&uuml;r nicht notwendige Speicherung Art. 6 Abs. 1 lit. a DSGVO i.V.m. &sect; 25 Abs. 1 TDDDG. F&uuml;r technisch notwendige Speicherung wie den Einwilligungsspeicher gilt &sect; 25 Abs. 2 TDDDG; eine Einwilligung ist insoweit nicht erforderlich.</p>
+
+  <h2>11. E-Mail-Kommunikation</h2>
+  <p>Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO. Wir weisen darauf hin, dass unverschl&uuml;sselte E-Mail-Kommunikation Sicherheitsl&uuml;cken aufweisen kann.</p>
+
+  <h2>12. Social-Media-Links</h2>
+  <p>Unsere Website enth&auml;lt einfache Hyperlinks zu unseren Profilen bei Facebook und Instagram. <strong>Es handelt sich um reine Links, nicht um eingebettete Social Plugins.</strong> Eine Daten&uuml;bermittlung an Meta findet erst statt, wenn Sie den Link aktiv anklicken.</p>
+
+  <h2>13. Daten&uuml;bermittlung in Drittl&auml;nder</h2>
+  <p>Der &uuml;berwiegende Teil der Verarbeitung findet innerhalb der EU statt. Unser CRM (HubSpot) nutzt ein EU-Rechenzentrum, unser Chat-Anbieter (Crisp) sitzt in Frankreich. Soweit Dienstleister Daten au&szlig;erhalb der EU/des EWR verarbeiten, sind diese &Uuml;bermittlungen durch <strong>EU-Standardvertragsklauseln</strong> gem&auml;&szlig; Art. 46 Abs. 2 lit. c DSGVO abgesichert.</p>
+
+  <h2>14. Speicherdauer</h2>
+  <ul>
+    <li><strong>Anfrage- und Formulardaten:</strong> So lange, wie es zur Bearbeitung Ihrer Anfrage und der daraus folgenden Beziehung erforderlich ist, danach im Rahmen gesetzlicher Aufbewahrungspflichten.</li>
+    <li><strong>Quiz-Daten:</strong> Bis zum Widerruf bzw. L&ouml;schverlangen.</li>
+    <li><strong>Vertrags- und Buchhaltungsunterlagen:</strong> Gem&auml;&szlig; &sect; 257 HGB und &sect; 147 AO in der Regel 6 bzw. 10 Jahre.</li>
+    <li><strong>Server-Logfiles:</strong> L&ouml;schung oder Anonymisierung nach kurzer Frist.</li>
+    <li><strong>Chat-Verl&auml;ufe:</strong> Nur so lange wie zur Bearbeitung erforderlich.</li>
+  </ul>
+
+  <h2>15. Ihre Rechte nach der DSGVO</h2>
+  <ul>
+    <li><strong>Auskunft (Art. 15 DSGVO)</strong></li>
+    <li><strong>Berichtigung (Art. 16 DSGVO)</strong></li>
+    <li><strong>L&ouml;schung (Art. 17 DSGVO)</strong></li>
+    <li><strong>Einschr&auml;nkung der Verarbeitung (Art. 18 DSGVO)</strong></li>
+    <li><strong>Daten&uuml;bertragbarkeit (Art. 20 DSGVO)</strong></li>
+    <li><strong>Widerspruch (Art. 21 DSGVO)</strong> gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO</li>
+    <li><strong>Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</strong> jederzeit mit Wirkung f&uuml;r die Zukunft</li>
+  </ul>
+  <div class="legal-note">
+    <p>Zur Aus&uuml;bung Ihrer Rechte gen&uuml;gt eine E-Mail an <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a>. Wir antworten unverz&uuml;glich, sp&auml;testens innerhalb eines Monats. Die Aus&uuml;bung Ihrer Rechte ist kostenfrei.</p>
+  </div>
+
+  <h2>16. Beschwerderecht bei der Aufsichtsbeh&ouml;rde</h2>
+  <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbeh&ouml;rde zu beschweren (Art. 77 DSGVO). Die f&uuml;r uns zust&auml;ndige Beh&ouml;rde ist:</p>
+  <div class="legal-box">
+    <p><strong>Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen</strong></p>
+    <p>Kavalleriestra&szlig;e 2&ndash;4<br>40213 D&uuml;sseldorf<br>Deutschland</p>
+    <p>Telefon: +49 211 38424-0<br>E-Mail: <a href="mailto:poststelle@ldi.nrw.de">poststelle@ldi.nrw.de</a><br>Web: <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a></p>
+  </div>
+
+  <h2>17. Datensicherheit</h2>
+  <p>Diese Website nutzt aus Sicherheitsgr&uuml;nden eine TLS/SSL-Verschl&uuml;sselung. Eine verschl&uuml;sselte Verbindung erkennen Sie an <strong>https://</strong> in der Adresszeile und am Schloss-Symbol. Zus&auml;tzlich treffen wir angemessene technische und organisatorische Ma&szlig;nahmen zum Schutz Ihrer Daten.</p>
+
+  <h2>18. &Auml;nderungen dieser Datenschutzerkl&auml;rung</h2>
+  <p>Wir &uuml;berpr&uuml;fen diese Datenschutzerkl&auml;rung regelm&auml;&szlig;ig und passen sie an, wenn sich unsere Leistungen oder die Rechtslage &auml;ndern. Es gilt jeweils die auf dieser Seite ver&ouml;ffentlichte Fassung.</p>
+
+  <p class="legal-updated">Stand: August 2026</p>
+</div>
+
+<div class="lang-divider"><div class="lang-divider-inner">
+  <div class="lang-divider-badge">English version</div>
+  <p>The English translation follows below. In case of any discrepancy, the German version above shall prevail.</p>
+</div></div>
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>English version.</strong> The legally binding German version appears above on this page.
+  </div>
+
+
+  <div class="legal-toc">
+    <div class="legal-toc-title">Contents</div>
+    <ol>
+      <li>Controller and contact details</li>
+      <li>Overview: what data we collect</li>
+      <li>Server log files</li>
+      <li>Contact and enquiry forms</li>
+      <li>Readiness quizzes</li>
+      <li>Live chat (Crisp)</li>
+      <li>Payment processing (Stripe)</li>
+      <li>Fonts</li>
+      <li>Content delivery network (jsDelivr)</li>
+      <li>Cookies and similar technologies</li>
+      <li>Email communication</li>
+      <li>Social media links</li>
+      <li>Transfers outside the EU/EEA</li>
+      <li>How long we keep your data</li>
+      <li>Your rights under the GDPR</li>
+      <li>Right to lodge a complaint</li>
+      <li>Data security</li>
+      <li>Changes to this policy</li>
+    </ol>
+  </div>
+
+  <h2>1. Controller and contact details</h2>
+  <p>The controller responsible for data processing on this website within the meaning of the General Data Protection Regulation (GDPR) is:</p>
+  <div class="legal-box">
+    <p><strong>Saran Capital Holdings UG (haftungsbeschr&auml;nkt)</strong></p>
+    <p>Heinestra&szlig;e 4<br>47559 Kranenburg<br>Germany</p>
+    <p><strong>Email:</strong> <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a><br>
+    <strong>Telephone:</strong> <a href="tel:+4915567545404">+49 155 6754 5404</a></p>
+  </div>
+  <p>The controller is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data.</p>
+  <p>We have not appointed a Data Protection Officer, as we are not legally required to do so under Art. 37 GDPR and &sect; 38 BDSG. For all data protection matters, please contact us directly using the details above.</p>
+
+  <h2>2. Overview: what data we collect</h2>
+  <p>We only collect personal data that you actively provide to us, plus a limited amount of technical data that is generated automatically when you visit our website. Specifically:</p>
+
+  <table class="legal-table">
+    <thead>
+      <tr><th>What we collect</th><th>When</th><th>Legal basis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name, email address, phone / WhatsApp number, enquiry type, your message</td>
+        <td>When you submit any contact or enquiry form</td>
+        <td>Art. 6(1)(b) GDPR (pre-contractual steps) and Art. 6(1)(a) GDPR (consent)</td>
+      </tr>
+      <tr>
+        <td>Name, email address, phone number, your quiz answers, quiz score, result category</td>
+        <td>When you complete an AuPair or host family readiness quiz</td>
+        <td>Art. 6(1)(a) GDPR (consent)</td>
+      </tr>
+      <tr>
+        <td>Date of arrival in Germany, German federal state (Bundesland)</td>
+        <td>When you submit the EuroDoot connection form</td>
+        <td>Art. 6(1)(b) GDPR (pre-contractual steps)</td>
+      </tr>
+      <tr>
+        <td>IP address, browser type and version, operating system, referring URL, date and time of access</td>
+        <td>Automatically on every page visit (server log files)</td>
+        <td>Art. 6(1)(f) GDPR (legitimate interest in secure operation)</td>
+      </tr>
+      <tr>
+        <td>Chat messages, chat session identifier, IP address, browser data</td>
+        <td>Only if you consent to the live chat and use it</td>
+        <td>Art. 6(1)(a) GDPR (consent)</td>
+      </tr>
+      <tr>
+        <td>Payment and billing data</td>
+        <td>Only when you purchase a course (processed by Stripe on Stripe's own pages)</td>
+        <td>Art. 6(1)(b) GDPR (contract performance)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>We do not use website analytics, advertising pixels, or tracking tools.</strong> We do not use Google Analytics, Meta/Facebook Pixel, or any comparable profiling or remarketing technology on this website.</p>
+
+  <h2>3. Server log files</h2>
+  <p>Our hosting provider automatically collects and stores information in so-called server log files, which your browser transmits automatically. This includes:</p>
+  <ul>
+    <li>Browser type and browser version</li>
+    <li>Operating system used</li>
+    <li>Referrer URL (the page you came from)</li>
+    <li>Host name of the accessing computer</li>
+    <li>Date and time of the server request</li>
+    <li>IP address</li>
+  </ul>
+  <p>This data is not merged with other data sources. It is processed on the basis of Art. 6(1)(f) GDPR. We have a legitimate interest in the technically error-free presentation and optimisation of our website, and in detecting and preventing misuse and attacks. Log data is deleted or anonymised after a short retention period.</p>
+
+  <h2>4. Contact and enquiry forms</h2>
+  <p>Our website offers several forms through which you can contact us &mdash; including the general contact form, the AuPair enquiry form, the host family enquiry form, the agency and tutor partnership forms, and the EuroDoot connection form.</p>
+  <p>When you use one of these forms, we collect the data you enter: <strong>your name, email address, phone or WhatsApp number, the type of enquiry, and your message</strong>. The EuroDoot form additionally asks for your <strong>date of arrival in Germany</strong> and your <strong>German federal state</strong>.</p>
+  <p><strong>Purpose:</strong> To respond to your enquiry, to provide the information you requested, and to take pre-contractual steps at your request.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR where the processing relates to a contract or pre-contractual measures; otherwise Art. 6(1)(a) GDPR on the basis of your consent, which you give by voluntarily submitting the form. You may withdraw this consent at any time with effect for the future.</p>
+
+  <h3>Processors used for form submissions</h3>
+  <p>Form data is transmitted to us using the following service providers, each acting as a processor under a data processing agreement (Art. 28 GDPR):</p>
+  <ul>
+    <li><strong>EmailJS</strong> (EmailJS.com) &mdash; used to deliver the content of your form submission to our email inbox. Data may be processed on servers outside the EU. Transfers are safeguarded by EU Standard Contractual Clauses.</li>
+    <li><strong>HubSpot</strong> (HubSpot Ireland Ltd., 1 Sir John Rogerson's Quay, Dublin 2, Ireland) &mdash; our customer relationship management system, hosted in the <strong>European Union data centre</strong>. We use HubSpot to store your enquiry, manage our correspondence with you, and send you the follow-up information you requested. HubSpot Privacy Policy: <a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener">legal.hubspot.com/privacy-policy</a></li>
+  </ul>
+
+  <h2>5. Readiness quizzes</h2>
+  <p>Our website offers self-assessment quizzes for AuPair candidates and for host families. Participation is entirely voluntary.</p>
+  <p>To receive your personalised result, you provide your <strong>name, email address and phone number</strong>. In addition, we store <strong>your individual answers, your calculated score, and the result category assigned to you</strong>.</p>
+  <p><strong>Purpose:</strong> To calculate and send you a personalised readiness result, and to give you tailored guidance about your preparation for the AuPair pathway between India and Germany.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(a) GDPR &mdash; your consent, given by voluntarily completing and submitting the quiz. You can withdraw your consent at any time by emailing <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a>.</p>
+  <p>Quiz results are stored in our HubSpot CRM (EU data centre) and are used to send you a personalised follow-up email. Your quiz answers are not shared with host families, agencies, or any other third party.</p>
+
+  <h2>6. Live chat (Crisp)</h2>
+  <p>We use the live chat service <strong>Crisp</strong>, operated by Crisp IM SAS, 2 Boulevard de Launay, 44100 Nantes, France, to allow you to ask questions directly on our website.</p>
+  <p>Crisp is loaded <strong>only after you have given your consent</strong> via our cookie banner. If you decline, the chat widget is not loaded and no data is transmitted to Crisp.</p>
+  <p>If you consent and use the chat, the following data may be processed: the content of your chat messages, your IP address, browser and device information, the pages you visit on our site, and a session identifier stored in your browser so that your conversation can be continued.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(a) GDPR &mdash; your consent, in conjunction with &sect; 25(1) TDDDG for the storage of information on your device. You can withdraw your consent at any time with effect for the future by clearing your browser storage for this site and declining the cookie banner.</p>
+  <p>Crisp is based in France (EU). Crisp Privacy Policy: <a href="https://crisp.chat/en/privacy/" target="_blank" rel="noopener">crisp.chat/en/privacy</a></p>
+
+  <h2>7. Payment processing (Stripe)</h2>
+  <p>If you purchase one of our courses, payment is processed by <strong>Stripe</strong> (Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Dublin 2, Ireland).</p>
+  <p>When you click a payment button, you are redirected to a checkout page hosted by Stripe. <strong>Your payment card details are entered directly on Stripe's systems and are never transmitted to or stored by us.</strong> We receive only confirmation of whether a payment succeeded, together with the name and email address associated with the purchase, so that we can grant you access to the course.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR &mdash; performance of a contract to which you are party.</p>
+  <p>Stripe's own privacy policy applies to processing that takes place on Stripe's pages: <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a></p>
+
+  <h2>8. Fonts</h2>
+  <p>This website uses the typeface &quot;Inter&quot;, which is licensed under the SIL Open Font License.</p>
+  <p><strong>The font files are hosted directly on our own server.</strong> They are not loaded from Google Fonts or any other external provider. As a result, <strong>no connection is made to Google servers when you visit this website, and your IP address is not transmitted to Google.</strong></p>
+
+  <h2>9. Content delivery network (jsDelivr)</h2>
+  <p>We load a JavaScript library required for our contact forms from the open-source content delivery network <strong>jsDelivr</strong> (operated by Prospect One, Krak&oacute;w, Poland). When this file is loaded, your IP address is transmitted to the CDN provider so that the file can be delivered to your browser.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR &mdash; our legitimate interest in the reliable, fast and secure delivery of our website.</p>
+  <p>jsDelivr Privacy Policy: <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsdelivr.com/terms/privacy-policy-jsdelivr-net</a></p>
+
+  <h2>10. Cookies and similar technologies</h2>
+  <p>Cookies and comparable technologies (such as browser local storage) are small pieces of information stored on your device by your browser.</p>
+  <p><strong>Our website itself does not set any analytics, advertising, or tracking cookies.</strong></p>
+  <p>However, the following third-party services may store information on your device:</p>
+  <table class="legal-table">
+    <thead>
+      <tr><th>Service</th><th>Purpose</th><th>Set when</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Crisp</strong> (live chat)</td>
+        <td>Maintains your chat session so a conversation can be continued across page loads</td>
+        <td>Only after you accept via the cookie banner</td>
+      </tr>
+      <tr>
+        <td><strong>Stripe</strong></td>
+        <td>Fraud prevention and secure payment processing</td>
+        <td>Only on Stripe's own checkout pages, after you click a payment button</td>
+      </tr>
+      <tr>
+        <td><strong>Consent record</strong></td>
+        <td>Remembers your cookie choice so we do not ask again on every visit</td>
+        <td>When you make a choice on the cookie banner</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Legal basis:</strong> For non-essential storage, Art. 6(1)(a) GDPR in conjunction with &sect; 25(1) TDDDG (your consent). For strictly necessary storage such as your consent record, &sect; 25(2) TDDDG applies and no consent is required.</p>
+  <p>You can also configure your browser to block or delete cookies at any time. Please note that blocking all cookies may limit the functionality of this and other websites.</p>
+
+  <h2>11. Email communication</h2>
+  <p>If you contact us by email, we process the personal data you provide (your email address, your name, and the content of your message) in order to answer your enquiry.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR where your message relates to a contract or pre-contractual steps; otherwise Art. 6(1)(f) GDPR, based on our legitimate interest in responding to enquiries addressed to us.</p>
+  <p>Please note that email communication can present security gaps. Completely secure protection of data against third-party access is not possible with unencrypted email.</p>
+
+  <h2>12. Social media links</h2>
+  <p>Our website contains simple hyperlinks to our profiles on Facebook and Instagram. <strong>These are plain links, not embedded social plugins.</strong> No data is transmitted to Meta unless you actively click the link and visit those platforms.</p>
+  <p>Once you leave our website, the privacy policy of the respective platform applies. We have no influence over the data processing carried out by Meta Platforms Ireland Ltd. on its own services.</p>
+
+  <h2>13. Transfers outside the EU/EEA</h2>
+  <p>Most of our processing takes place within the European Union. Our CRM (HubSpot) uses an EU data centre, and our live chat provider (Crisp) is based in France.</p>
+  <p>Where a service provider processes data outside the EU/EEA &mdash; for example EmailJS, or Stripe for certain operations &mdash; such transfers are safeguarded by the <strong>EU Standard Contractual Clauses</strong> pursuant to Art. 46(2)(c) GDPR, and where applicable by an adequacy decision of the European Commission or by additional technical and organisational measures.</p>
+
+  <h2>14. How long we keep your data</h2>
+  <ul>
+    <li><strong>Enquiry and form data:</strong> Retained for as long as necessary to handle your enquiry and any resulting relationship, and thereafter for as long as statutory retention obligations require. Where no such obligation applies, data is deleted once the purpose has been fulfilled and you have not been in contact for a reasonable period.</li>
+    <li><strong>Quiz data:</strong> Retained for as long as you remain interested in our programme, and deleted on request at any time.</li>
+    <li><strong>Contractual and accounting records:</strong> Retained for the statutory periods under German commercial and tax law (generally 6 or 10 years pursuant to &sect; 257 HGB and &sect; 147 AO).</li>
+    <li><strong>Server log files:</strong> Deleted or anonymised after a short technical retention period.</li>
+    <li><strong>Chat transcripts:</strong> Retained only as long as needed to handle your enquiry.</li>
+  </ul>
+  <p>If you withdraw your consent or object to processing, we will delete your data unless we are legally required or entitled to retain it.</p>
+
+  <h2>15. Your rights under the GDPR</h2>
+  <p>You have the following rights in relation to your personal data:</p>
+  <ul>
+    <li><strong>Right of access (Art. 15 GDPR)</strong> &mdash; to obtain confirmation of whether we process your data, and to receive a copy of it.</li>
+    <li><strong>Right to rectification (Art. 16 GDPR)</strong> &mdash; to have inaccurate data corrected and incomplete data completed.</li>
+    <li><strong>Right to erasure (Art. 17 GDPR)</strong> &mdash; to have your data deleted, where no legal retention obligation applies.</li>
+    <li><strong>Right to restriction of processing (Art. 18 GDPR)</strong> &mdash; to have processing limited in certain circumstances.</li>
+    <li><strong>Right to data portability (Art. 20 GDPR)</strong> &mdash; to receive your data in a structured, commonly used, machine-readable format.</li>
+    <li><strong>Right to object (Art. 21 GDPR)</strong> &mdash; to object at any time, on grounds relating to your particular situation, to processing based on Art. 6(1)(f) GDPR.</li>
+    <li><strong>Right to withdraw consent (Art. 7(3) GDPR)</strong> &mdash; to withdraw any consent you have given, at any time, with effect for the future. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.</li>
+  </ul>
+  <div class="legal-note">
+    <p>To exercise any of these rights, simply email us at <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a>. We will respond without undue delay and in any event within one month of receiving your request. There is no charge for exercising your rights.</p>
+  </div>
+
+  <h2>16. Right to lodge a complaint</h2>
+  <p>If you believe that our processing of your personal data infringes the GDPR, you have the right to lodge a complaint with a supervisory authority &mdash; in particular in the Member State of your habitual residence, place of work, or place of the alleged infringement (Art. 77 GDPR).</p>
+  <p>The supervisory authority responsible for our company is:</p>
+  <div class="legal-box">
+    <p><strong>Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen</strong></p>
+    <p>Kavalleriestra&szlig;e 2&ndash;4<br>40213 D&uuml;sseldorf<br>Germany</p>
+    <p>Telephone: +49 211 38424-0<br>Email: <a href="mailto:poststelle@ldi.nrw.de">poststelle@ldi.nrw.de</a><br>Website: <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a></p>
+  </div>
+
+  <h2>17. Data security</h2>
+  <p>This website uses TLS/SSL encryption for security reasons and to protect the transmission of confidential content, such as the enquiries you send to us. You can recognise an encrypted connection by the <strong>https://</strong> prefix in your browser's address bar and the lock symbol.</p>
+  <p>When SSL/TLS encryption is active, the data you transmit to us cannot be read by third parties. We also apply appropriate technical and organisational measures to protect your data against accidental or intentional manipulation, loss, destruction, or unauthorised access.</p>
+
+  <h2>18. Changes to this policy</h2>
+  <p>We review this privacy policy regularly and update it when our services or the applicable legal requirements change. The version published on this page always applies to your current visit.</p>
+
+  <p class="legal-updated">Last updated: August 2026</p>
+</div>
+</div>
+
+
+<!-- ══════════════ WIDERRUFSBELEHRUNG ══════════════ -->
+<div class="page" id="page-widerruf">
+<div class="page-hero">
+  <h1>Widerrufsbelehrung</h1>
+  <p>Widerrufsrecht f&uuml;r Verbraucher &middot; Right of withdrawal (English below)</p>
+</div>
+
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>Deutsche Fassung.</strong> Die englische &Uuml;bersetzung finden Sie weiter unten auf dieser Seite.
+    &mdash; <em>German version. The English translation is further down this page.</em>
+  </div>
+
+  <div class="legal-note">
+    <p>Diese Widerrufsbelehrung gilt f&uuml;r Verbraucher im Sinne des &sect; 13 BGB, die einen Vertrag &uuml;ber unsere kostenpflichtigen Kurse und Leistungen im Fernabsatz abschlie&szlig;en.</p>
+  </div>
+
+  <h2>Widerrufsrecht</h2>
+  <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gr&uuml;nden diesen Vertrag zu widerrufen.</p>
+  <p>Die Widerrufsfrist betr&auml;gt vierzehn Tage ab dem Tag des Vertragsabschlusses.</p>
+  <p>Um Ihr Widerrufsrecht auszu&uuml;ben, m&uuml;ssen Sie uns</p>
+  <div class="legal-box">
+    <p><strong>Saran Capital Holdings UG (haftungsbeschr&auml;nkt)</strong></p>
+    <p>Heinestra&szlig;e 4<br>47559 Kranenburg<br>Deutschland</p>
+    <p>E-Mail: <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a><br>
+    Telefon: <a href="tel:+4915567545404">+49 155 6754 5404</a></p>
+  </div>
+  <p>mittels einer eindeutigen Erkl&auml;rung (z.&nbsp;B. ein mit der Post versandter Brief oder eine E-Mail) &uuml;ber Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie k&ouml;nnen daf&uuml;r das unten stehende Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.</p>
+  <p>Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung &uuml;ber die Aus&uuml;bung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+
+  <h2>Folgen des Widerrufs</h2>
+  <p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschlie&szlig;lich der Lieferkosten (mit Ausnahme der zus&auml;tzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, g&uuml;nstigste Standardlieferung gew&auml;hlt haben), unverz&uuml;glich und sp&auml;testens binnen vierzehn Tagen ab dem Tag zur&uuml;ckzuzahlen, an dem die Mitteilung &uuml;ber Ihren Widerruf dieses Vertrags bei uns eingegangen ist.</p>
+  <p>F&uuml;r diese R&uuml;ckzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der urspr&uuml;nglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdr&uuml;cklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser R&uuml;ckzahlung Entgelte berechnet.</p>
+  <p>Haben Sie verlangt, dass die Dienstleistungen w&auml;hrend der Widerrufsfrist beginnen sollen, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Aus&uuml;bung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.</p>
+
+  <h2>Vorzeitiges Erl&ouml;schen des Widerrufsrechts</h2>
+  <h3>Bei Dienstleistungen (&sect; 356 Abs. 4 BGB)</h3>
+  <p>Ihr Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen, wenn wir die Dienstleistung vollst&auml;ndig erbracht haben und mit der Ausf&uuml;hrung der Dienstleistung erst begonnen haben, nachdem Sie dazu Ihre ausdr&uuml;ckliche Zustimmung gegeben haben und gleichzeitig Ihre Kenntnis davon best&auml;tigt haben, dass Sie Ihr Widerrufsrecht bei vollst&auml;ndiger Vertragserf&uuml;llung durch uns verlieren.</p>
+  <h3>Bei digitalen Inhalten (&sect; 356 Abs. 5 BGB)</h3>
+  <p>Bei einem Vertrag &uuml;ber die Bereitstellung von digitalen Inhalten, die nicht auf einem k&ouml;rperlichen Datentr&auml;ger geliefert werden, erlischt Ihr Widerrufsrecht, wenn</p>
+  <ul>
+    <li>Sie ausdr&uuml;cklich zugestimmt haben, dass wir mit der Ausf&uuml;hrung des Vertrags vor Ablauf der Widerrufsfrist beginnen,</li>
+    <li>Sie Ihre Kenntnis davon best&auml;tigt haben, dass Sie durch Ihre Zustimmung mit Beginn der Ausf&uuml;hrung des Vertrags Ihr Widerrufsrecht verlieren, und</li>
+    <li>wir Ihnen eine Best&auml;tigung hier&uuml;ber zur Verf&uuml;gung gestellt haben.</li>
+  </ul>
+
+  <h2>Muster-Widerrufsformular</h2>
+  <p><em>(Wenn Sie den Vertrag widerrufen wollen, dann f&uuml;llen Sie bitte dieses Formular aus und senden Sie es zur&uuml;ck.)</em></p>
+  <div class="legal-box">
+    <p>An:<br>
+    Saran Capital Holdings UG (haftungsbeschr&auml;nkt)<br>
+    Heinestra&szlig;e 4<br>
+    47559 Kranenburg<br>
+    Deutschland<br>
+    E-Mail: hello@academyaupair.com</p>
+    <p>&mdash;</p>
+    <p>Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag &uuml;ber den Kauf der folgenden Waren (*) / die Erbringung der folgenden Dienstleistung (*):</p>
+    <p>&nbsp;&nbsp;_______________________________________________</p>
+    <p>Bestellt am (*) / erhalten am (*): &nbsp;__________________</p>
+    <p>Name des/der Verbraucher(s): &nbsp;__________________</p>
+    <p>Anschrift des/der Verbraucher(s): &nbsp;__________________</p>
+    <p>Unterschrift des/der Verbraucher(s) <em>(nur bei Mitteilung auf Papier)</em>: &nbsp;__________________</p>
+    <p>Datum: &nbsp;__________________</p>
+    <p style="margin-top:10px;"><em>(*) Unzutreffendes streichen.</em></p>
+  </div>
+
+  <p class="legal-updated">Stand: August 2026</p>
+</div>
+
+<div class="lang-divider"><div class="lang-divider-inner">
+  <div class="lang-divider-badge">English version</div>
+  <p>The English translation follows below. In case of any discrepancy, the German version above shall prevail.</p>
+</div></div>
+
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>English version.</strong> The legally binding German version appears above on this page.
+  </div>
+
+  <div class="legal-note">
+    <p>This cancellation policy applies to consumers within the meaning of &sect; 13 of the German Civil Code (BGB) who conclude a distance contract for our paid courses and services.</p>
+  </div>
+
+  <h2>Right of withdrawal</h2>
+  <p>You have the right to withdraw from this contract within fourteen days without giving any reason.</p>
+  <p>The withdrawal period is fourteen days from the day the contract was concluded.</p>
+  <p>To exercise your right of withdrawal, you must inform us &mdash; Saran Capital Holdings UG (haftungsbeschr&auml;nkt), Heinestra&szlig;e 4, 47559 Kranenburg, Germany, email <a href="mailto:hello@academyaupair.com">hello@academyaupair.com</a>, telephone <a href="tel:+4915567545404">+49 155 6754 5404</a> &mdash; by means of a clear statement (for example a letter sent by post or an email) of your decision to withdraw from this contract. You may use the model withdrawal form below, but this is not obligatory.</p>
+  <p>To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.</p>
+
+  <h2>Consequences of withdrawal</h2>
+  <p>If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than fourteen days from the day on which we are informed about your decision to withdraw from this contract.</p>
+  <p>We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement.</p>
+  <p>If you requested that the provision of services begin during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated to us your withdrawal from this contract, in comparison with the full coverage of the contract.</p>
+
+  <h2>Early expiry of the right of withdrawal</h2>
+  <h3>For services (&sect; 356(4) BGB)</h3>
+  <p>Your right of withdrawal expires in the case of a contract for the provision of services if we have fully performed the service and only began performance after you gave your express consent and at the same time confirmed your awareness that you would lose your right of withdrawal upon our complete performance of the contract.</p>
+  <h3>For digital content (&sect; 356(5) BGB)</h3>
+  <p>In the case of a contract for the supply of digital content not supplied on a tangible medium, your right of withdrawal expires if you have expressly consented to us beginning performance before the end of the withdrawal period, you have confirmed your awareness that you thereby lose your right of withdrawal, and we have provided you with confirmation of this.</p>
+
+  <h2>Model withdrawal form</h2>
+  <p><em>(Complete and return this form only if you wish to withdraw from the contract.)</em></p>
+  <div class="legal-box">
+    <p>To:<br>
+    Saran Capital Holdings UG (haftungsbeschr&auml;nkt)<br>
+    Heinestra&szlig;e 4<br>
+    47559 Kranenburg<br>
+    Germany<br>
+    Email: hello@academyaupair.com</p>
+    <p>&mdash;</p>
+    <p>I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods (*) / for the provision of the following service (*):</p>
+    <p>&nbsp;&nbsp;_______________________________________________</p>
+    <p>Ordered on (*) / received on (*): &nbsp;__________________</p>
+    <p>Name of consumer(s): &nbsp;__________________</p>
+    <p>Address of consumer(s): &nbsp;__________________</p>
+    <p>Signature of consumer(s) <em>(only if this form is notified on paper)</em>: &nbsp;__________________</p>
+    <p>Date: &nbsp;__________________</p>
+    <p style="margin-top:10px;"><em>(*) Delete as appropriate.</em></p>
+  </div>
+
+  <p class="legal-updated">Last updated: August 2026</p>
+</div>
+</div>
+
+<!-- ══════════════ AGB / TERMS ══════════════ -->
+<div class="page" id="page-agb">
+<div class="page-hero">
+  <h1>Allgemeine Gesch&auml;ftsbedingungen</h1>
+  <p>AGB &middot; Terms and Conditions (English below)</p>
+</div>
+
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>Deutsche Fassung.</strong> Die englische &Uuml;bersetzung finden Sie weiter unten auf dieser Seite.
+    &mdash; <em>German version. The English translation is further down this page.</em>
+  </div>
+
+  <div class="legal-note">
+    <p><strong>Hinweis f&uuml;r den Betreiber:</strong> Dies ist eine Vorlage. Die mit <strong>[ ]</strong> markierten Stellen m&uuml;ssen an Ihr tats&auml;chliches Angebot angepasst werden (Preise, Kursdauer, Zugangsdauer, Terminregelungen). Bitte lassen Sie diese AGB vor Ver&ouml;ffentlichung von einer Rechtsanw&auml;ltin oder einem Rechtsanwalt f&uuml;r IT- und Vertragsrecht pr&uuml;fen. Diesen Hinweiskasten anschlie&szlig;end entfernen.</p>
+  </div>
+
+  <h2>&sect; 1 Geltungsbereich und Anbieter</h2>
+  <p>(1) Diese Allgemeinen Gesch&auml;ftsbedingungen (nachfolgend &bdquo;AGB&ldquo;) gelten f&uuml;r alle Vertr&auml;ge, die zwischen der Saran Capital Holdings UG (haftungsbeschr&auml;nkt), Heinestra&szlig;e 4, 47559 Kranenburg, Deutschland (nachfolgend &bdquo;Anbieter&ldquo;, &bdquo;wir&ldquo;) und der Kundin bzw. dem Kunden (nachfolgend &bdquo;Teilnehmer&ldquo;, &bdquo;Sie&ldquo;) &uuml;ber die Website academyaupair.com geschlossen werden.</p>
+  <p>(2) Verbraucher ist jede nat&uuml;rliche Person, die ein Rechtsgesch&auml;ft zu Zwecken abschlie&szlig;t, die &uuml;berwiegend weder ihrer gewerblichen noch ihrer selbst&auml;ndigen beruflichen T&auml;tigkeit zugerechnet werden k&ouml;nnen (&sect; 13 BGB). Unternehmer ist eine nat&uuml;rliche oder juristische Person, die bei Abschluss des Rechtsgesch&auml;fts in Aus&uuml;bung ihrer gewerblichen oder selbst&auml;ndigen beruflichen T&auml;tigkeit handelt (&sect; 14 BGB).</p>
+  <p>(3) Abweichende Bedingungen des Teilnehmers werden nicht anerkannt, es sei denn, wir stimmen ihrer Geltung ausdr&uuml;cklich schriftlich zu.</p>
+
+  <h2>&sect; 2 Leistungsgegenstand</h2>
+  <p>(1) Wir bieten Vorbereitungs-, Schulungs- und Zertifizierungsleistungen f&uuml;r AuPair-Bewerberinnen und -Bewerber aus Indien sowie f&uuml;r Gastfamilien in Deutschland an. Die Leistungen werden ganz oder teilweise online erbracht.</p>
+  <p>(2) Der konkrete Leistungsumfang, die Dauer und die Inhalte ergeben sich aus der jeweiligen Kursbeschreibung auf unserer Website zum Zeitpunkt der Buchung.</p>
+  <p>(3) <strong>Wir erbringen keine Rechts-, Steuer-, Visa- oder Migrationsberatung.</strong> Unsere Leistungen sind Vorbereitung und Schulung. Verbindliche Ausk&uuml;nfte zu Visum, Aufenthaltsrecht, Sozialversicherung oder Steuern erteilen ausschlie&szlig;lich die zust&auml;ndigen Beh&ouml;rden und hierzu befugte Berufstr&auml;ger.</p>
+  <p>(4) <strong>Wir sind keine Vermittlungsagentur und schulden keinen Vermittlungserfolg.</strong> Ein Anspruch auf das Zustandekommen einer Platzierung bei einer Gastfamilie, auf die Erteilung eines Visums oder auf einen sonstigen bestimmten Erfolg besteht nicht.</p>
+  <p>(5) Das von uns ausgestellte Zertifikat dokumentiert die Teilnahme und den erfolgreichen Abschluss unseres Programms. Es handelt sich <strong>nicht um einen staatlich anerkannten Abschluss</strong> und begr&uuml;ndet keinen Anspruch gegen&uuml;ber Beh&ouml;rden, Agenturen oder Gastfamilien.</p>
+
+  <h2>&sect; 3 Vertragsschluss</h2>
+  <p>(1) Die Darstellung der Kurse auf unserer Website stellt kein rechtlich bindendes Angebot dar, sondern eine Aufforderung zur Abgabe eines Angebots.</p>
+  <p>(2) Durch Anklicken der Schaltfl&auml;che zum Abschluss des Bestellvorgangs geben Sie ein verbindliches Angebot ab.</p>
+  <p>(3) Der Vertrag kommt zustande, wenn wir Ihr Angebot durch eine Buchungsbest&auml;tigung in Textform (E-Mail) annehmen oder mit der Leistungserbringung beginnen.</p>
+  <p>(4) Der Vertragstext wird von uns gespeichert. Sie erhalten die Vertragsdaten und diese AGB per E-Mail.</p>
+  <p>(5) Die Vertragssprache ist Deutsch und Englisch.</p>
+
+  <h2>&sect; 4 Preise und Zahlungsbedingungen</h2>
+  <p>(1) Es gelten die zum Zeitpunkt der Buchung auf der Website angegebenen Preise. Alle Preise verstehen sich <strong>[inklusive / zuz&uuml;glich]</strong> der gesetzlichen Umsatzsteuer.</p>
+  <p>(2) Die Zahlung erfolgt &uuml;ber unseren Zahlungsdienstleister Stripe (Stripe Payments Europe Ltd., Dublin, Irland). Es gelten erg&auml;nzend die Bedingungen von Stripe.</p>
+  <p>(3) Die Verg&uuml;tung ist <strong>[mit Vertragsschluss / vor Kursbeginn]</strong> vollst&auml;ndig f&auml;llig.</p>
+  <p>(4) Der Zugang zu den Kursinhalten wird nach vollst&auml;ndigem Zahlungseingang freigeschaltet.</p>
+
+  <h2>&sect; 5 Widerrufsrecht</h2>
+  <p>(1) Verbrauchern steht ein gesetzliches Widerrufsrecht zu. Einzelheiten ergeben sich aus unserer <a onclick="showPage('widerruf')">Widerrufsbelehrung</a>, die Bestandteil dieser AGB ist.</p>
+  <p>(2) Auf das vorzeitige Erl&ouml;schen des Widerrufsrechts bei Dienstleistungen (&sect; 356 Abs. 4 BGB) und bei digitalen Inhalten (&sect; 356 Abs. 5 BGB) wird ausdr&uuml;cklich hingewiesen.</p>
+
+  <h2>&sect; 6 Durchf&uuml;hrung, Termine und Absagen</h2>
+  <p>(1) Termine f&uuml;r Live-Einheiten werden rechtzeitig in Textform mitgeteilt.</p>
+  <p>(2) Wir behalten uns vor, einen Kurs abzusagen oder zu verschieben, wenn eine Mindestteilnehmerzahl nicht erreicht wird oder wenn ein wichtiger Grund vorliegt (z.&nbsp;B. Krankheit der Kursleitung, technische St&ouml;rung). In diesem Fall bieten wir einen Ersatztermin an oder erstatten bereits gezahlte Entgelte vollst&auml;ndig zur&uuml;ck. Weitergehende Anspr&uuml;che sind ausgeschlossen, soweit uns kein Vorsatz oder grobe Fahrl&auml;ssigkeit trifft.</p>
+  <p>(3) Verpasst der Teilnehmer eine Live-Einheit aus von ihm zu vertretenden Gr&uuml;nden, besteht kein Anspruch auf Nachholung oder anteilige Erstattung. <strong>[Optional: Aufzeichnungen werden im Rahmen der Zugangsdauer bereitgestellt.]</strong></p>
+  <p>(4) Der Zugang zu digitalen Kursinhalten wird f&uuml;r einen Zeitraum von <strong>[Zugangsdauer eintragen]</strong> gew&auml;hrt.</p>
+
+  <h2>&sect; 7 Pflichten des Teilnehmers</h2>
+  <p>(1) Sie sind verpflichtet, bei der Anmeldung wahrheitsgem&auml;&szlig;e und vollst&auml;ndige Angaben zu machen.</p>
+  <p>(2) Zugangsdaten sind vertraulich zu behandeln und d&uuml;rfen nicht an Dritte weitergegeben werden.</p>
+  <p>(3) Sie sind selbst f&uuml;r eine geeignete technische Ausstattung (Internetverbindung, Endger&auml;t) verantwortlich.</p>
+  <p>(4) In Live-Einheiten und Gruppenformaten ist ein respektvoller Umgang zu wahren. Bei erheblichen oder wiederholten Verst&ouml;&szlig;en k&ouml;nnen wir Teilnehmer vom weiteren Kurs ausschlie&szlig;en; ein Anspruch auf Erstattung besteht in diesem Fall nicht.</p>
+
+  <h2>&sect; 8 Urheberrecht und Nutzungsrechte</h2>
+  <p>(1) S&auml;mtliche Kursinhalte, Unterlagen, Videos, Vorlagen und Materialien sind urheberrechtlich gesch&uuml;tzt.</p>
+  <p>(2) Sie erhalten ein einfaches, nicht &uuml;bertragbares Recht zur Nutzung ausschlie&szlig;lich f&uuml;r eigene, private Zwecke f&uuml;r die Dauer der Zugangsberechtigung.</p>
+  <p>(3) Vervielf&auml;ltigung, Weitergabe, Ver&ouml;ffentlichung, &ouml;ffentliche Zug&auml;nglichmachung sowie Mitschnitte von Live-Einheiten sind ohne unsere vorherige schriftliche Zustimmung untersagt.</p>
+
+  <h2>&sect; 9 Haftung</h2>
+  <p>(1) Wir haften unbeschr&auml;nkt bei Vorsatz und grober Fahrl&auml;ssigkeit sowie bei Verletzung von Leben, K&ouml;rper oder Gesundheit.</p>
+  <p>(2) Bei einfacher Fahrl&auml;ssigkeit haften wir nur bei Verletzung einer wesentlichen Vertragspflicht (Kardinalpflicht), deren Erf&uuml;llung die ordnungsgem&auml;&szlig;e Durchf&uuml;hrung des Vertrags &uuml;berhaupt erst erm&ouml;glicht und auf deren Einhaltung Sie regelm&auml;&szlig;ig vertrauen d&uuml;rfen. In diesem Fall ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt.</p>
+  <p>(3) Im &Uuml;brigen ist die Haftung ausgeschlossen.</p>
+  <p>(4) Die Haftung nach dem Produkthaftungsgesetz bleibt unber&uuml;hrt.</p>
+  <p>(5) Wir haften nicht f&uuml;r Entscheidungen von Beh&ouml;rden, Agenturen oder Gastfamilien und nicht f&uuml;r den Erfolg einer Bewerbung, einer Vermittlung oder eines Visumverfahrens.</p>
+
+  <h2>&sect; 10 Datenschutz</h2>
+  <p>Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <a onclick="showPage('privacy')">Datenschutzerkl&auml;rung</a>.</p>
+
+  <h2>&sect; 11 Streitbeilegung</h2>
+  <p>Die OS-Plattform der Europ&auml;ischen Kommission wurde zum 20. Juli 2025 eingestellt. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+  <h2>&sect; 12 Schlussbestimmungen</h2>
+  <p>(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Bei Verbrauchern gilt diese Rechtswahl nur, soweit dadurch der durch zwingende Bestimmungen des Rechts des Staates des gew&ouml;hnlichen Aufenthalts gew&auml;hrte Schutz nicht entzogen wird.</p>
+  <p>(2) Ist der Teilnehmer Kaufmann, juristische Person des &ouml;ffentlichen Rechts oder &ouml;ffentlich-rechtliches Sonderverm&ouml;gen, ist Gerichtsstand unser Gesch&auml;ftssitz.</p>
+  <p>(3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der &uuml;brigen Bestimmungen unber&uuml;hrt.</p>
+
+  <p class="legal-updated">Stand: August 2026</p>
+</div>
+
+<div class="lang-divider"><div class="lang-divider-inner">
+  <div class="lang-divider-badge">English version</div>
+  <p>The English translation follows below. In case of any discrepancy, the German version above shall prevail.</p>
+</div></div>
+
+<div class="legal-wrap">
+  <div class="lang-note">
+    <strong>English version.</strong> The legally binding German version appears above on this page.
+  </div>
+
+  <div class="legal-note">
+    <p><strong>Note for the operator:</strong> This is a template. Items marked <strong>[ ]</strong> must be adapted to your actual offering (prices, course duration, access period, scheduling rules). Please have these terms reviewed by a lawyer specialising in IT and contract law before publication, then remove this notice box.</p>
+  </div>
+
+  <h2>&sect; 1 Scope and provider</h2>
+  <p>(1) These General Terms and Conditions apply to all contracts concluded via academyaupair.com between Saran Capital Holdings UG (haftungsbeschr&auml;nkt), Heinestra&szlig;e 4, 47559 Kranenburg, Germany (&quot;we&quot;, &quot;the provider&quot;) and the customer (&quot;you&quot;, &quot;the participant&quot;).</p>
+  <p>(2) A consumer is any natural person who concludes a legal transaction for purposes predominantly outside their trade, business or profession (&sect; 13 BGB). An entrepreneur is a natural or legal person acting in the exercise of their trade, business or profession (&sect; 14 BGB).</p>
+  <p>(3) Deviating conditions of the participant are not recognised unless we expressly agree to them in writing.</p>
+
+  <h2>&sect; 2 Subject of services</h2>
+  <p>(1) We provide preparation, training and certification services for AuPair applicants from India and for host families in Germany. Services are delivered wholly or partly online.</p>
+  <p>(2) The specific scope, duration and content follow from the course description on our website at the time of booking.</p>
+  <p>(3) <strong>We do not provide legal, tax, visa or immigration advice.</strong> Our services are preparation and training. Binding information on visas, residence law, social insurance or taxation is given exclusively by the competent authorities and duly authorised professionals.</p>
+  <p>(4) <strong>We are not a placement agency and do not owe any placement outcome.</strong> There is no entitlement to a placement with a host family, to the granting of a visa, or to any other specific result.</p>
+  <p>(5) The certificate we issue documents participation in and successful completion of our programme. It is <strong>not a state-recognised qualification</strong> and creates no entitlement vis-&agrave;-vis authorities, agencies or host families.</p>
+
+  <h2>&sect; 3 Conclusion of contract</h2>
+  <p>(1) The presentation of courses on our website does not constitute a legally binding offer but an invitation to submit an offer.</p>
+  <p>(2) By clicking the button completing the order process, you submit a binding offer.</p>
+  <p>(3) The contract is concluded when we accept your offer by booking confirmation in text form (email) or when we commence provision of the service.</p>
+  <p>(4) We store the contract text. You will receive the contract details and these terms by email.</p>
+  <p>(5) The contract languages are German and English.</p>
+
+  <h2>&sect; 4 Prices and payment</h2>
+  <p>(1) The prices stated on the website at the time of booking apply. All prices are <strong>[including / plus]</strong> statutory VAT.</p>
+  <p>(2) Payment is processed via our payment service provider Stripe (Stripe Payments Europe Ltd., Dublin, Ireland). Stripe's terms apply additionally.</p>
+  <p>(3) The fee is payable in full <strong>[on conclusion of contract / before course start]</strong>.</p>
+  <p>(4) Access to course content is granted after payment has been received in full.</p>
+
+  <h2>&sect; 5 Right of withdrawal</h2>
+  <p>(1) Consumers have a statutory right of withdrawal. Details are set out in our <a onclick="showPage('widerruf')">cancellation policy</a>, which forms part of these terms.</p>
+  <p>(2) Attention is expressly drawn to the early expiry of the right of withdrawal for services (&sect; 356(4) BGB) and for digital content (&sect; 356(5) BGB).</p>
+
+  <h2>&sect; 6 Delivery, scheduling and cancellations</h2>
+  <p>(1) Dates for live sessions are communicated in good time in text form.</p>
+  <p>(2) We reserve the right to cancel or reschedule a course if a minimum number of participants is not reached or for good cause (for example illness of the trainer, technical failure). In such cases we offer an alternative date or refund fees already paid in full. Further claims are excluded unless we acted with intent or gross negligence.</p>
+  <p>(3) If a participant misses a live session for reasons within their own responsibility, there is no entitlement to a make-up session or partial refund. <strong>[Optional: recordings are made available within the access period.]</strong></p>
+  <p>(4) Access to digital course content is granted for a period of <strong>[insert access period]</strong>.</p>
+
+  <h2>&sect; 7 Participant obligations</h2>
+  <p>(1) You are obliged to provide truthful and complete information when registering.</p>
+  <p>(2) Access credentials must be kept confidential and must not be passed on to third parties.</p>
+  <p>(3) You are responsible for suitable technical equipment (internet connection, device).</p>
+  <p>(4) Respectful conduct is required in live sessions and group formats. In the event of serious or repeated breaches we may exclude a participant from the remainder of the course; no refund entitlement arises in that case.</p>
+
+  <h2>&sect; 8 Copyright and rights of use</h2>
+  <p>(1) All course content, documents, videos, templates and materials are protected by copyright.</p>
+  <p>(2) You receive a simple, non-transferable right of use exclusively for your own private purposes for the duration of your access entitlement.</p>
+  <p>(3) Reproduction, distribution, publication, making publicly available, and recording of live sessions are prohibited without our prior written consent.</p>
+
+  <h2>&sect; 9 Liability</h2>
+  <p>(1) We are liable without limitation in cases of intent and gross negligence and for injury to life, body or health.</p>
+  <p>(2) In cases of simple negligence we are liable only for breach of a material contractual obligation (cardinal obligation) whose fulfilment is essential to the proper performance of the contract and on whose observance you may regularly rely. In such cases liability is limited to the foreseeable damage typical for this type of contract.</p>
+  <p>(3) Liability is otherwise excluded.</p>
+  <p>(4) Liability under the German Product Liability Act remains unaffected.</p>
+  <p>(5) We are not liable for decisions of authorities, agencies or host families, nor for the success of an application, a placement or a visa procedure.</p>
+
+  <h2>&sect; 10 Data protection</h2>
+  <p>Information on the processing of your personal data can be found in our <a onclick="showPage('privacy')">privacy policy</a>.</p>
+
+  <h2>&sect; 11 Dispute resolution</h2>
+  <p>The European Commission's ODR platform was discontinued on 20 July 2025. We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+  <h2>&sect; 12 Final provisions</h2>
+  <p>(1) The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods. For consumers, this choice of law applies only insofar as it does not deprive them of the protection afforded by mandatory provisions of the law of their country of habitual residence.</p>
+  <p>(2) If the participant is a merchant, a legal entity under public law or a special fund under public law, the place of jurisdiction is our registered office.</p>
+  <p>(3) Should individual provisions of these terms be invalid, the validity of the remaining provisions shall remain unaffected.</p>
+
+  <p class="legal-updated">Last updated: August 2026</p>
+</div>
 </div>
 
 <footer>
@@ -1875,7 +2739,7 @@ section.light .why-card {
     <a href="tel:+4915567545404" style="color:rgba(255,255,255,0.55);font-size:14px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">&#128222; +49 155 6754 5404</a>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2025 Academy AuPair. All rights reserved.</span>
+    <span>&copy; 2025 Academy AuPair. All rights reserved. &nbsp;&middot;&nbsp; <a href="javascript:void(0)" onclick="showPage('impressum')" style="color:rgba(255,255,255,0.75);text-decoration:underline;">Impressum</a> &nbsp;&middot;&nbsp; <a href="javascript:void(0)" onclick="showPage('privacy')" style="color:rgba(255,255,255,0.75);text-decoration:underline;">Datenschutz / Privacy</a> &nbsp;&middot;&nbsp; <a href="javascript:void(0)" onclick="showPage('agb')" style="color:rgba(255,255,255,0.75);text-decoration:underline;">AGB / Terms</a> &nbsp;&middot;&nbsp; <a href="javascript:void(0)" onclick="showPage('widerruf')" style="color:rgba(255,255,255,0.75);text-decoration:underline;">Widerruf / Cancellation</a></span>
     <span><a href="mailto:hello@academyaupair.com" style="color:rgba(255,255,255,0.5);">hello@academyaupair.com</a> &nbsp;&middot;&nbsp; <a href="tel:+4915567545404" style="color:rgba(255,255,255,0.5);">+49 155 6754 5404</a></span>
   </div>
 </footer>
@@ -2040,6 +2904,7 @@ function openCTA(type) {
       '<input id="m-phone" type="tel"   placeholder="Your WhatsApp number"        style="' + inputStyle + '" />' +
       '<textarea id="m-msg" rows="3" placeholder="Anything you would like to share or ask?" style="' + inputStyle + 'resize:vertical;"></textarea>' +
       '<button onclick="submitCTA(\'AuPair Preparation Enrolment\')" style="' + btnStyle + '">Send my enrolment request \u2192</button>' +
+      '<p style="font-size:12.5px;line-height:1.6;color:#7a8a80;margin:2px 0 0;">By submitting this form you agree that we may store and use your details to respond to your enquiry. See our <a onclick=\'showPage(\"privacy\");closeCTA();\' style="color:#2d6647;text-decoration:underline;cursor:pointer;">Privacy Policy</a>.</p>' +
       '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in name and email.</p>' +
       '<p id="m-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
       '</div>';
@@ -2053,6 +2918,7 @@ function openCTA(type) {
       '<input id="m-phone" type="tel"   placeholder="Your phone number (optional)" style="' + inputStyle + '" />' +
       '<textarea id="m-msg" rows="3" placeholder="Tell us about your situation and any specific concerns." style="' + inputStyle + 'resize:vertical;"></textarea>' +
       '<button onclick="submitCTA(\'Host Family Session Request\')" style="' + btnStyle + '">Send my request \u2192</button>' +
+      '<p style="font-size:12.5px;line-height:1.6;color:#7a8a80;margin:2px 0 0;">By submitting this form you agree that we may store and use your details to respond to your enquiry. See our <a onclick=\'showPage(\"privacy\");closeCTA();\' style="color:#2d6647;text-decoration:underline;cursor:pointer;">Privacy Policy</a>.</p>' +
       '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in name and email.</p>' +
       '<p id="m-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
       '</div>';
@@ -2066,6 +2932,7 @@ function openCTA(type) {
       '<input id="m-phone" type="tel"   placeholder="Your phone / WhatsApp"       style="' + inputStyle + '" />' +
       '<textarea id="m-msg" rows="4" placeholder="Tell us about your agency, how long you have been operating, and what you are looking for." style="' + inputStyle + 'resize:vertical;"></textarea>' +
       '<button onclick="submitCTA(\'Agency Partnership Enquiry\')" style="' + btnStyle + '">Send my enquiry \u2192</button>' +
+      '<p style="font-size:12.5px;line-height:1.6;color:#7a8a80;margin:2px 0 0;">By submitting this form you agree that we may store and use your details to respond to your enquiry. See our <a onclick=\'showPage(\"privacy\");closeCTA();\' style="color:#2d6647;text-decoration:underline;cursor:pointer;">Privacy Policy</a>.</p>' +
       '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in name and email.</p>' +
       '<p id="m-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
       '</div>';
@@ -2079,6 +2946,7 @@ function openCTA(type) {
       '<input id="m-phone" type="tel"   placeholder="Your phone / WhatsApp"       style="' + inputStyle + '" />' +
       '<textarea id="m-msg" rows="3" placeholder="Tell us about your students and how we can help them." style="' + inputStyle + 'resize:vertical;"></textarea>' +
       '<button onclick="submitCTA(\'From Tutor \u2014 Partnership Enquiry\')" style="' + btnStyle + '">Get in touch \u2192</button>' +
+      '<p style="font-size:12.5px;line-height:1.6;color:#7a8a80;margin:2px 0 0;">By submitting this form you agree that we may store and use your details to respond to your enquiry. See our <a onclick=\'showPage(\"privacy\");closeCTA();\' style="color:#2d6647;text-decoration:underline;cursor:pointer;">Privacy Policy</a>.</p>' +
       '<p id="m-err" style="color:#cc0000;font-size:13px;display:none;margin:0;">Please fill in name and email.</p>' +
       '<p id="m-ok"  style="color:#1D9E75;font-size:13px;display:none;margin:0;font-weight:600;">Sent! We will be in touch within 48 hours.</p>' +
       '</div>';
@@ -2733,16 +3601,66 @@ function openCTAWithProgram(programName) {
 
 </script>
 
-<!-- Crisp Chat Widget -->
+<!-- ══════════════ COOKIE CONSENT BANNER ══════════════ -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="ck-inner">
+    <div class="ck-text">
+      <h4>We respect your privacy</h4>
+      <p>We do not use any analytics or advertising trackers. We would only like to load our live chat, which stores a small identifier on your device so we can continue your conversation. Read more in our <a href="javascript:void(0)" onclick="showPage('privacy');dismissCookieBanner();">Privacy Policy</a>.</p>
+    </div>
+    <div class="ck-actions">
+      <button class="ck-btn ck-reject" onclick="cookieChoice(false)">Decline</button>
+      <button class="ck-btn ck-accept" onclick="cookieChoice(true)">Accept chat</button>
+    </div>
+  </div>
+</div>
+
+<!-- Crisp Chat Widget , loaded only after explicit consent -->
 <script type="text/javascript">
-window.$crisp=[];
-window.CRISP_WEBSITE_ID="d68192e8-06b7-405c-93af-ce933562ba4e";
 (function(){
-  d=document;
-  s=d.createElement("script");
-  s.src="https://client.crisp.chat/l.js";
-  s.async=1;
-  d.getElementsByTagName("head")[0].appendChild(s);
+  var STORAGE_KEY = 'aa_cookie_consent';
+
+  function loadCrisp(){
+    if (window.__crispLoaded) return;
+    window.__crispLoaded = true;
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "d68192e8-06b7-405c-93af-ce933562ba4e";
+    var d = document;
+    var s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  }
+
+  function readConsent(){
+    try { return window.localStorage.getItem(STORAGE_KEY); }
+    catch(e){ return null; }
+  }
+
+  function writeConsent(v){
+    try { window.localStorage.setItem(STORAGE_KEY, v); } catch(e){}
+  }
+
+  window.dismissCookieBanner = function(){
+    var b = document.getElementById('cookie-banner');
+    if (b) b.classList.remove('show');
+  };
+
+  window.cookieChoice = function(accepted){
+    writeConsent(accepted ? 'accepted' : 'declined');
+    window.dismissCookieBanner();
+    if (accepted) loadCrisp();
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var consent = readConsent();
+    if (consent === 'accepted') {
+      loadCrisp();
+    } else if (consent !== 'declined') {
+      var b = document.getElementById('cookie-banner');
+      if (b) b.classList.add('show');
+    }
+  });
 })();
 </script>
 
